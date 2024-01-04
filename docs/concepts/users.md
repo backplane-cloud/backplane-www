@@ -2,6 +2,6 @@
 sidebar_position: 7
 ---
 
-# Create User
+# Users, Teams, Roles & Assignments
 
 Create new User

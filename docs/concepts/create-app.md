@@ -2,6 +2,6 @@
 sidebar_position: 3
 ---
 
-# Create an App
+# Apps
 
 Use the Command Line Interface to Create your first App

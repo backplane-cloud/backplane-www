@@ -6,12 +6,13 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
-
+import hero from "/static/img/hero.png";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
+        <img src={hero} width="200px" />
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -19,7 +20,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/quick-start"
           >
             Get Started
           </Link>

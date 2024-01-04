@@ -8,20 +8,20 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Cloud Abstraction API",
-  tagline: "Supercharge your Cloud Native Transformation with Backplane",
+  title: "Supercharge your Cloud Transformation",
+  tagline: "with Backplane's Open Cloud Abstraction API",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://preview.backplane.dev",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "Backplane", // Usually your GitHub org/user name.
+  projectName: "backplane", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -65,22 +65,29 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+      },
       navbar: {
-        title: "Backplane",
+        title: "",
         logo: {
           alt: "My Site Logo",
-          src: "img/b.png",
+          src: "img/oscaa2.png",
         },
         items: [
+          { to: "/about", label: "About", position: "left" },
+          { to: "/roadmap", label: "Roadmap", position: "left" },
+          { to: "/showcase", label: "Showcase", position: "left" },
+
+          { to: "/community", label: "Community", position: "left" },
+          { to: "/blog", label: "Blog", position: "left" },
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Documentation",
+            label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
-          { to: "/showcase", label: "Showcase", position: "left" },
-          { to: "/blog", label: "Community", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",

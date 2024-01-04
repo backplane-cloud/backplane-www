@@ -4,18 +4,18 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Multi Cloud Environment Provisioning",
-    Svg: require("@site/static/img/multicloud.svg").default,
+    title: "Environment Provisioning",
+    Svg: require("@site/static/img/env.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Backplane was designed from the ground up make cloud integration as easy
+        as possible.
       </>
     ),
   },
   {
-    title: "Govern Cost, Access and Policies",
-    Svg: require("@site/static/img/governance.svg").default,
+    title: "Software Catalog",
+    Svg: require("@site/static/img/catalog.svg").default,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
@@ -24,12 +24,63 @@ const FeatureList = [
     ),
   },
   {
-    title: "Powered by Backplane",
-    Svg: require("@site/static/img/poweredby.svg").default,
+    title: "CLI & SDK",
+    Svg: require("@site/static/img/cli.svg").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
         be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+  {
+    title: "Cloud Controls",
+    Svg: require("@site/static/img/controls.svg").default,
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+  {
+    title: "Access Management",
+    Svg: require("@site/static/img/access.svg").default,
+    description: (
+      <>
+        The security posture of your Cloud depends upon good access governance.
+        Knowing who has access to what across Cloud Platforms is crucial for
+        enterprise-scale.
+      </>
+    ),
+  },
+  {
+    title: "Cloud Economics",
+    Svg: require("@site/static/img/finance.svg").default,
+    description: (
+      <>
+        The Backplane CLI allows for custom automation orchestration and with
+        Open API SDK for popular languages, integration has never been easier.
+      </>
+    ),
+  },
+  {
+    title: "Service Integration",
+    Svg: require("@site/static/img/integration.svg").default,
+    description: (
+      <>
+        The Backplane CLI allows for custom automation orchestration and with
+        Open API SDK for popular languages, integration has never been easier.
+      </>
+    ),
+  },
+  {
+    title: "Workflow Engine",
+    Svg: require("@site/static/img/workflow.svg").default,
+    description: (
+      <>
+        The Backplane CLI allows for custom automation orchestration and with
+        Open API SDK for popular languages, integration has never been easier.
       </>
     ),
   },

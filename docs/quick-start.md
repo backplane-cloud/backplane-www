@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Getting Started
+# Quick Start
 
 Backplane comprises of an API, CLI
 
@@ -57,8 +57,10 @@ bp request add --appid app1 --requestType link --requestedForType product
 
 :::
 
-:::note
-For **Powershell** users, run `pwsh` and then use the CLI commands with the `--stringify` or `-s` switch to return raw JSON, this can then be piped into Powershell with `Convert-FromJSON`. For example:
+:::note Powershell Users
+For **Powershell** users, run `pwsh` and then use the CLI commands with the `--stringify` or `-s` switch to return raw JSON, this can then be piped into Powershell with `Convert-FromJSON`.
+
+For example:
 
 ```ps
 bp product list --stringify | Convert-FromJSON

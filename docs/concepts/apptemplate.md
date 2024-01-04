@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# App Templates
+# Environment Templates
 
 Understanding app templates
 
