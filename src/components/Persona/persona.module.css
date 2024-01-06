@@ -1,0 +1,21 @@
+.card {
+  width: 50%;
+  height: 200px;
+  background: gray;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.cardbody {
+  margin-left: 20px;
+}
+
+.icon {
+  width: 300px;
+  padding: 10px;
+}
+
+.text {
+  font-size: 0.9rem;
+}

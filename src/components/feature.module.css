@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+}
+
+.featurecard {
+  /* background-color: #darkgray; */
+  /* border: solid 1px blueviolet; */
+  height: 400px;
+  width: 400px;
+  border-radius: 30px;
+  margin: 10px;
+  padding: 20px;
+  display: flex-col;
+  box-sizing: border-box;
+  background: #393a3d;
+  color: white;
+
+  text-align: ;
+  /* display: flex; */
+}
+
+.featurecard .icon {
+  padding: 20px;
+}
+
+.featurecard h1 {
+  font-size: 1.2rem;
+}
+
+.featurecard p {
+  font-size: 01rem;
+}

@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Quick Start
 
 Backplane comprises of an API, CLI
@@ -11,6 +14,17 @@ Backplane comprises of an API, CLI
 ### Download CLI
 
 To begin, download the [Backplane CLI](/download)
+
+<Tabs>
+  <TabItem value="self-host" label="Self Hosted" default>
+    Go to [Backplane API Repo](https://github.com/backplane-cloud/backplane-api) Github Repo and clone locally the Backplane API. 
+    `npm run start`
+  </TabItem>
+
+  <TabItem value="host" label="Hosted">
+    
+  </TabItem>
+</Tabs>
 
 ### Create your first User and Organisation
 

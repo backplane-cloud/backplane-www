@@ -1,8 +1,9 @@
 ---
 slug: welcome
-title: Introducing Backplane
+title: Announcing the release of Backplane
 authors: [lsheridan]
 tags: [backplane]
+hide_table_of_contents: false
 ---
 
 Introducing Project Backplane – Your API to seamless Cloud Management!

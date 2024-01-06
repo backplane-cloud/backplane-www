@@ -1,0 +1,157 @@
+.featureContainer {
+  width: 100%;
+  margin: 0, auto;
+  padding: 20px;
+  /* margin: 20px; */
+  /* background: pink; */
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+  width: 800px;
+  margin: 0, auto;
+  padding: 20px;
+  /* margin: 20px; */
+  align-self: center;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+@media screen and (max-width: 996px) {
+  .container {
+    width: auto;
+    /* margin: 0, auto;
+    padding: 20px;
+    margin: 20px;
+    align-self: center;
+    font-family: Poppins, sans-serif;
+    text-align: center; */
+  }
+}
+
+.container2 {
+  width: 800px;
+  margin: 0, auto;
+
+  align-self: center;
+  font-family: Poppins, sans-serif;
+  /* text-align: center; */
+}
+
+.featureCard {
+  height: 300px;
+  width: 300px;
+  background: #f8f8f8;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.featureCardEnterprise {
+  height: auto;
+  width: 250px;
+  background: #9100ff;
+  color: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px;
+}
+
+.featureCardEnterprise .titleEnterprise {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  height: 50px;
+}
+
+.featureCardEnterprise .descriptionEnterprise {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  margin-top: 10px;
+  text-align: left;
+}
+.featureCard .title {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  height: 50px;
+}
+
+.featureCard .description {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.container h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 4rem;
+  /* color: #393a3d; */
+}
+.container h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 3rem;
+  /* color: #393a3d; */
+}
+.container h3 {
+  font-family: Poppins, sans-serif;
+  font-size: 1.1rem;
+  color: darkgray;
+  font-weight: normal;
+}
+.container h4 {
+  font-family: Poppins, sans-serif;
+  font-size: 1.4rem;
+  color: 393A3D;
+  /* font-weight: normal; */
+}
+
+.container p {
+  font-size: 1.2rem;
+  color: #393a3d;
+  /* text-align: left; */
+}
+
+.container .blue {
+  background-color: #32acff;
+  color: white;
+  margin: 10px;
+}
+
+.container .gray {
+  background-color: #efefef;
+  color: #393a3d;
+  margin: 10px;
+}
+.container .yellow {
+  background-color: #f8dc4e;
+  color: #393a3d;
+  margin: 10px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  /* width: 350px; */
+  /* background: pink; */
+  margin: 0, auto;
+  padding: 20px;
+}
+
+.featureSvg {
+  height: 250px;
+  width: 250px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 996px) {
+  .container h1 {
+    width: auto;
+    font-size: 2rem;
+  }
+}

@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 const FeatureList = [
   {
     title: "Environment Provisioning",
-    Svg: require("@site/static/img/env.svg").default,
+    Svg: require("@site/static/img/cloudenv.svg").default,
     description: (
       <>
         Backplane was designed from the ground up make cloud integration as easy
@@ -35,7 +35,7 @@ const FeatureList = [
   },
   {
     title: "Cloud Controls",
-    Svg: require("@site/static/img/controls.svg").default,
+    Svg: require("@site/static/img/policy.svg").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -88,7 +88,7 @@ const FeatureList = [
 
 function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("col col--3")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>

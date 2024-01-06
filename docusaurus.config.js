@@ -8,8 +8,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Supercharge your Cloud Transformation",
-  tagline: "with Backplane's Open Cloud Abstraction API",
+  title: "The Open Source Cloud Abstraction API",
+  tagline: "For building Cloud Platforms",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -76,18 +76,20 @@ const config = {
           src: "img/oscaa2.png",
         },
         items: [
-          { to: "/about", label: "About", position: "left" },
+          { to: "/blog/2024/01/04/about", label: "About", position: "left" },
           { to: "/roadmap", label: "Roadmap", position: "left" },
           { to: "/showcase", label: "Showcase", position: "left" },
 
-          { to: "/community", label: "Community", position: "left" },
+          // { to: "/community", label: "Community", position: "left" },
           { to: "/blog", label: "Blog", position: "left" },
+
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
             label: "Docs",
           },
+          { to: "/docs/cli", label: "API", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
@@ -138,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Backplane Software Ltd.Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Backplane Software Ltd. Built with Docusaurus`,
       },
       prism: {
         theme: prismThemes.github,
