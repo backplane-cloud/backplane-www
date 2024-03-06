@@ -49,11 +49,12 @@
   margin: 15px;
   border-radius: 10px;
   font-size: 0.5rem;
+  /* color: #2a7fff; */
 }
 
 [data-theme="dark"] .featureCard {
   color: #fff;
-  background: #2a7fff;
+  background: #23262a;
 }
 
 .featureCardEnterprise {
@@ -161,6 +162,7 @@
   width: 250px;
   padding: 40px;
   border-radius: 10px;
+  color: #2a7fff;
 }
 
 @media screen and (max-width: 996px) {

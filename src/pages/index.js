@@ -16,13 +16,13 @@ const ShowcaseFeature = ({ title, description, id, Svg }) => {
       <div key={id} className={styles.featureCard}>
         <div>
           <Svg
-            // className={styles.featureSvg}
+            className={styles.featureSvg}
             style={{
               width: "50px",
               height: "50px",
               padding: "0px",
               // background: "blue",
-              // color: "#32acff",
+              // color: "#2a7fff",
             }}
           />
         </div>
