@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbackplane=self.webpackChunkbackplane||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Announcing the release of Backplane","permalink":"/blog/welcome","unlisted":false},{"title":"Backstory","permalink":"/blog/2024/01/04/about","unlisted":false}]}')}}]);

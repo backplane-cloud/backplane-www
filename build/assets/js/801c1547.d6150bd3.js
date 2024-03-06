@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbackplane=self.webpackChunkbackplane||[]).push([[9409],{1715:a=>{a.exports=JSON.parse('{"label":"backplane","permalink":"/blog/tags/backplane","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);
