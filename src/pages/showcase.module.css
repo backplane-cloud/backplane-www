@@ -20,6 +20,15 @@
   font-family: Poppins, sans-serif;
   text-align: center;
 }
+
+/* .featureSvg {
+  height: 1px;
+  width: 100px;
+  padding: 60px;
+  border-radius: 20px;
+  background: pink;
+} */
+
 @media screen and (max-width: 996px) {
   .container {
     width: auto;
@@ -33,27 +42,33 @@
 }
 
 .container2 {
-  width: 800px;
+  width: 1200px;
   margin: 0, auto;
-
+  display: flex;
   align-self: center;
   font-family: Poppins, sans-serif;
   /* text-align: center; */
 }
 
 .featureCard {
-  height: 300px;
-  width: 300px;
-  background: #f8f8f8;
+  height: 250px;
+  width: 250px;
+  background: #efefef;
   padding: 20px;
   margin: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
+  font-size: 0.5rem;
+}
+
+[data-theme="dark"] .featureCard {
+  color: #fff;
+  background: #2a7fff;
 }
 
 .featureCardEnterprise {
   height: auto;
   width: 250px;
-  background: #9100ff;
+  background: #32acff;
   color: white;
   padding: 20px;
   margin: 15px;
@@ -74,33 +89,33 @@
   text-align: left;
 }
 .featureCard .title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2rem;
   font-weight: bold;
-  height: 50px;
+  /* height: 50px; */
 }
 
 .featureCard .description {
-  font-size: 1rem;
-  line-height: 1.8rem;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
   margin-top: 10px;
   text-align: left;
 }
 
 .container h1 {
-  font-family: Poppins, sans-serif;
-  font-size: 4rem;
+  font-family: Orbitron, Poppins, sans-serif;
+  font-size: 3rem;
   /* color: #393a3d; */
 }
 .container h2 {
   font-family: Poppins, sans-serif;
-  font-size: 3rem;
-  /* color: #393a3d; */
+  font-size: 2rem;
+  color: #2a7fff;
 }
 .container h3 {
   font-family: Poppins, sans-serif;
   font-size: 1.1rem;
-  color: darkgray;
+  color: #d5d5d5;
   font-weight: normal;
 }
 .container h4 {
@@ -116,8 +131,16 @@
   /* text-align: left; */
 }
 
+[data-theme="dark"] .container p {
+  color: #fff;
+}
+
+[data-theme="dark"] .container h4 {
+  color: #fff;
+}
+
 .container .blue {
-  background-color: #32acff;
+  background-color: #2a7fff;
   color: white;
   margin: 10px;
 }

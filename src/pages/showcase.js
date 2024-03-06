@@ -2,12 +2,28 @@ import Layout from "@theme/Layout";
 import styles from "./showcase.module.css";
 import Link from "@docusaurus/Link";
 import diagram from "@site/docs/backplane-intro.png";
-import oscaa from "@site/src/pages/oscaa-sm.png";
 
-const ShowcaseFeature = ({ title, description, id }) => {
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+// import styles from "./styles.module.css";
+
+const ShowcaseFeature = ({ title, description, id, Svg }) => {
   return (
     <>
       <div key={id} className={styles.featureCard}>
+        <div>
+          <Svg
+            // className={styles.featureSvg}
+            style={{
+              width: "50px",
+              height: "50px",
+              padding: "0px",
+              // background: "blue",
+              color: "#32acff",
+            }}
+          />
+        </div>
+
         <div className={styles.title}>{title}</div>
         <div className={styles.description}>{description}</div>
       </div>
@@ -26,87 +42,88 @@ const EnterpriseFeature = ({ title, description, id }) => {
 };
 
 const showcase = () => {
-  const EnterpriseFeatureList = [
-    {
-      title: "Transformation Manager",
-      Svg: require("@site/static/img/catalog.svg").default,
-      description: (
-        <>
-          Cloud Native Transformation requires audit, assessment, business case
-          and plan.
-        </>
-      ),
-    },
-    {
-      title: "Policy Exemption Manager",
-      Svg: require("@site/static/img/catalog.svg").default,
-      description: (
-        <>
-          Trusted downstream tools can modify access to enhance permission
-          posture.
-        </>
-      ),
-    },
+  // const EnterpriseFeatureList = [
+  //   {
+  //     title: "Transformation Manager",
+  //     Svg: require("@site/static/img/catalog.svg").default,
+  //     description: (
+  //       <>
+  //         Cloud Native Transformation requires audit, assessment, business case
+  //         and plan.
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     title: "Policy Exemption Manager",
+  //     Svg: require("@site/static/img/catalog.svg").default,
+  //     description: (
+  //       <>
+  //         Trusted downstream tools can modify access to enhance permission
+  //         posture.
+  //       </>
+  //     ),
+  //   },
 
-    {
-      title: "Optimisation Insights",
-      Svg: require("@site/static/img/catalog.svg").default,
-      description: (
-        <>
-          A full of cloud workloads, their capabilities and services. Assess
-          architectural alignment and governance posture across the
-          organisation.
-        </>
-      ),
-    },
-    {
-      title: "Software License Manager",
-      Svg: require("@site/static/img/catalog.svg").default,
-      description: (
-        <>
-          A full of cloud workloads, their capabilities and services. Assess
-          architectural alignment and governance posture across the
-          organisation.
-        </>
-      ),
-    },
-    {
-      title: "Cloud Graph",
-      Svg: require("@site/static/img/catalog.svg").default,
-      description: (
-        <>
-          A full of cloud workloads, their capabilities and services. Assess
-          architectural alignment and governance posture across the
-          organisation.
-        </>
-      ),
-    },
-    {
-      title: "RBAC Proxy",
-      Svg: require("@site/static/img/catalog.svg").default,
-      description: (
-        <>
-          A full of cloud workloads, their capabilities and services. Assess
-          architectural alignment and governance posture across the
-          organisation.
-        </>
-      ),
-    },
-    {
-      title: "Backlog Manager",
-      Svg: require("@site/static/img/catalog.svg").default,
-      description: (
-        <>
-          A full of cloud workloads, their capabilities and services. Assess
-          architectural alignment and governance posture across the
-          organisation.
-        </>
-      ),
-    },
-  ];
+  //   {
+  //     title: "Optimisation Insights",
+  //     Svg: require("@site/static/img/catalog.svg").default,
+  //     description: (
+  //       <>
+  //         A full of cloud workloads, their capabilities and services. Assess
+  //         architectural alignment and governance posture across the
+  //         organisation.
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     title: "Software License Manager",
+  //     Svg: require("@site/static/img/catalog.svg").default,
+  //     description: (
+  //       <>
+  //         A full of cloud workloads, their capabilities and services. Assess
+  //         architectural alignment and governance posture across the
+  //         organisation.
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     title: "Cloud Graph",
+  //     Svg: require("@site/static/img/catalog.svg").default,
+  //     description: (
+  //       <>
+  //         A full of cloud workloads, their capabilities and services. Assess
+  //         architectural alignment and governance posture across the
+  //         organisation.
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     title: "RBAC Proxy",
+  //     Svg: require("@site/static/img/catalog.svg").default,
+  //     description: (
+  //       <>
+  //         A full of cloud workloads, their capabilities and services. Assess
+  //         architectural alignment and governance posture across the
+  //         organisation.
+  //       </>
+  //     ),
+  //   },
+  //   {
+  //     title: "Backlog Manager",
+  //     Svg: require("@site/static/img/catalog.svg").default,
+  //     description: (
+  //       <>
+  //         A full of cloud workloads, their capabilities and services. Assess
+  //         architectural alignment and governance posture across the
+  //         organisation.
+  //       </>
+  //     ),
+  //   },
+  // ];
+
   const FeatureList = [
     {
-      title: "Global Catalog",
+      title: "Software Catalog",
       Svg: require("@site/static/img/catalog.svg").default,
       description: (
         <>
@@ -115,19 +132,18 @@ const showcase = () => {
       ),
     },
     {
-      title: "Cloud Provisioning",
-      Svg: require("@site/static/img/env.svg").default,
+      title: "Environment Provisioning",
+      Svg: require("@site/static/img/provisioning.svg").default,
       description: (
         <>
           Backplane API enables the creation of Cloud Environments in any
-          regsitered Cloud Service Provider. Allowing for self-service
-          orchestration use-cases i.e. IDP development!
+          regsitered Cloud Service Provider.
         </>
       ),
     },
     {
       title: "Governance",
-      Svg: require("@site/static/img/env.svg").default,
+      Svg: require("@site/static/img/governance.svg").default,
       description: (
         <>
           Having Cost, Access and Policy visibility across your Organisation,
@@ -137,7 +153,7 @@ const showcase = () => {
     },
     {
       title: "Workflow Engine",
-      Svg: require("@site/static/img/env.svg").default,
+      Svg: require("@site/static/img/workflow.svg").default,
       description: (
         <>
           Create Requests for budget approval, access to Products and other
@@ -148,18 +164,18 @@ const showcase = () => {
     },
 
     {
-      title: "Integrate Services",
-      Svg: require("@site/static/img/env.svg").default,
+      title: "Integration Services",
+      Svg: require("@site/static/img/service.svg").default,
       description: (
         <>
-          Plug in your favourite services from Github to any custom API with a
+          Plug in your favourite services from Github to any custom API with a{" "}
           <code>Service</code>.
         </>
       ),
     },
     {
       title: "CLI",
-      Svg: require("@site/static/img/env.svg").default,
+      Svg: require("@site/static/img/cli.svg").default,
       description: (
         <>
           Backplane is developed by the Backplane Open Source team, and one of
@@ -171,7 +187,7 @@ const showcase = () => {
 
     {
       title: "Extensions Marketplace",
-      Svg: require("@site/static/img/env.svg").default,
+      Svg: require("@site/static/img/marketplace.svg").default,
       description: (
         <>
           Extend Backplane's functionality by building your own custom
@@ -181,11 +197,11 @@ const showcase = () => {
     },
     {
       title: "App Templates",
-      Svg: require("@site/static/img/env.svg").default,
+      Svg: require("@site/static/img/template.svg").default,
       description: (
         <>
-          Extend Backplane's functionality by building your own custom
-          Extensions and publish them in the Backplane Marketplace.
+          Create Apps with preset environments and services onboarded. Examples
+          are Sandbox, Production etc.
         </>
       ),
     },
@@ -195,13 +211,13 @@ const showcase = () => {
     <Layout>
       {/* Hero  */}
       <div className={styles.container}>
-        <h1>The Open Source </h1>
-        <h1>Cloud Abstraction API</h1>
+        <img src={oscaa} style={{ marginTop: "50px", width: "100px" }} />
+        <br />
+        <h2>Open Source </h2>
+        <h2>Cloud Abstraction API</h2>
         <p>
-          A simple API to aid in multi cloud enablement and transformation.
+          for platform engineers building their IDP and multi cloud governance
           <br />
-          Whether you're building your Internal Development Portal or Cloud
-          Management platform, OSCAA makes it easier!
         </p>
         {/* <img src={oscaa} style={{ width: "100px" }} /> */}
         <div className={styles.cta}>
@@ -225,23 +241,30 @@ const showcase = () => {
         <hr />
       </div>
       <div className={styles.container}>
-        <h2>Building an IDP ? </h2>
-        <h3>
-          Power your developer experience with Backplane’s Open Cloud API.
-        </h3>
-        <p>
+        <h2>How it works </h2>
+        {/* <h3>A single API to govern and manage many clouds.</h3> */}
+        {/* <p>
           Are you building an Internal Developer Platform and your Developers
           are spending time writing integration code to provision environments ?
           Backplane’s Open Cloud Abstraction API does the hard work for you, all
           you have to do is integrate with Backplane's single API, saving
           precious developer time.
+        </p> */}
+        <p>
+          You simply register your Organisation and add your Cloud Provider
+          credentials, and then either directly through the <code>CLI</code> or
+          through <code>REST API</code>, make requests to create{" "}
+          <code>Cloud Environments</code>, retrieve <code>Cost</code>,{" "}
+          <code>Access</code> or <code>Policy</code> data for those
+          environments. Backplane follows an Organisation, Platform, Product and
+          App schema hierarchy.
         </p>
-        <img src={oscaa} style={{ marginTop: "50px", width: "100px" }} />
+        {/* <img src={oscaa} style={{ marginTop: "50px", width: "100px" }} />
         <br />
-        Open Cloud Abstraction API (OSCAA)
+        Cloud Abstraction API */}
         <img src={diagram} style={{ marginTop: "50px" }} />
         <div style={{ marginTop: "50px", textAlign: "left" }}>
-          <h4>Plug into the Backplane</h4>
+          <h4>Plugging into the Backplane</h4>
           <p>
             Simply add your <code>Cloud Provider</code> to your Organisation to
             enable self-service Cloud 'Space' provisioning. By{" "}
@@ -252,7 +275,9 @@ const showcase = () => {
           </p>
         </div>
         <div style={{ marginTop: "50px", textAlign: "left" }}>
-          <h4>Governance as-a-Service</h4>
+          {/* <h4>Govern multiple clouds at ease!</h4>
+           */}
+          <h4>Managing the multi cloud!</h4>
           <p>
             Developer concerns are not in isolation of Cloud Economics, Security
             by way of Access Posture and Resource Controls by way of Platform
@@ -261,11 +286,11 @@ const showcase = () => {
           </p>
         </div>
         <div style={{ marginTop: "50px", textAlign: "left" }}>
-          <h4>Developer Experience</h4>
+          <h4>Building an Internal Developer Platform ? </h4>
           <p>
-            Self-service is key to developer experience. Where the requisitte
-            cloud 'space' is provisioned on-demand, with hooks to services like
-            Github that will ensure a repo is provisioned for all workloads.
+            Using Backplane to take care of environment provisioning and
+            retrieving governance data simplifies development and saves
+            integration time!
           </p>
         </div>
         <div>
@@ -289,8 +314,8 @@ const showcase = () => {
               key={id}
               title={feature.title}
               description={feature.description}
-              svg={feature.Svg}
-              style={styles.featureCard}
+              Svg={feature.Svg}
+              // style={styles.featureCard}
             />
           ))}
         </div>
@@ -307,11 +332,11 @@ const showcase = () => {
 
       <div className={styles.container}>
         <h2>Open Source, always & forever!</h2>
-        <p>
+        {/* <p>
           The Backplane Project promises that <strong>Backplane Core</strong>{" "}
           which comprises of the API, CLI and soon to be released UI, will
           always and forever be <strong>Open Source</strong>.
-        </p>
+        </p> */}
         <p>
           The Backplane Open Source team welcome all contributions from the
           community to enhance Backplane Core. Please view the{" "}
@@ -320,19 +345,19 @@ const showcase = () => {
           report bugs!
         </p>
 
-        <p>
+        {/* <p>
           If you are an organisation that benefits from Backplane Open Cloud
           Abstraction API and would like to support its development and guide
           the future development of features, we have sponsorship benefits
           available for you and welcome your support!
-        </p>
+        </p> */}
 
         <div className={styles.container}>
           <Link
             className={`button button button--lg ${styles.yellow}`}
             to="/docs/sponsorship"
           >
-            Sponsor Us
+            Become a Sponsor
           </Link>
         </div>
         {/* <h3>

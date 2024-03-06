@@ -70,15 +70,15 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: "",
+        title: "Project Backplane",
         logo: {
-          alt: "My Site Logo",
-          src: "img/oscaa2.png",
+          alt: "Backplane Logo",
+          src: "img/logo.svg",
         },
         items: [
           { to: "/blog/2024/01/04/about", label: "About", position: "left" },
-          { to: "/roadmap", label: "Roadmap", position: "left" },
-          { to: "/showcase", label: "Showcase", position: "left" },
+          // { to: "/roadmap", label: "Roadmap", position: "left" },
+          // { to: "/showcase", label: "Showcase", position: "left" },
 
           // { to: "/community", label: "Community", position: "left" },
           { to: "/blog", label: "Blog", position: "left" },

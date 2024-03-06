@@ -8,7 +8,7 @@ Backplane Software provides a separate hosted SaaS offering and focuses on devel
 
 This is OSCAA, the `Open` `Source` `Cloud` `Abstraction` `API`, he wants to be the key building block to your Cloud Native Transformation and Cloud Journey. Please consider sponsoring him, so he can get help you achieve your transformation goals faster!
 
-![OSCAA](./oscaa.svg)
+<!-- ![OSCAA](./backplane-logo-blue.svg) -->
 
 ### Commercial Sponsor
 
@@ -56,6 +56,6 @@ For the first 10 x Tier A sponsors with a 5 year commitment term will be entitle
 
 ## Thank you :heart:
 
-The Backplane Project is made possible from sponsorship and the cloud engineering community that actively maintain Backplane Core. :sunglasses:
+The Backplane Project is made possible from sponsorship and the platform engineering community that actively maintains Backplane Core. :sunglasses:
 
 Backplane Software's SaaS and enterprise extensions also help to keep Backplane Cloud Abstraction API open source.

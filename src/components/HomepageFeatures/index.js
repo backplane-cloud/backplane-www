@@ -8,8 +8,8 @@ const FeatureList = [
     Svg: require("@site/static/img/cloudenv.svg").default,
     description: (
       <>
-        Backplane was designed from the ground up make cloud integration as easy
-        as possible.
+        f Backplane was designed from the ground up make cloud integration as
+        easy as possible.
       </>
     ),
   },
