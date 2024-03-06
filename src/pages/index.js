@@ -6,10 +6,8 @@ import diagram from "@site/docs/backplane-intro.png";
 // import BackplaneSvg from "./backplane-logo.svg";
 import ThemedImage from "@theme/ThemedImage";
 
-// import logob from "@site/src/pages/backplane-logo.png";
-
-// import clsx from "clsx";
-// import Heading from "@theme/Heading";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
 // import styles from "./styles.module.css";
 
 const ShowcaseFeature = ({ title, description, id, Svg }) => {
@@ -229,8 +227,7 @@ const showcase = () => {
         <br />
         <h1>Project Backplane </h1>
         <h2>Cloud Abstraction API</h2>
-        simplifying IDP creation and multi cloud governance for Platform
-        Engineers
+        Simplifying IDP creation for Platform Engineers
         <div className={styles.cta}>
           <div>
             <Link
@@ -383,13 +380,13 @@ const showcase = () => {
           which comprises of the API, CLI and soon to be released UI, will
           always and forever be <strong>Open Source</strong>.
         </p> */}
-        <p>
+        {/* <p>
           The Backplane Open Source team welcome all contributions from the
           community to enhance Backplane Core. Please view the{" "}
           <a href="">Product Roadmap</a> for release timeframes, and their{" "}
           <a href="">Product Backlog</a> to vote for Feature prioritisation or
           report bugs!
-        </p>
+        </p> */}
 
         {/* <p>
           If you are an organisation that benefits from Backplane Open Cloud
