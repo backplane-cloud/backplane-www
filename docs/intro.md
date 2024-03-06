@@ -6,19 +6,21 @@ sidebar_position: 1
 
 Let's discover **Backplane in less than 5 minutes**.
 
-## Why Backplane ?
+## Welcome to the Backplane!
 
-### Context
+A single API to enable multi cloud governance and environment provisioning. Sounds cool right ?
 
-As organisations adopt cloud at scale, the burden to govern becomes evermore critical. Not only are organisations adopting a single cloud, but invariably their cloud-first strategies and transformations have ventured into the realm of multi-cloud, through various business activities like acquisitions etc.
+Yes - we think so too! :sunglasses:
 
-Organisations are also wrestling with a paradigm shift from mode 1 centralised Ops to mode 2, DevOps and Platform engineering approaches. And the most recent developments is towards the development of Internal Developer Portals to further streamline the Developer experience.
+As organisations continue to invest and adopt cloud there's an ever increasing need to ensure the cloud providers can be governed. A single-cloud strategy leaves organisations vendor-locked and so are seeking multi-cloud strategies to have flexibility upon where they can obtain the beset value. Also, other business activities like mergers and acquisitions can bring a multi-cloud landscape.
+
+Organisations are also going through a cultural transformation with a paradigm shift from centralised operations (mode 1) to a decentralised model (mode 2) with DevOps and more recently Platform engineering. The latter focusing on the development of Internal Developer Portals to further streamline the Developer experience.
 
 > With Backplane, we wanted to create a single cloud API to help drive cloud-native transformation, with a particularly strong emphasis on cost, access and policy.
 >
-> **Lewis Sheridan** - _Maintainer@Backplane_
+> **Lewis** - Founder @ Backplane
 
-### Problem
+### What Problems is Backplane solving
 
 - Inefficient use of developers time
 
@@ -40,7 +42,7 @@ So whether you're building a custom internal development platform or cloud manag
 
 ![Backplane Diagram](backplane-intro.png)
 
-## Features
+## Core Features
 
 ### Environment Provisioning :cloud:
 

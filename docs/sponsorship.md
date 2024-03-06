@@ -1,16 +1,14 @@
 # Sponsorship
 
-Backplane is an open source project and we are committed to ensuring that Backplane API, CLI and UI remain open source and free, always and forever!
+Backplane is an open source project and we are committed to ensuring that the Backplane API, CLI and UI remain open source and free, always and forever!
 
 Backplane Software provides a separate hosted SaaS offering and focuses on developing extension modules available to organisations under license.
 
 ## Why Sponsor Backplane Open Source
 
-This is OSCAA, the `Open` `Source` `Cloud` `Abstraction` `API`, he wants to be the key building block to your Cloud Native Transformation and Cloud Journey. Please consider sponsoring him, so he can get help you achieve your transformation goals faster!
+The value of Backplane is in its abstraction over the concerns of 'Cloud Space', Access, Cost and Policies. By having a single integration point for the present and the future, it saves organisations development time as well as supports a vendor neutral cloud strategy where each cloud platform.
 
-<!-- ![OSCAA](./backplane-logo-blue.svg) -->
-
-### Commercial Sponsor
+### Commercial Sponsors
 
 | Tier | Annual Commitment | Benefits                                                                                                                                                                                                                                                                     |
 | ---- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +20,7 @@ This is OSCAA, the `Open` `Source` `Cloud` `Abstraction` `API`, he wants to be t
 For the first 10 x Tier A sponsors with a 5 year commitment term will be entitled to use the commercially hosted SaaS offering and licensed enterprise extensions **FREE OF CHARGE** for the duration of the sponsorship term.  
 :::
 
-### Individual Sponsor
+### Individual Sponsors
 
 | Tier | Suggested Donation | Benefits                                                            |
 | ---- | ------------------ | ------------------------------------------------------------------- |
@@ -53,9 +51,3 @@ For the first 10 x Tier A sponsors with a 5 year commitment term will be entitle
 :heavy_check_mark: All extensions developed from sponsor funds will be made fully Open Sourced.
 
 :heavy_check_mark: The Backplane project will always remain open source, always and forever!
-
-## Thank you :heart:
-
-The Backplane Project is made possible from sponsorship and the platform engineering community that actively maintains Backplane Core. :sunglasses:
-
-Backplane Software's SaaS and enterprise extensions also help to keep Backplane Cloud Abstraction API open source.

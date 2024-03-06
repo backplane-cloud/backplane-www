@@ -75,7 +75,7 @@ const config = {
         },
         items: [
           { to: "/blog/2024/01/04/about", label: "About", position: "left" },
-          // { to: "/roadmap", label: "Roadmap", position: "left" },
+          { to: "/roadmap", label: "Roadmap", position: "left" },
           // { to: "/showcase", label: "Showcase", position: "left" },
 
           // { to: "/community", label: "Community", position: "left" },
@@ -87,7 +87,7 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/docs/cli", label: "API", position: "left" },
+
           {
             href: "https://github.com/backplane-cloud/backplane-www",
             label: "GitHub",
