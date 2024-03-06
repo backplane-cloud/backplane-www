@@ -229,12 +229,8 @@ const showcase = () => {
         <br />
         <h1>Project Backplane </h1>
         <h2>Cloud Abstraction API</h2>
-        <p>
-          for Platform Engineers, simplifying IDP creation and multi cloud
-          governance
-          <br />
-        </p>
-        {/* <img src={oscaa} style={{ width: "100px" }} /> */}
+        simplifying IDP creation and multi cloud governance for Platform
+        Engineers
         <div className={styles.cta}>
           <div>
             <Link
