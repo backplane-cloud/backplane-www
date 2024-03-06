@@ -93,6 +93,11 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            href: "https://backplaneworkspace.slack.com",
+            label: "Slack",
+            position: "right",
+          },
         ],
       },
       footer: {
@@ -113,6 +118,10 @@ const config = {
               {
                 label: "LinkedIn",
                 href: "https://www.linkedin.com/company/backplane-software",
+              },
+              {
+                label: "Slack",
+                href: "https://backplaneworkspace.slack.com",
               },
             ],
           },
