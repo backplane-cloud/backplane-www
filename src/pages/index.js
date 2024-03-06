@@ -227,7 +227,7 @@ const showcase = () => {
           className="logo"
         />
         <br />
-        <h1>Backplane </h1>
+        <h1>Project Backplane </h1>
         <h2>Cloud Abstraction API</h2>
         <p>
           for Platform Engineers, simplifying IDP creation and multi cloud
@@ -353,13 +353,11 @@ const showcase = () => {
             Give it a try!
           </Link>
         </div>
-      </div>
-      <div className={styles.container}>
+
         <h2>
           <strike>Cool</strike>, Core Features{" "}
         </h2>
-      </div>
-      <div className={styles.container2}>
+
         <div className={styles.featureContainer}>
           {FeatureList.map((feature, id) => (
             <ShowcaseFeature

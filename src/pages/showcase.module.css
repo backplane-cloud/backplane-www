@@ -110,7 +110,7 @@
 .container h2 {
   font-family: Poppins, sans-serif;
   font-size: 2rem;
-  color: #2a7fff;
+  color: black;
 }
 .container h3 {
   font-family: Poppins, sans-serif;
@@ -121,7 +121,7 @@
 .container h4 {
   font-family: Poppins, sans-serif;
   font-size: 1.4rem;
-  color: 393A3D;
+  color: #2a7fff;
   /* font-weight: normal; */
 }
 
@@ -135,7 +135,7 @@
   color: #fff;
 }
 
-[data-theme="dark"] .container h4 {
+[data-theme="dark"] .container h2 {
   color: #fff;
 }
 

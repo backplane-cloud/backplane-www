@@ -68,7 +68,7 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: "Project Backplane",
+        title: "Backplane",
         logo: {
           alt: "Backplane Logo",
           src: "img/backplane-logo-blue.svg",
