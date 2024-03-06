@@ -71,7 +71,7 @@ const config = {
         title: "Project Backplane",
         logo: {
           alt: "Backplane Logo",
-          src: "img/logo.svg",
+          src: "img/backplane-logo-blue.svg",
         },
         items: [
           { to: "/blog/2024/01/04/about", label: "About", position: "left" },
