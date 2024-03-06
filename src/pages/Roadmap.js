@@ -62,7 +62,7 @@ const Roadmap = () => {
           <div className={styles.outer}>
             <div className={styles.card}>
               <div className={styles.info}>
-                <h3 className={styles.title}>Present</h3>
+                <h3 className={styles.title}>Next</h3>
                 <h4>Entering Seed Funding Rounds with VCs</h4>
                 <p>
                   Seeking Seed Capital to developed Backplane.Cloud as a
