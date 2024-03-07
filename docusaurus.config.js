@@ -76,6 +76,7 @@ const config = {
         items: [
           { to: "/blog/2024/01/04/about", label: "About", position: "left" },
           { to: "/roadmap", label: "Roadmap", position: "left" },
+          // { to: "/investors", label: "Investors", position: "left" },
           // { to: "/showcase", label: "Showcase", position: "left" },
 
           // { to: "/community", label: "Community", position: "left" },
@@ -139,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Backplane Software Ltd. Built with Docusaurus`,
+        copyright: `Copyright © ${new Date().getFullYear()} Backplane Software Ltd. `,
       },
       prism: {
         theme: prismThemes.github,

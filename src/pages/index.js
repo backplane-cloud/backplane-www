@@ -1,16 +1,15 @@
 import Layout from "@theme/Layout";
-import styles from "./showcase.module.css";
+import styles from "./index.module.css";
 import Link from "@docusaurus/Link";
+import ThemedImage from "@theme/ThemedImage";
 import diagram from "@site/docs/backplane-intro.png";
 
-// import BackplaneSvg from "./backplane-logo.svg";
-import ThemedImage from "@theme/ThemedImage";
+// import clsx from "clsx";
+// import Heading from "@theme/Heading";
 
-import clsx from "clsx";
-import Heading from "@theme/Heading";
-// import styles from "./styles.module.css";
+// Component for Feature Tiles
 
-const ShowcaseFeature = ({ title, description, id, Svg }) => {
+const Feature = ({ title, description, id, Svg }) => {
   return (
     <>
       <div key={id} className={styles.featureCard}>
@@ -18,8 +17,8 @@ const ShowcaseFeature = ({ title, description, id, Svg }) => {
           <Svg
             className={styles.featureSvg}
             style={{
-              width: "50px",
-              height: "50px",
+              width: "35px",
+              height: "35px",
               padding: "0px",
               // background: "blue",
               // color: "#2a7fff",
@@ -33,18 +32,8 @@ const ShowcaseFeature = ({ title, description, id, Svg }) => {
     </>
   );
 };
-const EnterpriseFeature = ({ title, description, id }) => {
-  return (
-    <>
-      <div key={id} className={styles.featureCardEnterprise}>
-        <div className={styles.titleEnterprise}>{title}</div>
-        <div className={styles.descriptionEnterprise}>{description}</div>
-      </div>
-    </>
-  );
-};
 
-const showcase = () => {
+const mainPage = () => {
   // const EnterpriseFeatureList = [
   //   {
   //     title: "Transformation Manager",
@@ -223,9 +212,8 @@ const showcase = () => {
   return (
     <Layout>
       {/* Hero  */}
+
       <div className={styles.container}>
-        {/* <BackplaneSvg className="themedBackplaneLogo" />; */}
-        {/* <img src={logob} style={{ marginTop: "50px", width: "100px" }} /> */}
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -235,9 +223,9 @@ const showcase = () => {
           className="logo"
         />
         <br />
-        <h1>Project Backplane </h1>
-        <h2>Cloud Abstraction API</h2>
-        Simplifying IDP creation for Platform Engineers
+        <h1>Backplane</h1>
+        <h2>Cloud Abstraction API project</h2>
+        <h5>Simplifying IDP creation for Platform Engineers</h5>
         <div className={styles.cta}>
           <div>
             <Link
@@ -258,32 +246,34 @@ const showcase = () => {
         </div>
         <hr />
       </div>
+
+      {/* End Hero */}
+
       <div className={styles.container}>
         <h2>How it works </h2>
-        {/* <h3>A single API to govern and manage many clouds.</h3> */}
-        {/* <p>
+        <h5>A single API to govern and manage many clouds.</h5>
+        <p>
           Are you building an Internal Developer Platform and your Developers
           are spending time writing integration code to provision environments ?
           Backplane’s Open Cloud Abstraction API does the hard work for you, all
           you have to do is integrate with Backplane's single API, saving
           precious developer time.
-        </p> */}
+        </p>
         <p>
-          You simply register your Organisation and add your Cloud Provider
-          credentials, and then either directly through the <code>CLI</code> or
-          through <code>REST API</code>, make requests to create{" "}
+          By simply registering your Organisation, adding your Cloud Provider
+          credentials and then either directly through the <code>CLI</code> or{" "}
+          <code>REST API</code>, make requests to create
           <code>Cloud Environments</code>, retrieve <code>Cost</code>,{" "}
           <code>Access</code> or <code>Policy</code> data for those
           environments. Backplane follows an Organisation, Platform, Product and
           App schema hierarchy.
         </p>
-
-        <img src={diagram} style={{ marginTop: "50px" }} />
-
+        <br />
+        <h5>Reference Architecture</h5>
+        <img src={diagram} />
         <div style={{ marginTop: "50px", textAlign: "left" }}>
           <h2>Why Backplane ? </h2>
         </div>
-
         <div style={{ marginTop: "50px", textAlign: "left" }}>
           <h4>Simplify building your IDP MVP</h4>
           <p>
@@ -294,7 +284,6 @@ const showcase = () => {
             the IDP MVP.
           </p>
         </div>
-
         <div style={{ marginTop: "50px", textAlign: "left" }}>
           <h4>Multicloud Governance</h4>
           <p>
@@ -306,7 +295,6 @@ const showcase = () => {
             Backplane's CLI.{" "}
           </p>
         </div>
-
         <div style={{ marginTop: "50px", textAlign: "left" }}>
           <h4>
             For Enterprise Architects, Platform Engineers and FinOps teams!
@@ -320,12 +308,12 @@ const showcase = () => {
             to measure value in your cloud workloads.{" "}
           </p>
         </div>
-
         <div style={{ marginTop: "50px", textAlign: "left" }}>
           <h2>Enterprise-scale</h2>
         </div>
         <div style={{ marginTop: "50px", textAlign: "left" }}>
           <h4>Work your way</h4>
+
           <p>
             Simply add your <code>Cloud Provider</code> to your Organisation to
             enable self-service Cloud 'Space' provisioning. By{" "}
@@ -335,7 +323,6 @@ const showcase = () => {
             creation.
           </p>
         </div>
-
         <div style={{ marginTop: "50px", textAlign: "left" }}>
           {/* <h4>Govern multiple clouds at ease!</h4>
            */}
@@ -347,7 +334,6 @@ const showcase = () => {
             Product Owners and Developers alike.
           </p>
         </div>
-
         <div>
           <Link
             className={`button button--secondary button--lg ${styles.blue}`}
@@ -356,14 +342,11 @@ const showcase = () => {
             Give it a try!
           </Link>
         </div>
-
-        <h2>
-          <strike>Cool</strike>, Core Features{" "}
-        </h2>
-
+        <br />
+        <h2>Features</h2>
         <div className={styles.featureContainer}>
           {FeatureList.map((feature, id) => (
-            <ShowcaseFeature
+            <Feature
               key={id}
               title={feature.title}
               description={feature.description}
@@ -385,65 +368,16 @@ const showcase = () => {
 
       <div className={styles.container}>
         <h2>Open Source, always & forever!</h2>
-        {/* <p>
-          The Backplane Project promises that <strong>Backplane Core</strong>{" "}
-          which comprises of the API, CLI and soon to be released UI, will
-          always and forever be <strong>Open Source</strong>.
-        </p> */}
-        {/* <p>
-          The Backplane Open Source team welcome all contributions from the
-          community to enhance Backplane Core. Please view the{" "}
-          <a href="">Product Roadmap</a> for release timeframes, and their{" "}
-          <a href="">Product Backlog</a> to vote for Feature prioritisation or
-          report bugs!
-        </p> */}
 
-        {/* <p>
-          If you are an organisation that benefits from Backplane Open Cloud
-          Abstraction API and would like to support its development and guide
-          the future development of features, we have sponsorship benefits
-          available for you and welcome your support!
-        </p> */}
-
-        <div className={styles.container}>
-          <Link
-            className={`button button button--lg ${styles.yellow}`}
-            to="/docs/sponsorship"
-          >
-            Become a Sponsor
-          </Link>
-        </div>
-        {/* <h3>
-          Backplane Software offers a hosted-version of Backplane called
-          Backplane Cloud. This SaaS offering provides the benefits of a
-          hosted-solution for a subscription. In addition, Marketplace
-          Extensions for enterprise customers will be available under license.
-        </h3> */}
+        <Link
+          className={`button button button--lg ${styles.yellow}`}
+          to="/docs/sponsorship"
+        >
+          Become a Sponsor
+        </Link>
       </div>
-
-      {/* <div className={styles.container}>
-        <h2>Extensions</h2>
-        <p>
-          Develop your own custom Marketplace Extensions and make them either
-          freely available to the community or under license.
-        </p>
-      </div>
-
-      <div>
-        <div className={styles.featureContainer}>
-          {EnterpriseFeatureList.map((feature, id) => (
-            <EnterpriseFeature
-              key={id}
-              title={feature.title}
-              description={feature.description}
-              svg={feature.Svg}
-              style={styles.featureCardRoadmap}
-            />
-          ))}
-        </div>
-      </div> */}
     </Layout>
   );
 };
 
-export default showcase;
+export default mainPage;
