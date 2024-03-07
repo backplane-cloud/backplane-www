@@ -208,6 +208,16 @@ const showcase = () => {
         </>
       ),
     },
+    {
+      title: "Budgeting",
+      Svg: require("@site/static/img/budget.svg").default,
+      description: (
+        <>
+          Create an Organisation-level budget with budget request workflow for
+          Platform and Products.
+        </>
+      ),
+    },
   ];
 
   return (

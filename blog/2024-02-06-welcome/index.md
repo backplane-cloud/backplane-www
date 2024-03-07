@@ -1,11 +1,12 @@
 ---
-slug: welcome
-title: Announcing the release of Backplane
-authors: [lsheridan]
-tags: [backplane]
-hide_table_of_contents: false
+# slug: welcome
+# title: Launch
+# authors: [lsheridan]
+# tags: [backplane]
+# hide_table_of_contents: false
 ---
 
+<!--
 Introducing Project Backplane – Your API to seamless Cloud Management!
 
 We're excited to present Project Backplane, an Open Source Cloud Abstraction API designed to simplify the management of multi-cloud environments. No more navigating the complexities of different cloud platforms; now, you can handle it all through one user-friendly API.
