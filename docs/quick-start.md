@@ -16,14 +16,14 @@ Backplane comprises of an API, CLI
 CLI download links:
 <Tabs>
 <TabItem value="Mac OS" label="Mac OS" default>
-[backplane-cli-macos](/cli/backplane-cli-macos)
+[backplane-cli-macos.zip](/cli/backplane-cli-macos.zip)
 </TabItem>
 
   <TabItem value="Windows" label="Windows">
-        [backplane-cli-win.exe](/cli/backplane-cli-win.exe) 
+        [backplane-cli-win.exe.zip](/cli/backplane-cli-win.exe.zip) 
   </TabItem>
   <TabItem value="Linux" label="Linux">
-        [backplane-cli-linux](/cli/backplane-cli-linux) 
+        [backplane-cli-linux.zip](/cli/backplane-cli-linux.zip) 
   </TabItem>
 </Tabs>
 
