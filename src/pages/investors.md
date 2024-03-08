@@ -1,18 +1,18 @@
 ---
-title: Markdown page example
+title: Investor Fact Sheet
 ---
 
 # Investor Fact Sheet
 
 ## Mission
 
-Build a best-in-class SaaS cloud engineering platform to accelerate cloud native transformations for all businesses.
+Build the best-in-class SaaS cloud engineering platform to accelerate cloud native transformations for businesses worldwide.
 
 ## Problems
 
-- Cloud Cost Shock! - Enterprises are struggling to articulate and obtain value from public cloud platforms
+- Cloud Cost - Enterprises are struggling to articulate and obtain value from their investment in public cloud platforms.
 
-  - No cost budget controls, enforcement at enterprise scale.
+  - Little to no cost budget controls and enforcement at enterprise scale.
 
   - A culture of cost accountability and ownership is alien to engineering teams.
 

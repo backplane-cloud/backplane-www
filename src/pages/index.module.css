@@ -98,6 +98,13 @@
   background: #23262a;
 }
 
+[data-theme="dark"] .container h5 {
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: normal;
+}
+
 [data-theme="dark"] .container p {
   color: #fff;
 }
