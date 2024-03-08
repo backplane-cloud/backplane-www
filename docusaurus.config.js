@@ -90,6 +90,11 @@ const config = {
           },
 
           {
+            href: "https://api.backplane.dev/openapi/",
+            label: "API",
+            position: "right",
+          },
+          {
             href: "https://github.com/backplane-cloud/backplane-www",
             label: "GitHub",
             position: "right",
