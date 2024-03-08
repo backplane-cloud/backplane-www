@@ -13,17 +13,30 @@ Backplane comprises of an API, CLI
 
 ### Download CLI
 
-To begin, download the [Backplane CLI](/download)
+CLI download links:
+<Tabs>
+<TabItem value="Mac OS" label="Mac OS" default>
+[backplane-cli-macos](/cli/backplane-cli-macos)
+</TabItem>
+
+  <TabItem value="Windows" label="Windows">
+        [backplane-cli-win.exe](/cli/backplane-cli-win.exe) 
+  </TabItem>
+  <TabItem value="Linux" label="Linux">
+        [backplane-cli-linux](/cli/backplane-cli-linux) 
+  </TabItem>
+</Tabs>
+
+## Start Using Backplane
 
 <Tabs>
-  <TabItem value="self-host" label="Self Hosted" default>
+  <TabItem value="host" label="Hosted" default>
+</TabItem>
+  <TabItem value="self-host" label="Self Hosted" >
     Go to [Backplane API Repo](https://github.com/backplane-cloud/backplane-api) Github Repo and clone locally the Backplane API. 
     `npm run start`
   </TabItem>
 
-  <TabItem value="host" label="Hosted">
-    
-  </TabItem>
 </Tabs>
 
 ### Create your first User and Organisation

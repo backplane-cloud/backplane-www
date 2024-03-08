@@ -238,7 +238,7 @@ const mainPage = () => {
           <div>
             <Link
               className={`button button--secondary button--lg ${styles.blue}`}
-              to="/docs/quick-start"
+              to="/docs/cli"
             >
               Download CLI
             </Link>
