@@ -207,10 +207,10 @@ const mainPage = () => {
         <h2>Open Cloud Abstraction API</h2>
 
         <p>
-          Backplane Open Cloud Abstraction API is free-to-use software built by
-          platform engineers at Backplane Software for simplifying enterprise
-          governance of multi-cloud environments, with the concerns of cloud
-          Cost, Access, Resource controls and Environment creation all available
+          Backplane's Open Cloud Abstraction API is free-to-use software built
+          by platform engineers @ Backplane Software for simplifying
+          enterprise-scale multi-cloud governance. The concerns of cloud Cost,
+          Access, Resource controls and Environment creation all available
           through a single API.
           {/* creation. Enabling Enterprise Architects, DevOps and Platform
           Engineers to govern multi-cloud platforms at enterprise-scale. */}
