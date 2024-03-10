@@ -156,14 +156,16 @@ const mainPage = () => {
 
       <div className={styles.container}>
         <h2>Introducing Backplane</h2>
-        With a single Cloud Abstraction API, querying cloud Cost, Access,
-        Resource controls and Environment data becomes simpler through
-        abstraction, presenting a more regular and consistent data-shape.
+        <p>
+          With a single Cloud Abstraction API, querying cloud Cost, Access,
+          Resource controls and Environment data becomes simpler through
+          abstraction, presenting a more regular and consistent data-shape.
+        </p>
         <br />
         <br />
-        <h4>Multi-Cloud Governance with Backplane</h4>
+        <h5>Cloud Abstraction API</h5>
         <img src={regular} style={{ padding: "20px", width: "600px" }} />
-        <h2>Benefits</h2>
+        <h4>Benefits</h4>
         <ul style={{ textAlign: "left" }}>
           <li>
             <b>Simplicity</b> - The API transforms the data into a regular and
