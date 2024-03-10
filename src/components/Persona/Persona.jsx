@@ -28,8 +28,7 @@ const Persona = ({ id, role, avatar, problem, text, solution }) => {
           </div>
           <div>{solution}</div>
         </div>
-      </div>{" "}
-      <hr />
+      </div>
     </>
   );
 };
