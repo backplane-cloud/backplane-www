@@ -302,11 +302,11 @@ const mainPage = () => {
               across multiple cloud platforms.
             </li>
           </ol>
-          A multicloud landscape add complexity with each cloud platform having
-          their own specific way of dealing with Cost, Access, Resource controls
-          and Environment provisioning. Consuming tools and/or systems will need
-          to integrate with each Cloud Platform's API and process the data to
-          transform it into a suitable format.
+          A multi-cloud landscape adds complexity with each cloud platform
+          having their own specific way of handling Cost, Access, Resource
+          controls and Environment provisioning. Consuming tools and/or systems
+          will need to integrate with each Cloud Platform's API and process the
+          data to transform it into a suitable format.
         </p>
         <p>
           <br />
@@ -323,15 +323,15 @@ const mainPage = () => {
               API’s more brittle.
             </li>
             <li>
-              <b>Increased Effort</b> - More complicated integration effort
-              required from developers
+              <b>Increased Effort</b> - Multi integration points adds complexity
+              and effort.
             </li>
           </ul>
           <br />
           <h2>Introducing the Cloud Abstraction API</h2>
           With a single Cloud Abstraction API, querying cloud Cost, Access,
-          Resource controls and Environment data becomes simpler with an
-          abstracted and more uniform data-shape.
+          Resource controls and Environment data becomes simpler through
+          abstraction, presenting a more regular and consistent data-shape.
           <br />
           <br />
           <h4>Multi-Cloud Governance with Backplane</h4>
@@ -344,12 +344,13 @@ const mainPage = () => {
             </li>
             <li>
               <b>Decoupled</b> - Loose coupling makes for a more flexible and
-              scalable consumer, rather than a brittle one
+              scalable consumer, rather than a brittle one.
             </li>
             <li>
               <b>Less Effort</b> - Less developer effort required from an
-              integration perspective. Multi cloud governance becomes easier to
-              retrieve and simpler to reason about in multi-cloud landscapes.
+              integration perspective. Multi-cloud governance becomes easier to
+              retrieve data and simpler to reason about across the cloud
+              platforms.
             </li>
           </ul>
         </p>
