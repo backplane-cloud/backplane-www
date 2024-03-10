@@ -239,6 +239,32 @@ const mainPage = () => {
       {/* End Hero */}
 
       <div className={styles.container}>
+        <h2>Introducing Backplane</h2>
+        With a single Cloud Abstraction API, querying cloud Cost, Access,
+        Resource controls and Environment data becomes simpler through
+        abstraction, presenting a more regular and consistent data-shape.
+        <br />
+        <br />
+        <h4>Multi-Cloud Governance with Backplane</h4>
+        <img src={regular} style={{ padding: "20px", width: "600px" }} />
+        <h2>Benefits</h2>
+        <ul style={{ textAlign: "left" }}>
+          <li>
+            <b>Simplicity</b> - The API transforms the data into a regular and
+            consistent data-shape making consumption simpler.
+          </li>
+          <li>
+            <b>Decoupled</b> - Loose coupling makes for a more flexible and
+            scalable consumer, rather than a brittle one.
+          </li>
+          <li>
+            <b>Less Effort</b> - Less developer effort required from an
+            integration perspective. Multi-cloud governance becomes easier to
+            retrieve data and simpler to reason about across the cloud
+            platforms.
+          </li>
+        </ul>{" "}
+        <br />
         <h2>Use Cases</h2>
         <br />
         <p>
@@ -246,7 +272,6 @@ const mainPage = () => {
           enterprise use-cases to form the governance foundation to your cloud
           transformation. Some scenarios include:
         </p>
-
         <br />
         <h4>Developing an Internal Developer Portal</h4>
         <p>
@@ -336,31 +361,6 @@ const mainPage = () => {
             </li>
           </ul>
           <br />
-          <h2>Introducing Backplane</h2>
-          With a single Cloud Abstraction API, querying cloud Cost, Access,
-          Resource controls and Environment data becomes simpler through
-          abstraction, presenting a more regular and consistent data-shape.
-          <br />
-          <br />
-          <h4>Multi-Cloud Governance with Backplane</h4>
-          <img src={regular} style={{ padding: "20px", width: "600px" }} />
-          <h2>Benefits</h2>
-          <ul style={{ textAlign: "left" }}>
-            <li>
-              <b>Simplicity</b> - The API transforms the data into a regular and
-              consistent data-shape making consumption simpler.
-            </li>
-            <li>
-              <b>Decoupled</b> - Loose coupling makes for a more flexible and
-              scalable consumer, rather than a brittle one.
-            </li>
-            <li>
-              <b>Less Effort</b> - Less developer effort required from an
-              integration perspective. Multi-cloud governance becomes easier to
-              retrieve data and simpler to reason about across the cloud
-              platforms.
-            </li>
-          </ul>
         </p>
         <br />
         {/* <h4>Reference Architecture</h4>
