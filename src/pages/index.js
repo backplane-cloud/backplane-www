@@ -354,6 +354,11 @@ const mainPage = () => {
             </li>
           </ul>
         </p>
+
+        <br />
+        <h4>Reference Architecture</h4>
+        <img src={diagram} />
+
         {/* <p>
           By simply registering your Organisation, adding your Cloud Provider
           credentials and then either directly through the <code>CLI</code> or{" "}
