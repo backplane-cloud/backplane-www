@@ -204,12 +204,14 @@ const mainPage = () => {
         />
         <br />
         {/* <h1>Backplane</h1> */}
-        <h2>Multi-Cloud Abstraction API</h2>
+        <h2>Open Cloud Abstraction API</h2>
 
         <p>
-          Simplifying governance of multi-cloud environments, with the concerns
-          of cloud Cost, Access, Resource controls and Environment creation all
-          available through a single API.
+          Backplane Open Cloud Abstraction API is free-to-use software built by
+          platform engineers at Backplane Software for simplifying enterprise
+          governance of multi-cloud environments, with the concerns of cloud
+          Cost, Access, Resource controls and Environment creation all available
+          through a single API.
           {/* creation. Enabling Enterprise Architects, DevOps and Platform
           Engineers to govern multi-cloud platforms at enterprise-scale. */}
         </p>
@@ -239,7 +241,7 @@ const mainPage = () => {
       <div className={styles.container}>
         <h2>Use Cases</h2>
         <br />
-        <p style={{ textAlign: "justify" }}>
+        <p>
           Backplane's Cloud Abstraction API is versatile to support a number of
           enterprise use-cases to form the governance foundation to your cloud
           transformation. Some scenarios include:
@@ -247,20 +249,20 @@ const mainPage = () => {
 
         <br />
         <h4>Developing an Internal Developer Portal</h4>
-        <p style={{ textAlign: "justify" }}>
+        <p>
           With a single integration point for multi-cloud environment
           provisioning, platform engineering teams can speed up the development
           of the organisations IDP .
         </p>
         <h4>Providing Governance-as-a-Service data feed</h4>
-        <p style={{ textAlign: "justify" }}>
+        <p>
           Backplane provides a multi-cloud governance data feed that can be used
           to enrich downstream systems to provide transparency on Cost, Access,
           Resource controls and Environments across your cloud workloads. This
           helps Cloud Governance, Identity and Enterprise Architects.
         </p>
         <h4>Cloud Budget Management</h4>
-        <p style={{ textAlign: "justify" }}>
+        <p>
           With Backplane Workflow Engine and Budget management, you can assign
           Budgets at the Platform and Product levels and have approval workflow.
           Helping Organisation, Platform and Product Owners have full
@@ -269,7 +271,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Multi-Cloud Governance</h2>
+        <h2>Why an Abstraction API ?</h2>
         <p style={{ textAlign: "justify" }}>
           As enterprises journey towards cloud-native architectures, they are
           increasingly finding themselves with a multi-cloud environment they
@@ -334,7 +336,7 @@ const mainPage = () => {
             </li>
           </ul>
           <br />
-          <h2>Cloud Abstraction API</h2>
+          <h2>Introducing Backplane</h2>
           With a single Cloud Abstraction API, querying cloud Cost, Access,
           Resource controls and Environment data becomes simpler through
           abstraction, presenting a more regular and consistent data-shape.
@@ -442,11 +444,11 @@ const mainPage = () => {
             className={`button button--secondary button--lg ${styles.blue}`}
             to="/docs/quick-start"
           >
-            Give it a try!
+            Try it out!
           </Link>
         </div>
         <br />
-        <h2>Features</h2>
+        <h2>Features at-a-glance</h2>
         <div className={styles.featureContainer}>
           {FeatureList.map((feature, id) => (
             <Feature
