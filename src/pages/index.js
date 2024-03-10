@@ -357,7 +357,7 @@ const mainPage = () => {
 
         <br />
         <h4>Reference Architecture</h4>
-        <img src={diagram} />
+        <img src={multicloud_diagram} />
 
         {/* <p>
           By simply registering your Organisation, adding your Cloud Provider
