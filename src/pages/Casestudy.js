@@ -134,27 +134,28 @@ const Casestudy = () => {
             </li>
             <br />
             <li>
-              <b>Multiple Clouds to Govern, Manage and Operate</b> - In addition
-              towing to newly acquired companies as part of its expansion plans,
-              they have to introduce AWS and AliBaba into their cloud landscape
-              which today is Microsoft Azure. This has introduced signifcant
-              pressure on the existing existing Cloud engineering teams who are
-              expert only in Microsoft Azure. They need to be able to adopt,
+              <b>Multiple Clouds to Govern, Manage and Operate</b> - Owing to
+              expansion plans, GSC have acquired two companies operating with a
+              cloud platform that differs from GSC's primary cloud platform of
+              Azure. This has introduced signifcant pressure on the existing
+              cloud engineering teams to expand their subject matter expertise
+              to these new cloud platforms. They need to be able to adopt,
               enable and govern these platforms quickly in order not to impact
-              the business.
+              integrating the businesses.
             </li>
             <br />
             <li>
-              <b>Soaring Cloud Cost</b> - Leadership have expressed concern with
-              an explosion of cloud spend, lack of budget controls and
-              transformation friction.{" "}
+              <b>Soaring Cloud Cost</b> - Leadership have expressed significant
+              concern with an explosion of cloud spend and lack of budget
+              controls. Emergency cost controls have been product in place and
+              have all but halted transformation efforts.
             </li>
           </ul>
         </p>
 
         <p>
-          Backplane’s Cloud Abstraction API can help get their cloud
-          transformation back on track and costs under control.
+          Backplane’s Cloud Abstraction API has features that can tackle each of
+          these issues.
         </p>
 
         <br />
