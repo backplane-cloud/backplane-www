@@ -125,11 +125,11 @@ const mainPage = () => {
         <h2>Multi-Cloud Abstraction API</h2>
 
         <p>
-          Backplane's Open Source Cloud Abstraction API is free-to-use software
-          built by platform engineers @ Backplane Software for simplifying
-          enterprise-scale multi-cloud governance and development of IDPs. The
-          concerns of cloud Cost, Access, Resource controls and Environment
-          creation are all available through a single API.
+          Is an open source, free-to-use software built by platform engineers @
+          Backplane Software for simplifying multi-cloud governance and
+          development of IDPs. The concerns of cloud Cost, Access, Resource
+          controls and Environment creation are all available through a single
+          API.
         </p>
         <div className={styles.cta}>
           <div>
