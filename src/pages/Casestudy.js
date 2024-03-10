@@ -116,46 +116,48 @@ const Casestudy = () => {
           world-class cloud engineering culture to enable their strategy.
         </p>
 
-        <p>
-          <br /> <h4>Problems</h4>
+        <br />
+        <h4>Problems</h4>
+        <p style={{ textAlign: "left" }}>
           <br />
-          <ul style={{ textAlign: "left" }}>
-            <li>
-              <b>Slow Transformation</b> - Their transformation efforts have
-              stalled, partly owing to unchecked cloud spend but also due to no
-              single organisational alignment across teams, resulting in a lack
-              of consistency in the technology stack being deployed.{" "}
-            </li>
+
+          <p>
+            <b>Slow Transformation</b> <br />
+            GSC's transformation efforts have stalled, partly owing to unchecked
+            cloud spend but also due to no single organisational alignment
+            across teams, resulting in a lack of consistency in the technology
+            stack being deployed.{" "}
+          </p>
+          <p>
+            <b>Architectural Misalignment</b>
             <br />
-            <li>
-              <b>Architectural Misalignment</b> - The technology stack becoming
-              increasingly fragmented as different product teams have chosen
-              different technology stacks for their products.{" "}
-            </li>
-            <br />
-            <li>
-              <b>Multiple Clouds to Govern, Manage and Operate</b> - Owing to
-              expansion plans, GSC have acquired two companies operating with a
-              cloud platform that differs from GSC's primary cloud platform of
-              Azure. This has introduced signifcant pressure on the existing
-              cloud engineering teams to expand their subject matter expertise
-              to these new cloud platforms. They need to be able to adopt,
-              enable and govern these platforms quickly in order not to impact
-              integrating the businesses.
-            </li>
-            <br />
-            <li>
-              <b>Soaring Cloud Cost</b> - Leadership have expressed significant
-              concern with an explosion of cloud spend and lack of budget
-              controls. Emergency cost controls have been product in place and
-              have all but halted transformation efforts.
-            </li>
-          </ul>
+            The technology stack becoming increasingly fragmented as different
+            product teams have chosen different technology stacks for their
+            products.{" "}
+          </p>
+
+          <p>
+            <b>Multiple Clouds to Govern, Manage and Operate</b> <br /> Owing to
+            expansion plans, GSC have acquired two companies operating with a
+            cloud platform that differs from GSC's primary cloud platform of
+            Azure. This has introduced signifcant pressure on the existing cloud
+            engineering teams to expand their subject matter expertise to these
+            new cloud platforms. They need to be able to adopt, enable and
+            govern these platforms quickly in order not to impact integrating
+            the businesses.
+          </p>
+
+          <p>
+            <b>Soaring Cloud Cost</b> <br /> Leadership have expressed
+            significant concern with an explosion of cloud spend and lack of
+            budget controls. Emergency cost controls have been product in place
+            and have all but halted transformation efforts.
+          </p>
         </p>
 
         <p>
-          Backplane’s Cloud Abstraction API has features that can tackle each of
-          these issues.
+          Below is a list of Backplane's Cloud Abstraction API features that can
+          help GSC solve these problems.
         </p>
 
         <br />
