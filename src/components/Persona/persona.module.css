@@ -1,21 +1,49 @@
 .card {
-  width: 50%;
-  height: 200px;
-  background: gray;
-  padding: 10px;
-  border-radius: 20px;
+  width: fill;
+  height: auto;
+  /* background: #efefef; */
+  padding: 20px;
+  /* border-radius: 20px; */
   display: flex;
 }
 
 .cardbody {
   margin-left: 20px;
+  width: fill;
 }
 
-.icon {
+/* .avatar {
   width: 300px;
   padding: 10px;
+} */
+
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .text {
   font-size: 0.9rem;
+  margin-top: 10px;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* .problem {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+} */
+
+.solution,
+.problem {
+  color: blue;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

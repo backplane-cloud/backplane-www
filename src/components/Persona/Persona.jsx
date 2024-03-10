@@ -1,25 +1,35 @@
 import styles from "./persona.module.css";
-import face from "./face.png";
+import cto from "./cto.png";
+import architect from "./architect.png";
+import platformengineer from "./platform-engineer.png";
+import governance from "./governance.png";
 
-const Persona = () => {
+const Persona = ({ id, role, avatar, problem, text, solution }) => {
+  let image = {
+    cto,
+    architect,
+    platformengineer,
+    governance,
+  };
+
   return (
     <>
       <div className={styles.card}>
-        <div className={styles.icon}>
-          <img src={face} />
-        </div>
         <div className={styles.cardbody}>
-          <div>
-            <h3>Cloud Platform Lead</h3>
-          </div>
+          <img src={image[avatar]} />
+          <div className={styles.title}>{role}</div>
+
+          <div className={styles.problem}>{problem}</div>
+
+          <div>{text}</div>
+
           <div className={styles.text}>
-            Transitioning workloads to cloud and transforming ways of working
-            are critical success factors for our Cloud Native strategy. The
-            Backplane platform provides a robust governance, development and
-            transformation tracking platform.
+            <span className={styles.solution}>Backplane feature</span>
           </div>
+          <div>{solution}</div>
         </div>
-      </div>
+      </div>{" "}
+      <hr />
     </>
   );
 };

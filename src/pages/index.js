@@ -203,8 +203,8 @@ const mainPage = () => {
           className="logo"
         />
         <br />
-        <h1>Backplane</h1>
-        <h2>Multi Cloud Abstraction API</h2>
+        {/* <h1>Backplane</h1> */}
+        <h2>Multi-Cloud Abstraction API</h2>
 
         <p>
           Simplifying governance of multi-cloud environments, with the concerns
@@ -237,54 +237,83 @@ const mainPage = () => {
       {/* End Hero */}
 
       <div className={styles.container}>
-        <h2>Multi-cloud governance is challenging</h2>
-        <p>
-          Enterprises are increasingly finding themselves within a multi-cloud
-          landscape, typically the result of the following scenarios:
+        <h2>Use Cases</h2>
+        <br />
+        <p style={{ textAlign: "justify" }}>
+          Backplane's Cloud Abstraction API is versatile to support a number of
+          enterprise use-cases to form the governance foundation to your cloud
+          transformation. Some scenarios include:
         </p>
-        {/* <img
-          src={multicloud_diagram}
-          style={{ padding: "20px", width: "600px" }}
-        /> */}
+
+        <br />
+        <h4>Developing an Internal Developer Portal</h4>
+        <p style={{ textAlign: "justify" }}>
+          With a single integration point for multi-cloud environment
+          provisioning, platform engineering teams can speed up the development
+          of the organisations IDP .
+        </p>
+        <h4>Providing Governance-as-a-Service data feed</h4>
+        <p style={{ textAlign: "justify" }}>
+          Backplane provides a multi-cloud governance data feed that can be used
+          to enrich downstream systems to provide transparency on Cost, Access,
+          Resource controls and Environments across your cloud workloads. This
+          helps Cloud Governance, Identity and Enterprise Architects.
+        </p>
+        <h4>Cloud Budget Management</h4>
+        <p style={{ textAlign: "justify" }}>
+          With Backplane Workflow Engine and Budget management, you can assign
+          Budgets at the Platform and Product levels and have approval workflow.
+          Helping Organisation, Platform and Product Owners have full
+          cost-visibility and accountability of cloud spend.
+        </p>
+      </div>
+
+      <div className={styles.container}>
+        <h2>Multi-Cloud Governance</h2>
+        <p style={{ textAlign: "justify" }}>
+          As enterprises journey towards cloud-native architectures, they are
+          increasingly finding themselves with a multi-cloud environment they
+          need to govern. Below are some examples of why enterprises are
+          adopting multi-cloud:
+        </p>
+
+        <p style={{ textAlign: "left" }}>
+          <p>
+            <h5>Feature Availability</h5>
+            An organisation may wish to use a certain Cloud Platform for their
+            differentiating features from their current Cloud Platform. For
+            example, Oracle may provide more attractive licensing for database
+            workloads running on IaaS.
+          </p>
+          <p>
+            <h5>Avoiding vendor Lock-in</h5>
+            The need to de-risk dependency upon a single Cloud Platform and
+            avoid vendor lock-in. Vendor lock-in can adversely affect
+            contractual and commercial negotiations upon renewal as well as
+            constraining technical capabilities and services.
+          </p>
+
+          <p>
+            <h5>Mergers & Acquisitions</h5>
+            Through business activities of mergers and acquisitions - an
+            acquired business may have workloads in Ali Baba or Oracle. This
+            presents significant challenges to Enterprise Architects and Cloud
+            Governance teams, since each cloud platform will have its own
+            governance implementation pertaining to cost, access, resource
+            controls and environment creation. This leads to complexity scaling
+            governance and also reasoning about governance concerns across
+            multiple cloud platforms.
+          </p>
+        </p>
+
         <p>
-          <ol style={{ textAlign: "left" }}>
-            <li>
-              <b>Feature Availability</b>
-              <br />
-              An organisation may wish to use a certain Cloud Platform for their
-              differentiating features from their current Cloud Platform. For
-              example, Oracle may provide more attractive licensing for database
-              workloads running on IaaS.
-            </li>
-            <br />
-            <li>
-              <b>Avoid Vendor Lock-in</b>
-              <br />
-              The need to de-risk dependency upon a single Cloud Platform and
-              avoid vendor lock-in. Vendor lock-in can adversely affect
-              contractual and commercial negotiations upon renewal as well as
-              constraining technical capabilities and services.
-            </li>
-            <br />
-            <li>
-              <b>Mergers & Acquisitions</b>
-              <br />
-              Through business activities of mergers and acquisitions - an
-              acquired business may have workloads in Ali Baba or Oracle. This
-              presents significant challenges to Enterprise Architects and Cloud
-              Governance teams, since each cloud platform will have its own
-              governance implementation pertaining to cost, access, resource
-              controls and environment creation. This leads to complexity
-              scaling governance and also reasoning about governance concerns
-              across multiple cloud platforms.
-            </li>
-          </ol>
           A multi-cloud landscape adds complexity with each cloud platform
           having their own specific way of handling Cost, Access, Resource
           controls and Environment provisioning. Consuming tools and/or systems
           will need to integrate with each Cloud Platform's API and process the
           data to transform it into a suitable format.
         </p>
+
         <p>
           <br />
           <h4>Multi-Cloud Governance today</h4>
@@ -305,7 +334,7 @@ const mainPage = () => {
             </li>
           </ul>
           <br />
-          <h2>Introducing the Cloud Abstraction API</h2>
+          <h2>Cloud Abstraction API</h2>
           With a single Cloud Abstraction API, querying cloud Cost, Access,
           Resource controls and Environment data becomes simpler through
           abstraction, presenting a more regular and consistent data-shape.
@@ -331,11 +360,9 @@ const mainPage = () => {
             </li>
           </ul>
         </p>
-
         <br />
-        <h4>Reference Architecture</h4>
-        <img src={multicloud_diagram} />
-
+        {/* <h4>Reference Architecture</h4>
+        <img src={multicloud_diagram} /> */}
         {/* <p>
           By simply registering your Organisation, adding your Cloud Provider
           credentials and then either directly through the <code>CLI</code> or{" "}

@@ -76,6 +76,8 @@ const config = {
         items: [
           { to: "/blog/2024/01/04/about", label: "About", position: "left" },
           { to: "/roadmap", label: "Roadmap", position: "left" },
+
+          { to: "/howitworks", label: "How it works", position: "left" },
           { to: "/casestudy", label: "Case Study", position: "left" },
           // { to: "/investors", label: "Investors", position: "left" },
           // { to: "/showcase", label: "Showcase", position: "left" },
