@@ -260,13 +260,7 @@ const mainPage = () => {
       {/* End Hero */}
 
       <div className={styles.container}>
-        {/* <h2>The problem</h2> */}
-        {/* <p>
-          Backplane operates in the problem domain of multi-cloud governance
-          with its focus on how to govern Cost, Access, Resource controls and
-          Environment Creation across multiple cloud platforms and at
-          enterprise-scale.
-        </p> */}{" "}
+        <h2>Multi cloud governance is challenging</h2>
         <p>
           Enterprises are increasingly finding themselves within a multi-cloud
           landscape, typically the result of the following scenarios:
@@ -308,12 +302,11 @@ const mainPage = () => {
               across multiple cloud platforms.
             </li>
           </ol>
-          <h2>Multi cloud governance is challenging</h2>A multicloud landscape
-          add complexity with each cloud platform having their own specific way
-          of dealing with Cost, Access, Resource controls and Environment
-          provisioning. Consuming tools and/or systems will need to integrate
-          with each Cloud Platform's API and process the data to transform it
-          into a suitable format.
+          A multicloud landscape add complexity with each cloud platform having
+          their own specific way of dealing with Cost, Access, Resource controls
+          and Environment provisioning. Consuming tools and/or systems will need
+          to integrate with each Cloud Platform's API and process the data to
+          transform it into a suitable format.
         </p>
         <p>
           <br />
