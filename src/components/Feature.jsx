@@ -1,16 +1,24 @@
 import styles from "./feature.module.css";
-import oscaa from "@site/src/components/oscaa.png";
 
-const Feature = ({ title, svg, description }) => {
+const Feature = ({ title, description, id, Svg }) => {
   return (
     <>
-      <div className={styles.featurecard}>
+      <div key={id} className={styles.featureCard}>
         <div>
-          d{oscaa}d dd
-          <img src={oscaa} />
-          <h1>{title}</h1>
-          <p>{description}</p>ddd
+          <Svg
+            className={styles.featureSvg}
+            style={{
+              width: "35px",
+              height: "35px",
+              padding: "0px",
+              // background: "blue",
+              // color: "#2a7fff",
+            }}
+          />
         </div>
+
+        <div className={styles.title}>{title}</div>
+        <div className={styles.description}>{description}</div>
       </div>
     </>
   );

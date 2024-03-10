@@ -6,35 +6,12 @@ import diagram from "@site/docs/backplane-intro.png";
 import multicloud_diagram from "@site/docs/multicloud-diagram.png";
 import irregular from "@site/docs/irregular.png";
 import regular from "@site/docs/regular.png";
+import Feature from "@site/src/components/Feature";
 
 // import clsx from "clsx";
 // import Heading from "@theme/Heading";
 
 // Component for Feature Tiles
-
-const Feature = ({ title, description, id, Svg }) => {
-  return (
-    <>
-      <div key={id} className={styles.featureCard}>
-        <div>
-          <Svg
-            className={styles.featureSvg}
-            style={{
-              width: "35px",
-              height: "35px",
-              padding: "0px",
-              // background: "blue",
-              // color: "#2a7fff",
-            }}
-          />
-        </div>
-
-        <div className={styles.title}>{title}</div>
-        <div className={styles.description}>{description}</div>
-      </div>
-    </>
-  );
-};
 
 const mainPage = () => {
   // const EnterpriseFeatureList = [
@@ -433,7 +410,7 @@ const mainPage = () => {
             Product Owners and Developers alike.
           </p>
         </div> */}
-        <div>
+        <div style={{ marginTop: "20px" }}>
           <Link
             className={`button button--secondary button--lg ${styles.blue}`}
             to="/docs/quick-start"
@@ -450,7 +427,6 @@ const mainPage = () => {
               title={feature.title}
               description={feature.description}
               Svg={feature.Svg}
-              style={styles.featureCard}
             />
           ))}
         </div>
