@@ -204,7 +204,7 @@ const mainPage = () => {
         />
         <br />
         {/* <h1>Backplane</h1> */}
-        <h2>Open Cloud Abstraction API</h2>
+        <h2>Multi-Cloud Abstraction API</h2>
 
         <p>
           Backplane's Open Cloud Abstraction API is free-to-use software built
