@@ -260,7 +260,7 @@ const mainPage = () => {
       {/* End Hero */}
 
       <div className={styles.container}>
-        <h2>Multi cloud governance is challenging</h2>
+        <h2>Multi-cloud governance is challenging</h2>
         <p>
           Enterprises are increasingly finding themselves within a multi-cloud
           landscape, typically the result of the following scenarios:
