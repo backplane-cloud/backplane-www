@@ -121,9 +121,10 @@ const mainPage = () => {
         <h2>Multi-Cloud Abstraction API</h2>
 
         <p>
-          Simplifying multi-cloud governance and development of IDPs. The
-          concerns of cloud Cost, Access, Resource controls and Environment
-          creation are all available through a single API.
+          Making cloud Cost, Access, Resource controls and Environment creation
+          available through a single API. Simplifying governance of multi-cloud
+          landscapes and accelerating the development of internal developer
+          platforms.
         </p>
         <div className={styles.cta}>
           <div>
