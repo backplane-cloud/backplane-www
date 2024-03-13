@@ -79,6 +79,7 @@ const config = {
 
           { to: "/howitworks", label: "How it works", position: "left" },
           { to: "/casestudy", label: "Case Study", position: "left" },
+          // { to: "/features", label: "Features", position: "left" },
           // { to: "/investors", label: "Investors", position: "left" },
           // { to: "/showcase", label: "Showcase", position: "left" },
 

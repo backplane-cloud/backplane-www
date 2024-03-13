@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import diagram from "@site/docs/gsc-logo.png";
 import referencearchitecture from "@site/docs/multicloud-diagram.png";
 import irregular from "@site/docs/irregular.png";
+import regular from "@site/docs/regular.png";
 
 // import BackplaneSvg from "./backplane-logo.svg";
 import ThemedImage from "@theme/ThemedImage";
@@ -30,6 +31,33 @@ const Howitworks = () => {
         <img src={referencearchitecture} />
         <br />
         <br />
+
+        <h2>The Data model</h2>
+        <p>
+          Your Organisation entity will contain Cloud Service Provider
+          credentials with Read permissions in your Cloud Platform. The data
+          model follows a hierarchy of: An{" "}
+          <span className={styles.bluetext}>Organisation</span> can have many{" "}
+          <span className={styles.bluetext}>Platforms</span>, Platforms can have
+          many <span className={styles.bluetext}>Products</span> and Products
+          can contain many <span className={styles.bluetext}>Apps</span>. Apps
+          contain environments provisioned in an underlying cloud platform.
+          Cost, Access and Resource control data (aka Policies) can then be
+          viewed through the lens of the App, Product, Platform or Org.
+        </p>
+        <ThemedImage
+          alt="Backplane themed image"
+          sources={{
+            light: "/img/data-model-light.svg",
+            dark: "/img/data-model-dark.svg",
+          }}
+          // className="logo"
+          style={{ padding: "20px", width: "400px" }}
+        />
+        <p>
+          Backplane supports the importing of Apps and Products (see import
+          instructions).
+        </p>
         <h2>Why an Abstraction API ?</h2>
         <p style={{ textAlign: "justify" }}>
           As enterprises journey towards cloud-native architectures, they are
@@ -78,7 +106,7 @@ const Howitworks = () => {
         <p>
           <br />
           <h4>Multi-Cloud Governance today</h4>
-          <img src={irregular} style={{ padding: "20px", width: "400px" }} />
+          <img src={irregular} style={{ padding: "20px" }} />
           <h2>Problems</h2>
           <ul style={{ textAlign: "left" }}>
             <li>
@@ -97,6 +125,7 @@ const Howitworks = () => {
           <br />
         </p>
         <br />
+        <img src={regular} style={{ padding: "20px" }} />
       </div>
     </Layout>
   );
