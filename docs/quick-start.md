@@ -102,7 +102,7 @@ app.listen(port, () =>
 
 ### Step 4 - Update Package.json
 
-Add `"type": "modules"` so the script can load ES modules.
+Add `"type": "module"` so the script can load ES modules.
 
 Add `"server": "node index.js"` to the scripts section. Be sure to separate with a `,`.
 
