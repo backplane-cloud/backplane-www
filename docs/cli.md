@@ -3,20 +3,32 @@ import TabItem from '@theme/TabItem';
 
 # CLI
 
-## Download
+### Install CLI
 
-Please choose the binary for your operating system.
+Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
+
 <Tabs>
-<TabItem value="Mac OS" label="Mac OS" default>
-[backplane-cli-macos.zip](/cli/backplane-cli-macos.zip)
-</TabItem>
+   
+<TabItem value="Binaries" label="Binaries" default>
+Choose the binary for your OS:
+      <Tabs>
+            <TabItem value="Mac OS" label="Mac OS" default>
+                  [backplane-cli-macos.zip](/cli/backplane-cli-macos.zip)
+            </TabItem>
 
-  <TabItem value="Windows" label="Windows">
-        [backplane-cli-win.exe.zip](/cli/backplane-cli-win.exe.zip) 
+      <TabItem value="Windows" label="Windows">
+            [backplane-cli-win.exe.zip](/cli/backplane-cli-win.exe.zip)
+      </TabItem>
+      <TabItem value="Linux" label="Linux">
+            [backplane-cli-linux.zip](/cli/backplane-cli-linux.zip)
+      </TabItem>
+    </Tabs>
+
   </TabItem>
-  <TabItem value="Linux" label="Linux">
-        [backplane-cli-linux.zip](/cli/backplane-cli-linux.zip) 
+   <TabItem value="NPM" label="NPM">
+  `npm i @backplane-software/cli`
   </TabItem>
+  
 </Tabs>
 
 ## Open Terminal
