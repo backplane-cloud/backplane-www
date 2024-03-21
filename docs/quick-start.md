@@ -42,9 +42,8 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 You can use the hosted Backplane API server at `api.backplane.dev` for Demo purposes. Or, you can use the self-hosted approach. For the latter, you'll need to setup your MongoDB instance, Mailsender and Logtail account separately.
 
 <Tabs>
-  <TabItem value="host" label="Hosted" default>
-</TabItem>
-  <TabItem value="self-host" label="Self-Hosted" >
+  
+  <TabItem value="self-host" label="Self-Hosted" default>
 
 ### Step 1 - Install Node
 
@@ -112,7 +111,8 @@ Add `"server": "node index.js"` to the scripts section. Be sure to separate with
 
 Use `curl http://localhost:8000` to confirm server is running. If successful you should see: `Backplane REST API Server is ready`.
 </TabItem>
-
+<TabItem value="host" label="Hosted">
+</TabItem>
 </Tabs>
 
 ## Register your first User and Organisation
