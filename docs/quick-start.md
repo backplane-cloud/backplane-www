@@ -17,7 +17,7 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
 <Tabs>
     <TabItem value="NPM" label="NPM" default>
-  `npm i @backplane-software/cli`
+  `npm i @backplane-software/backplane-cli`
   </TabItem>
 <TabItem value="Binaries" label="Binaries">
 <Tabs>
