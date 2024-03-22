@@ -144,7 +144,7 @@ bp auth setserver --server https://api.backplane.dev/api
 #### Register your first User and Organisation
 
 ```js
-bp user register -e <"your email address"> -p <"Password"> -orgname <"My Organisation Name">
+bp user register --displayname "<Display Name>" --email "<your email address>" --password "<Password>"> -orgname "<Your Organisation Name>"
 ```
 
 #### Login
