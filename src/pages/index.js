@@ -115,7 +115,7 @@ const mainPage = () => {
           className="logo"
         />
         <br />
-        <h1>Project Backplane</h1>
+        
         <h2>Open Source Cloud Abstraction API</h2>
 
         <p>Simplifying multi-cloud governance and speeding up development of custom Internal Developer Portals.
