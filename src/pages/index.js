@@ -168,7 +168,7 @@ const mainPage = () => {
           cloud strategy often find themselves with a multi-cloud landscape.
           This can be intentional through de-risking vendor lock-in, or
           leveraging differentiating value, or a by-product from commercial
-          mergers and aquisitions. Governing multi-cloud environments can be
+          mergers and acquisitions. Governing multi-cloud environments can be
           complex, and this is especially so at enterprise scale. By providing a
           single abstraction API, the retrieval of Cost, Access and Resource
           control data is drastically simplified, allowing for faster
