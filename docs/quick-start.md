@@ -125,7 +125,7 @@ app.listen(port, () =>
 
 #### Step 5 - Launch Server
 
-`npm run server` to start the server on localhost port 5001.
+`npm run server` to start the server on localhost port 8000.
 
 Use `curl http://localhost:8000` to confirm server is running. If successful you should see: `Backplane REST API Server is ready`.
 </TabItem>
@@ -144,7 +144,7 @@ bp auth setserver --server https://api.backplane.dev/api
 #### Register your first User and Organisation
 
 ```js
-bp user register -e myname@backplane.cloud -p **** -orgname 'My Organisation Name'
+bp user register -e <"your email address"> -p <"Password"> -orgname <"My Organisation Name">
 ```
 
 #### Login
