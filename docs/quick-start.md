@@ -150,7 +150,7 @@ bp user register --displayname "<Display Name>" --email "<your email address>" -
 #### Login
 
 ```js
-bp auth login -e myname@backplane.cloud -p ****
+bp auth login -e "<myname@backplane.cloud>" -p "<Password>"
 ```
 
 ### Add Cloud Credentials
