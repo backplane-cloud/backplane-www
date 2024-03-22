@@ -127,8 +127,27 @@ bp auth login -e myname@backplane.cloud -p ****
 ### Add Cloud Credentials
 
 ```js
-bp org update -
+bp org update --id <orgID>
+--provider azure
+--tenantid <tenant ID>
+--clientid <client ID>
+--clientsecret <Your Client Secret>
 ```
+
+:::info
+
+To create credentials you'll need to create an App registration in Entra ID.
+
+1. Go to Microsoft Entra ID, and under Manage in the left side menu, select App registrations.
+
+2. Click on New Registration and gives it a name and click Register.
+
+3. Take note of the Tenant ID and Client ID.
+
+4. Create a new Client Secret, click on Add a certificate or secret, New client secret, type a description, set expiry and click Add. Make a note of the Secret Value.
+
+5. Assign the Service Principal you created with Contributor permission at the Subscription scope.
+   :::
 
 ### Create your first Platform
 
