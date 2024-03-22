@@ -158,11 +158,11 @@ bp auth login -e "<myname@backplane.cloud>" -p "<Password>"
 <Tabs>
     <TabItem value="Azure" label="Azure" default>
   ```js
-bp org update --id <orgID>
---provider azure
---tenantid <tenant ID>
---clientid <client ID>
---clientsecret <Your Client Secret>
+bp org update --id "<orgID>"
+--provider "azure"
+--tenantid "<tenant ID>"
+--clientid "<client ID>"
+--clientsecret "<Your Client Secret>"
 ```
 
 :::tip Creating a Service Principal in Azure
