@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Quick Start
 
-Backplane comprises of two components: an API server and a CLI client. 
+Backplane comprises of two components: an API server and a CLI client.
 
 ## Start Using Backplane
 
@@ -17,7 +17,9 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
 <Tabs>
     <TabItem value="NPM" label="NPM" default>
-  `npm i @backplane-software/backplane-cli`
+  ```
+  npm i @backplane-software/backplane-cli
+  ```
   </TabItem>
 <TabItem value="Binaries" label="Binaries">
 <Tabs>
@@ -130,7 +132,7 @@ Use `curl http://localhost:8000` to confirm server is running. If successful you
 <TabItem value="host" label="Demo Server">
 To set the CLI to use the demo server, use the following command:
 
-```bp auth setserver --server https://api.backplane.dev/api```
+`bp auth setserver --server https://api.backplane.dev/api`
 </TabItem>
 </Tabs>
 
@@ -201,8 +203,8 @@ bp product add --displayname 'Product X'
 bp app add --displayname 'App 1' --cloud azure --template default
 ```
 
-:::info 
-App templates define what environments are created and optionally onboarding of a service, for example a Github repository. The *default* template will create prod, nonprod, test and dev. Custom App Templates can be added such as Sandbox whereby only a single environment is provisioned. 
+:::info
+App templates define what environments are created and optionally onboarding of a service, for example a Github repository. The _default_ template will create prod, nonprod, test and dev. Custom App Templates can be added such as Sandbox whereby only a single environment is provisioned.
 :::
 
 :::tip
