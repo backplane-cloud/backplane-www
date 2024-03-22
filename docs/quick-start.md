@@ -197,7 +197,7 @@ bp platform add --displayname 'Platform A'
 ### Create your first Product
 
 ```js
-bp product add --displayname 'Product X'
+bp product add --displayname 'Product X' --platformid '<Platform ID>'
 ```
 
 ### Create your first App
