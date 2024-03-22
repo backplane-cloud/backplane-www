@@ -126,7 +126,9 @@ bp auth login -e myname@backplane.cloud -p ****
 
 ### Add Cloud Credentials
 
-```js
+<Tabs>
+    <TabItem value="Azure" label="Azure" default>
+  ```js
 bp org update --id <orgID>
 --provider azure
 --tenantid <tenant ID>
@@ -148,6 +150,14 @@ To create credentials you'll need to create an App registration in Entra ID.
 
 5. Assign the Service Principal you created with Contributor permission at the Subscription scope.
    :::
+   </TabItem>
+   <TabItem value="GCP" label="GCP">
+   Coming Soon
+   </TabItem>
+   <TabItem value="AWS" label="AWS">
+   Coming Soon
+   </TabItem>
+   </Tabs>
 
 ### Create your first Platform
 
