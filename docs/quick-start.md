@@ -46,7 +46,7 @@ You can use the hosted Backplane API server at `api.backplane.dev` for Demo purp
 
 #### Step 1 - Install Node
 
-Install Node.JS on your system and then from a terminal window, initialise an NPM project.
+Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
 
 ```
 mkdir backplane-api
@@ -62,8 +62,8 @@ Create `.env` file, and provide the following:
 ```
 NODE_ENV=development
 PORT=8000
+
 JWT_SECRET=<provide-key> // Make up your own secret, this is used as the salt to CryptB for password Hashing. e.g. MyS3cureP&!00word*
-LOG_LEVEL=debug
 
 MONGO_URI=<provide-key>
 
@@ -71,7 +71,22 @@ MAILSENDER_USERNAME=<your-username>
 MAILSENDER_PASSWORD=<provide-key>
 
 LOGTAIL_KEY=<provide-key>
+LOG_LEVEL=debug
 ```
+
+:::tip Setting up MongoDB
+Backplane API Server uses MongoDB as the backend datastore. See [Setting up MongoDB](/docs/setupmongo).
+:::
+
+:::tip Setting up MailerSend
+MailerSend is used as an SMTP mailrelay, so that User Registration e-mails can be sent as well as approval request e-mails. Create an account here: [MailerSend](https://www.mailersend.com/)
+:::
+
+:::tip Setting up LogTail
+
+`/utils/logger.js` is used as Middleware for logging purposes. It leverages LogTail, now known as Better Stack is used as a Log Repository. It's free up to 1GB a month with 3-day retention. Create an account here: [LogTail](https://betterstack.com/logs).
+
+:::
 
 #### Step 3 - Create Index.js
 
