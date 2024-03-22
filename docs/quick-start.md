@@ -38,11 +38,13 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 </Tabs>
 You can use the hosted Backplane API server at `api.backplane.dev` for Demo purposes. Or, you can use the self-hosted approach. For the latter, you'll need to setup your MongoDB instance, Mailsender and Logtail account separately.
 
+### Install API Server
+
 <Tabs>
   
   <TabItem value="self-host" label="Self-Hosted" default>
 
-### Step 1 - Install Node
+#### Step 1 - Install Node
 
 Install Node.JS on your system and then from a terminal window, initialise an NPM project.
 
@@ -53,7 +55,7 @@ npm init -y
 npm i express dotenv @backplane-software/backplane-api
 ```
 
-### Step 2 - Setup Environment Variables
+#### Step 2 - Setup Environment Variables
 
 Create `.env` file, and provide the following:
 
@@ -71,7 +73,7 @@ MAILSENDER_PASSWORD=<provide-key>
 LOGTAIL_KEY=<provide-key>
 ```
 
-### Step 3 - Create Index.js
+#### Step 3 - Create Index.js
 
 Create `index.js` file and copy the below into it.
 
@@ -96,13 +98,13 @@ app.listen(port, () =>
 );
 ```
 
-### Step 4 - Update Package.json
+#### Step 4 - Update Package.json
 
 Add `"type": "module"` so the script can load ES modules.
 
 Add `"server": "node index.js"` to the scripts section. Be sure to separate with a `,`.
 
-### Step 5 - Launch Server
+#### Step 5 - Launch Server
 
 `npm run server` to start the server on localhost port 5001.
 
@@ -112,13 +114,15 @@ Use `curl http://localhost:8000` to confirm server is running. If successful you
 </TabItem>
 </Tabs>
 
-## Register your first User and Organisation
+### Configure Organisation
+
+#### Register your first User and Organisation
 
 ```js
 bp user register -e myname@backplane.cloud -p **** -orgname 'My Organisation Name'
 ```
 
-### Login
+#### Login
 
 ```js
 bp auth login -e myname@backplane.cloud -p ****
@@ -136,7 +140,7 @@ bp org update --id <orgID>
 --clientsecret <Your Client Secret>
 ```
 
-:::info
+:::tip Creating a Service Principal in Azure
 
 To create credentials you'll need to create an App registration in Entra ID.
 
