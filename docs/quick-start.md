@@ -203,7 +203,7 @@ bp product add --displayname 'Product X' --platformid '<Platform ID>'
 ### Create your first App
 
 ```js
-bp app add --displayname 'App 1' --cloud azure --template default
+bp app add --displayname 'App 1' --cloud azure
 ```
 
 :::info
