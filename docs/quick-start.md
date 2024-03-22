@@ -36,7 +36,9 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
   </TabItem>
   
 </Tabs>
-You can use the hosted Backplane API server at `api.backplane.dev` for Demo purposes. Or, you can use the self-hosted approach. For the latter, you'll need to setup your MongoDB instance, Mailsender and Logtail account separately.
+:::info demo server
+You can use the hosted Backplane API server at `https://api.backplane.dev/api` for Demo purposes. 
+:::
 
 ### Install API Server
 
@@ -115,9 +117,9 @@ app.listen(port, () =>
 
 #### Step 4 - Update Package.json
 
-Add `"type": "module"` so the script can load ES modules.
+- Add `"type": "module"` so the script can load ES modules.
 
-Add `"server": "node index.js"` to the scripts section. Be sure to separate with a `,`.
+- Add `"server": "node index.js"` to the scripts section. Be sure to separate with a `,`.
 
 #### Step 5 - Launch Server
 
@@ -195,6 +197,10 @@ bp product add --displayname 'Product X'
 ```js
 bp app add --displayname 'App 1' --cloud azure --template default
 ```
+
+:::info 
+App templates define what environments are created and optionally onboarding of a service, for example a Github repository. The *default* template will create prod, nonprod, test and dev. Custom App Templates can be added such as Sandbox whereby only a single environment is provisioned. 
+:::
 
 :::tip
 To link an App to a Product, you will need to create a Link Request. e.g.
