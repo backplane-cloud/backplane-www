@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Quick Start
 
-Backplane comprises of an API, CLI
+Backplane comprises of two components: an API server and a CLI client. 
 
 ## Start Using Backplane
 
