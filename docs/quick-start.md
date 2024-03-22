@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Backplane comprises of an API, CLI
 
-## Instructions
+## Start Using Backplane
 
 ### Install CLI
 
@@ -36,9 +36,6 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
   </TabItem>
   
 </Tabs>
-
-## Start Using Backplane
-
 You can use the hosted Backplane API server at `api.backplane.dev` for Demo purposes. Or, you can use the self-hosted approach. For the latter, you'll need to setup your MongoDB instance, Mailsender and Logtail account separately.
 
 <Tabs>
