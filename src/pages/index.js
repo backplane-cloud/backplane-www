@@ -118,9 +118,7 @@ const mainPage = () => {
         <h1>Project Backplane</h1>
         <h2>Open Source Cloud Abstraction API</h2>
 
-        <p>
-          Speeding up development of IDPs, simplifying governance of multi-cloud
-          environments and implementing FinOps!
+        <p>Simplifying multi-cloud governance and speeding up development of custom Internal Development Portals.
         </p>
         <div className={styles.cta}>
           <div>
@@ -147,13 +145,9 @@ const mainPage = () => {
         <h2>What is project Backplane</h2>
         <p>
           Backplane is an Open Source Cloud Abstraction API that simplifies
-          multi-cloud governance (Cost, Access, Resource controls) and
-          Environment provisioning. Enabling platform engineering teams to be
-          able to build enterprise-scale internal developer platforms faster. By
-          simplifying the data concerns of Cost, Access, Resource controls and
-          Environments, developers no longer have to spend time integrating with
-          each cloud providers' API and simply integrate to Backplane's single,
-          abstracted API. Saving development time, effort, and offering
+          multi-cloud governance (Cost, Access, Resource controls and
+          Environment provisioning). Enabling platform engineering teams to be
+          able to build enterprise-scale internal developer platforms faster. Saving development time, effort, and offering
           performance gains to consuming systems by offloading the Extract and
           Transform overhead.
         </p>
