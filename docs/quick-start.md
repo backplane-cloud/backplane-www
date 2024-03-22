@@ -132,7 +132,10 @@ Use `curl http://localhost:8000` to confirm server is running. If successful you
 <TabItem value="host" label="Demo Server">
 To set the CLI to use the demo server, use the following command:
 
-`bp auth setserver --server https://api.backplane.dev/api`
+```
+bp auth setserver --server https://api.backplane.dev/api
+```
+
 </TabItem>
 </Tabs>
 
