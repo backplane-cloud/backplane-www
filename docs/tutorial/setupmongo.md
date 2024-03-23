@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Setting up MongoDB
 
+Configuring Atlas hosted MongoDB
+
 1. Go to MongoDB.com and click on [Try Free](https://www.mongodb.com/cloud/atlas/register)
 2. Complete the Sign up form and click on Create your Access account. You will receive an e-mail verification. Once verified, click continue.
 3. Complete the form until you get to the section Deploy your database.

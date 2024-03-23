@@ -6,25 +6,50 @@ sidebar_position: 1
 
 Let's discover **Backplane in less than 5 minutes**.
 
-## Welcome to the Backplane!
+## What is Backplane ?
 
-A single API to enable multi cloud governance and environment provisioning. Sounds cool right ?
+Backplane is a set of tools to simplify multi-cloud governance at enterprise-scale and to simplify and speed up custom integrations.
 
-Yes - we think so too! :sunglasses:
+It provides cost, access and policy data retrieval and allows for cross-cloud environment provisioning.
 
-As organisations continue to invest and adopt cloud there's an ever increasing need to ensure the cloud providers can be governed. A single-cloud strategy leaves organisations vendor-locked and so are seeking multi-cloud strategies to have flexibility upon where they can obtain the beset value. Also, other business activities like mergers and acquisitions can bring a multi-cloud landscape.
+Backplane comes in two flavours depending on your requirements:
 
-Organisations are also going through a cultural transformation with a paradigm shift from centralised operations (mode 1) to a decentralised model (mode 2) with DevOps and more recently Platform engineering. The latter focusing on the development of Internal Developer Portals to further streamline the Developer experience.
+### Cloud Abstraction API Server (Backplane Core)
 
-> With Backplane, we wanted to create a single cloud API to help drive cloud-native transformation, with a particularly strong emphasis on cost, access and policy.
->
-> **Lewis** - Founder @ Backplane
+- The Cloud Abstraction API helps organisations govern multiple clouds, bring cost, access and resource control visibility across cloud platforms into a single view through the Backplane Software Catalog.
 
-### What Problems is Backplane solving
+- It is designed for platform engineers, enterprise architects and developers for cloud adoption, enablement and governance.
 
-- Inefficient use of developers time
+- It helps to both simplify and speed up internal developer portal development with abstracted environment creation.
 
-  Subject Matter Expertise in a Cloud Platform from a governance perspective is provided by a Cloud Engineer for integration, or Cloud Architect. Developers are then tasked with consuming the Cloud Provider's API to implment environment provisioning and extraction of governance data to feed to downstream systems. This approach is costly both in terms of time and effort to 'plug-in' to each Cloud Provider in a multicloud scenario.
+  - Software Catalog
+  - Cost Budgeting
+  - Workflow Engine
+  - Full built-in RBAC
+  - Service Integration
+  - CLI
+
+### Backplane Library
+
+- A set of abstracted functions for retriving cloud cost, access, policies and creating environments in AWS, Azure and GCP.
+
+- Saving Developers integration time and effort so they can reason about cloud platforms in an abstracted manner. For example, rather than creating an Account in AWS or a Subscription in Azure or a Project in GCP, you simply provision 'Cloud Space'. In Backplane, the App represents the 'Cloud Space' that ultimately comprise the environments.
+
+<!-- ## Why use Backplane ?
+
+Multi-cloud governance complex and integrating into cloud platforms requires significant effort and expertise.
+
+Through Backplane's abstracted wrapper, whether the Backplane Library or the Backplane API Server, interfacing with the Cloud Platforms for governance purposes is made simple.
+
+## What benefits does Backplane provide ?
+
+### Inefficient use of developers time
+
+- When building an internal developer platform, code needs to be written to integrate to each of the Cloud vendors APIs for the concerns of environment provisioning, cost, access and policy data retrieval.
+
+- Developers can use the Backplane Module Library to rapidly integrate multi-cloud environment provisioning into their development platform.
+
+- In addition, the Backplane Cloud Abstraction API provides a RESTful service to use.
 
 - Irregular data shape
 
@@ -36,9 +61,11 @@ Organisations are also going through a cultural transformation with a paradigm s
 
 ### Solution
 
-Backplane simplifies the Cloud landscape by providing a single abstraction API for the purposes of environment provisioning and extraction of governance data, from cost, access and policies. With a more generalised, abstracted form of the data, building IDPs and CMPs becomes a more trivial activity.
+- Backplane simplifies the Cloud landscape by providing a single abstraction API for the purposes of environment provisioning and extraction of governance data, from cost, access and policies. With a more generalised, abstracted form of the data, building IDPs and CMPs becomes a more trivial activity.
 
-So whether you're building a custom internal development platform or cloud management platform, or have a need to consume cloud governance data as a service, the Backplane API can help.
+- So whether you're building a custom internal development platform or cloud management platform, or have a need to consume cloud governance data as a service, the Backplane API can help.
+
+- The below diagram illustrates how Backplane sits in-between the Cloud Service Providers and the Developer planes, to provide a governance plane and single integration point.
 
 ![Backplane Diagram](backplane-intro.png)
 
@@ -62,56 +89,6 @@ Understanding **Who has access to what** is key to ensuring a good access postur
 
 ### Policy :shield:
 
-Guardrails are put in place to ensure that resources adhere to security and architectural references. Having these enforced consistently across cloud platforms and having visibility of these is critical to operating cloud platforms at scale.
+Guardrails are put in place to ensure that resources adhere to security and architectural references. Having these enforced consistently across cloud platforms and having visibility of these is critical to operating cloud platforms at scale. -->
 
-Are you ready to [Get Started](/docs/getting-started) ?
-
-## Project Goals
-
-### Open Source
-
-- Contribute Backplane to the Open Source and Platform Engineering community, to help with Cloud Native transformations. Submit Backplane to the Cloud Native Compute Foundation.
-
-### Extensions Marketplace
-
-- (eXtensions) marketplace to extend Backplane Core's functionality with new features to build-out a platform and eco-system that helps every organisation with their Cloud journey.
-
-### Accelerate Cloud Native Transformations
-
-- By having a single, community develoed API that is vendor agnostic and enables organisations to quickly and easily adopt multicloud strategies on their terms.
-
-<!-- Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes. -->
+Are you ready to [Get Started](/docs/quick-start) ?

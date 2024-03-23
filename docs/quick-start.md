@@ -9,8 +9,6 @@ import TabItem from '@theme/TabItem';
 
 Backplane comprises of two components: an API server and a CLI client.
 
-## Start Using Backplane
-
 ### Install CLI
 
 Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
@@ -79,7 +77,7 @@ LOG_LEVEL=debug
 ```
 
 :::tip Setting up MongoDB
-Backplane API Server uses MongoDB as the backend datastore. See [Setting up MongoDB](/docs/setupmongo).
+Backplane API Server uses MongoDB as the backend datastore. See [Setting up MongoDB](/docs/tutorial/setupmongo).
 :::
 
 :::tip Setting up MailerSend
@@ -139,21 +137,23 @@ bp auth setserver --server https://api.backplane.dev/api
 </TabItem>
 </Tabs>
 
-### Configure Organisation
+## Setup Backplane
 
-#### Register your first User and Organisation
+### Register Organisation
 
 ```js
-bp user register --displayname "<Display Name>" --email "<your email address>" --password "<Password>"> -orgname "<Your Organisation Name>"
+bp user register --displayname "<Display Name>" --email "<your e-mail address>" --password "<Password>" -orgname "<Your Organisation Name>"
 ```
 
 #### Login
 
 ```js
-bp auth login -e "<myname@backplane.cloud>" -p "<Password>"
+bp auth login -e "<your e-mail address>" -p "<Password>"
 ```
 
 ### Add Cloud Credentials
+
+After you've registered your Root user and Organisation, the first port of call is to establish Cloud Service Provider credentials. Once these are in place, you can create your first App.
 
 <Tabs>
     <TabItem value="Azure" label="Azure" default>
@@ -196,6 +196,8 @@ bp platform add --displayname 'Platform A'
 
 ### Create your first Product
 
+A Product can contain one or many Apps, and an App can belong to a single Cloud Platform. For example, Product A can contain App X (Azure), App Y (AWS) and App Z (GCP). The Apps represent the Cloud Workload.
+
 ```js
 bp product add --displayname 'Product X' --platformid '<Platform ID>'
 ```
@@ -210,14 +212,14 @@ bp app add --displayname 'App 1' --cloud azure
 App templates define what environments are created and optionally onboarding of a service, for example a Github repository. The _default_ template will create prod, nonprod, test and dev. Custom App Templates can be added such as Sandbox whereby only a single environment is provisioned.
 :::
 
-:::tip
+<!-- :::tip
 To link an App to a Product, you will need to create a Link Request. e.g.
 
 ```js
 bp request add --appid app1 --requestType link --requestedForType product
 ```
 
-:::
+::: -->
 
 :::note Powershell Users
 For **Powershell** users, run `pwsh` and then use the CLI commands with the `--stringify` or `-s` switch to return raw JSON, this can then be piped into Powershell with `Convert-FromJSON`.
@@ -229,3 +231,5 @@ bp product list --stringify | Convert-FromJSON
 ```
 
 :::
+
+This completes the Quick Start.
