@@ -158,15 +158,15 @@ After you've registered your Root user and Organisation, the first port of call 
 <Tabs>
     <TabItem value="Azure" label="Azure" default>
   ```js
-bp org update --id "<orgID>"
+bp cloud add --id "<orgID>"
 --provider "azure"
 --tenantid "<tenant ID>"
 --clientid "<client ID>"
 --clientsecret "<Your Client Secret>"
 --subscriptionid "<default subscription GUID>" 
 ```
-:::noteT
-The subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release.
+:::note
+The Subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release. 
 :::
 
 :::tip Creating a Service Principal in Azure
