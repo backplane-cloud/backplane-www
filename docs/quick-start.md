@@ -163,7 +163,11 @@ bp org update --id "<orgID>"
 --tenantid "<tenant ID>"
 --clientid "<client ID>"
 --clientsecret "<Your Client Secret>"
+--subscriptionid "<default subscription GUID>" 
 ```
+:::noteT
+The subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release.
+:::
 
 :::tip Creating a Service Principal in Azure
 
