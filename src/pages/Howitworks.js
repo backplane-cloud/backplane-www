@@ -24,7 +24,7 @@ const Howitworks = () => {
             light: "/img/howbackplaneworks-light.png",
             dark: "/img/howbackplaneworks-dark.png",
           }}
-          style={{ width: "300px", margin: "50px 0" }}
+          style={{ width: "350px", margin: "50px 0" }}
         />
         <p>
           Backplane forms the governance plane and sits beneath the developer
