@@ -14,12 +14,8 @@ Backplane comprises of two components: an API server and a CLI client.
 Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
 <Tabs>
-    <TabItem value="NPM" label="NPM" default>
-  ```
-  npm i @backplane-software/backplane-cli -g
-  ```
-  </TabItem>
-<TabItem value="Binaries" label="Binaries">
+    
+<TabItem value="Binaries" label="Binaries" default>
 <Tabs>
 <TabItem value="Mac OS" label="Mac OS" default>
 [backplane-cli-macos.zip](/cli/backplane-cli-macos.zip)
@@ -34,7 +30,11 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
     </Tabs>
 
   </TabItem>
-  
+  <TabItem value="NPM" label="NPM">
+  ```
+  npm i @backplane-software/backplane-cli -g
+  ```
+  </TabItem>
 </Tabs>
 :::info demo server
 You can use the hosted Backplane API server at `https://api.backplane.dev/api` for Demo purposes. 
@@ -43,8 +43,15 @@ You can use the hosted Backplane API server at `https://api.backplane.dev/api` f
 ### Install API Server
 
 <Tabs>
-  
-  <TabItem value="self-host" label="Self-Hosted" default>
+  <TabItem value="host" label="Demo Server">
+To set the CLI to use the demo server, use the following command:
+
+```
+bp auth setserver --server https://api.backplane.dev/api
+```
+
+</TabItem>
+  <TabItem value="self-host" label="Self-Hosted">
 
 #### Step 1 - Install Node
 
@@ -127,14 +134,7 @@ app.listen(port, () =>
 
 Use `curl http://localhost:8000` to confirm server is running. If successful you should see: `Backplane REST API Server is ready`.
 </TabItem>
-<TabItem value="host" label="Demo Server">
-To set the CLI to use the demo server, use the following command:
 
-```
-bp auth setserver --server https://api.backplane.dev/api
-```
-
-</TabItem>
 </Tabs>
 
 ## Setup Backplane
@@ -155,20 +155,6 @@ bp auth login -e "<your e-mail address>" -p "<Password>"
 
 After you've registered your Root user and Organisation, the first port of call is to establish Cloud Service Provider credentials. Once these are in place, you can create your first App.
 
-<Tabs>
-    <TabItem value="Azure" label="Azure" default>
-  ```js
-bp cloud add --id "<orgID>"
---provider "azure"
---tenantid "<tenant ID>"
---clientid "<client ID>"
---clientsecret "<Your Client Secret>"
---subscriptionid "<default subscription GUID>" 
-```
-:::note
-The Subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release. 
-:::
-
 :::tip Creating a Service Principal in Azure
 
 To create credentials you'll need to create an App registration in Entra ID.
@@ -183,6 +169,21 @@ To create credentials you'll need to create an App registration in Entra ID.
 
 5. Assign the Service Principal you created with Contributor permission at the Subscription scope.
    :::
+
+<Tabs>
+    <TabItem value="Azure" label="Azure" default>
+  ```js
+bp cloud add --id "<orgID>"
+--provider "azure"
+--tenantid "<tenant ID>"
+--clientid "<client ID>"
+--clientsecret "<Your Client Secret>"
+--subscriptionid "<default subscription GUID>" 
+```
+:::note
+The Subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release. 
+:::
+
    </TabItem>
    <TabItem value="GCP" label="GCP">
    Coming Soon
