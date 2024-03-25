@@ -56,7 +56,7 @@ const Casestudy = () => {
 
   return (
     <Layout>
-      <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <div style={{ textAlign: "center", marginTop: "20px" }}>
         <h1>Example Case Study</h1>
         <img src={diagram} style={{ width: "100px", marginTop: "20px" }} />
       </div>

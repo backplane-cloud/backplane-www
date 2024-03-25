@@ -16,7 +16,7 @@ import Heading from "@theme/Heading";
 const Howitworks = () => {
   return (
     <Layout>
-      <div className={styles.container} style={{ marginTop: "50px" }}>
+      <div className={styles.container} style={{ marginTop: "20px" }}>
         <h2>How Backplane works</h2>
         <ThemedImage
           alt="Backplane themed image"
