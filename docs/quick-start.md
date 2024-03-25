@@ -22,7 +22,7 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 </TabItem>
 
       <TabItem value="Windows" label="Windows">
-            [backplane-cli-win.exe.zip](/cli/backplane-cli-win.exe.zip)
+            [bp.zip](/cli/bp.exe.zip)
       </TabItem>
       <TabItem value="Linux" label="Linux">
             [backplane-cli-linux.zip](/cli/backplane-cli-linux.zip)
