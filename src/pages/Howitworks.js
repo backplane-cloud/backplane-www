@@ -18,7 +18,14 @@ const Howitworks = () => {
     <Layout>
       <div className={styles.container} style={{ marginTop: "50px" }}>
         <h2>How Backplane works</h2>
-
+        <ThemedImage
+          alt="Backplane themed image"
+          sources={{
+            light: "/img/howbackplaneworks-light.png",
+            dark: "/img/howbackplaneworks-dark.png",
+          }}
+          style={{ width: "300px", margin: "50px" }}
+        />
         <p>
           Backplane forms the governance plane and sits beneath the developer
           and integration plane. The abstraction API provides an interface that
