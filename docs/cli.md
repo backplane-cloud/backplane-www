@@ -17,7 +17,7 @@ Choose the binary for your OS:
             </TabItem>
 
       <TabItem value="Windows" label="Windows">
-            [backplane-cli-win.exe.zip](/cli/backplane-cli-win.exe.zip)
+            [bp.exe.zip](/cli/bp.exe.zip)
       </TabItem>
       <TabItem value="Linux" label="Linux">
             [backplane-cli-linux.zip](/cli/backplane-cli-linux.zip)
