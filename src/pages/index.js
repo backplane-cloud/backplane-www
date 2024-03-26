@@ -119,12 +119,14 @@ const mainPage = () => {
         />
         <br />
 
-        <h2>Open Source Cloud Abstraction API</h2>
+        <h2>Cloud Abstraction API</h2>
 
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
-          Simplifying Enterprise-scale Cloud Adoption, Enablement and Governance
+          Backplane is an Open Source Cloud Abstraction API that simplifies
+          multi-cloud governance and speeds up the development of internal
+          developer portals
         </p>
         <div className={styles.cta}>
           <div>
@@ -148,28 +150,23 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Why Backplane ?</h2>
+        <h2>What Problem does Backplane help solve ? </h2>
         <p>
-          Backplane is an Open Source Cloud Abstraction API that simplifies
-          multi-cloud governance (Cost, Access, Resource controls and
-          Environment provisioning). Enabling platform engineering teams to be
-          able to build enterprise-scale internal developer platforms faster.
-          Saving development time, effort, and offering performance gains to
-          consuming systems by offloading the Extract and Transform overhead.
+          Governing multi-cloud at scale is complex. Integrating custom tooling
+          to cloud platforms requires subject matter expertise and effort. By
+          providing a single abstracted view of the concerns of Cloud Cost,
+          Access, Resource Controls and Environment provisioning, platform
+          engineering teams and developers can focus on speed of delivery and a
+          separation of concerns that makes it simpler and easier to reason
+          about multicloud governance.
         </p>
-        <p>
-          Enterprises undergoing digital transformation often adopt multi-cloud
-          strategies, whether to avoid vendor lock-in, leverage differentiating
-          features, or due to mergers and acquisitions. Managing multi-cloud
-          environments at enterprise-scale is complex.
-        </p>
-        <p>
-          Backplane's abstraction API helps by streamlining access to Cost,
-          Access, and Resource control data, simplifying integration and
-          enhancing governance across cloud platforms. Consuming systems can
-          rely on a uniform data shape, making it simpler to reason about
-          governance concerns.
-        </p>
+        <h3>How it works</h3>
+        The Backplane API sits in front of the cloud platforms and provides a
+        logical data model of Org, Platform, Product and App. The App is linked
+        to a Cloud Platform, and generic queries for Cost, Access, Policy and
+        Environment provisioning can be issued to the Backplane API, and it will
+        translate the request into the correct format for the underlying cloud
+        platform.
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -179,8 +176,9 @@ const mainPage = () => {
           // className="logo"
           className={styles.image}
         />
+        <h2>Benefits</h2>
         <Tabs>
-          <TabItem value="speed" label="Speed-up Integration" default>
+          <TabItem value="speed" label="Speed-up IDP MVP creation" default>
             <p>
               Developers do not have to learn the API for each cloud provider to
               determine how to access Cost, Access and Resource control data,
@@ -270,11 +268,15 @@ const mainPage = () => {
           </TabItem>
         </Tabs>
         <br />
-        <h2>Sample Use Cases</h2>
+        <h2>Use Cases</h2>
         Here are some scenarios where Backplane's Cloud Abstraction API can
         help:
         <Tabs>
-          <TabItem value="building-idp" label="Building IDP MVP" default>
+          <TabItem
+            value="building-idp"
+            label="Building Enterprise IDP MVP"
+            default
+          >
             <p>
               When building your IDP MVP, speed is of the essense. Off-loading
               environment provisioning to Backplane Cloud Abstraction API
@@ -285,20 +287,16 @@ const mainPage = () => {
           </TabItem>
           <TabItem value="multicloud-governance" label="Multi-cloud Governance">
             <p>
-              Building the MVP IDP for your organisation will require
-              integration with a Cloud Provider. If you use multiple Cloud
-              Providers then this task is significantly ardeous. With
-              Backplane's Single Cloud Abstraction API for environment
-              provisioning, you can get your MVP IDP up and running quickly!
+              Being able to retrieve Cost, Access and Policy data across
+              multiple clouds and in a datashape that allows side-by-side
+              analysis.
             </p>
           </TabItem>
           <TabItem value="business-process" label="Business Process">
             <p>
-              Building the MVP IDP for your organisation will require
-              integration with a Cloud Provider. If you use multiple Cloud
-              Providers then this task is significantly ardeous. With
-              Backplane's Single Cloud Abstraction API for environment
-              provisioning, you can get your MVP IDP up and running quickly!
+              Business processes such as Budget Approvals are handled through
+              Backplane's Workflow Engine. By creating a Request, it is sent to
+              the appropiate approval authority.
             </p>
           </TabItem>
         </Tabs>
