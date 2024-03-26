@@ -134,7 +134,7 @@ const mainPage = () => {
               className={`button button--secondary button--lg ${styles.gray}`}
               to="/docs/quick-start"
             >
-              Get Started
+              Try it out
             </Link>
           </div>
           <div>
@@ -150,7 +150,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>What Problem does Backplane help solve ? </h2>
+        <h2>Problem</h2>
         <p>
           Governing multi-cloud at scale is complex. Integrating custom tooling
           to cloud platforms requires subject matter expertise and effort. By
@@ -160,7 +160,7 @@ const mainPage = () => {
           separation of concerns that makes it simpler and easier to reason
           about multicloud governance.
         </p>
-        <h3>How it works</h3>
+        <h2>Solution</h2>
         The Backplane API sits in front of the cloud platforms and provides a
         logical data model of Org, Platform, Product and App. The App is linked
         to a Cloud Platform, and generic queries for Cost, Access, Policy and
@@ -220,7 +220,7 @@ const mainPage = () => {
             </p>
           </TabItem>
         </Tabs>
-        <h2>Who is it for ?</h2>
+        <h2>Our Customers</h2>
         Backplane is designed and built for enterprise-scale cloud governance.
         <br />
         <br />
@@ -305,10 +305,10 @@ const mainPage = () => {
       <div className={styles.container}>
         <div>
           <Link
-            className={`button button--secondary button--lg ${styles.blue}`}
+            className={`button button--secondary button--lg ${styles.gray}`}
             to="/docs/quick-start"
           >
-            Get Started
+            Try it out
           </Link>
         </div>
       </div>
