@@ -138,6 +138,11 @@
   color: #393a3d;
   margin: 10px;
 }
+.container .darkgray {
+  background-color: #393a3d;
+  color: #fff;
+  margin: 10px;
+}
 
 .cta {
   display: flex;

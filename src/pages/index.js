@@ -317,25 +317,50 @@ const mainPage = () => {
 
       <div className={styles.container}>
         <h2>Get involved, Backplane Community </h2>
+        <p>
+          We are a team of cloud engineers passionate about cloud adoption,
+          enablement and governance. Feel free to get involved; whether
+          collaborating on code, bug-fixed, new ideas or implementing new
+          features. Backplane's Cloud Abstraction API is Open Source, built by
+          engineers, for engineers!
+        </p>
 
-        <ThemedImage
-          alt="Backplane themed image"
-          sources={{
-            light: "/img/github-light.png",
-            dark: "/img/github-dark.png",
-          }}
-          // className="logo"
-          style={{ width: "50px", margin: "20px" }}
-        />
-        <ThemedImage
-          alt="Backplane themed image"
-          sources={{
-            light: "/img/slack.png",
-            dark: "/img/slack.png",
-          }}
-          // className="logo"
-          style={{ width: "50px", margin: "20px" }}
-        />
+        <a href="https://github.com/backplane-cloud/" target="_blank">
+          <ThemedImage
+            alt="Github"
+            sources={{
+              light: "/img/github-light.png",
+              dark: "/img/github-dark.png",
+            }}
+            // className="logo"
+            style={{ width: "50px", margin: "20px" }}
+          />
+        </a>
+        <a href="https://backplaneworkspace.slack.com/" target="_blank">
+          <ThemedImage
+            alt="Slack"
+            sources={{
+              light: "/img/slack.png",
+              dark: "/img/slack.png",
+            }}
+            // className="logo"
+            style={{ width: "50px", margin: "20px" }}
+          />
+        </a>
+        <a
+          href="https://www.npmjs.com/settings/backplane-software/packages"
+          target="_blank"
+        >
+          <ThemedImage
+            alt="NPM"
+            sources={{
+              light: "/img/npm.png",
+              dark: "/img/npm.png",
+            }}
+            // className="logo"
+            style={{ width: "100px", margin: "20px" }}
+          />
+        </a>
       </div>
     </Layout>
   );
