@@ -6,6 +6,9 @@ import referencearchitecture from "@site/docs/multicloud-diagram.png";
 import irregular from "@site/docs/irregular.png";
 import regular from "@site/docs/regular.png";
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 // import BackplaneSvg from "./backplane-logo.svg";
 import ThemedImage from "@theme/ThemedImage";
 
@@ -17,7 +20,7 @@ const Howitworks = () => {
   return (
     <Layout>
       <div className={styles.container} style={{ marginTop: "20px" }}>
-        <h2>Building an IDP MVP</h2>
+        <h2>How it works ?</h2>
 
         <p>
           Platform engineers and developers are spending time integrating their
@@ -33,7 +36,7 @@ const Howitworks = () => {
           }}
           style={{ width: "400px", margin: "20px 0" }}
         />
-        <h2>Backplane Simplifies this</h2>
+        <h2>Simplification through Abstraction</h2>
 
         <p>
           Backplane forms the governance plane and sits beneath the developer

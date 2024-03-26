@@ -124,7 +124,7 @@ const mainPage = () => {
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
-          Simplifying Cloud Adoption, Enablement and Governance for enterprises!
+          Simplifying Enterprise-scale Cloud Adoption, Enablement and Governance
         </p>
         <div className={styles.cta}>
           <div>
@@ -273,8 +273,6 @@ const mainPage = () => {
         <h2>Sample Use Cases</h2>
         Here are some scenarios where Backplane's Cloud Abstraction API can
         help:
-        <br />
-        <br />
         <Tabs>
           <TabItem value="building-idp" label="Building IDP MVP" default>
             <p>
@@ -312,20 +310,32 @@ const mainPage = () => {
             className={`button button--secondary button--lg ${styles.blue}`}
             to="/docs/quick-start"
           >
-            Try it out!
+            Get Started
           </Link>
         </div>
       </div>
 
       <div className={styles.container}>
-        <h2>Open Source, always & forever!</h2>
+        <h2>Get involved, Backplane Community </h2>
 
-        <Link
-          className={`button button button--lg ${styles.yellow}`}
-          to="/docs/sponsorship"
-        >
-          Become a Patreon
-        </Link>
+        <ThemedImage
+          alt="Backplane themed image"
+          sources={{
+            light: "/img/github-light.png",
+            dark: "/img/github-dark.png",
+          }}
+          // className="logo"
+          style={{ width: "50px", margin: "20px" }}
+        />
+        <ThemedImage
+          alt="Backplane themed image"
+          sources={{
+            light: "/img/slack.png",
+            dark: "/img/slack.png",
+          }}
+          // className="logo"
+          style={{ width: "50px", margin: "20px" }}
+        />
       </div>
     </Layout>
   );
