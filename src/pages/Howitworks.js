@@ -17,15 +17,24 @@ const Howitworks = () => {
   return (
     <Layout>
       <div className={styles.container} style={{ marginTop: "20px" }}>
-        <h2>How Backplane works</h2>
+        <h2>Building the IDP MVP</h2>
+
+        <p>
+          Platform engineers and developers are spending time integrating their
+          internal developer portal by integrating with one or more cloud
+          service providers. This gives rise to tight coupling, and the
+          developers requiring familiarity with each cloud platform APIs.
+        </p>
         <ThemedImage
           alt="Backplane themed image"
           sources={{
-            light: "/img/howbackplaneworks-light.png",
-            dark: "/img/howbackplaneworks-dark.png",
+            light: "/img/withoutbackplane-light.png",
+            dark: "/img/withoutbackplane-dark.png",
           }}
-          style={{ width: "350px", margin: "20px 0" }}
+          style={{ width: "400px", margin: "20px 0" }}
         />
+        <h2>Backplane Simplifies this</h2>
+
         <p>
           Backplane forms the governance plane and sits beneath the developer
           and integration plane. The abstraction API provides an interface that
@@ -33,11 +42,20 @@ const Howitworks = () => {
           integration perspective, so upstream systems can consume governance
           data and create cloud environments simply and easily.
         </p>
-        <br />
+        <ThemedImage
+          alt="Backplane themed image"
+          sources={{
+            light: "/img/howbackplaneworks-light.png",
+            dark: "/img/howbackplaneworks-dark.png",
+          }}
+          style={{ width: "400px", margin: "20px 0" }}
+        />
+
+        {/* <br />
         <h5>Reference Architecture Diagram</h5>
         <img src={referencearchitecture} />
         <br />
-        <br />
+        <br /> */}
 
         <h2>The Data model</h2>
         <p>
@@ -55,8 +73,8 @@ const Howitworks = () => {
         <ThemedImage
           alt="Backplane themed image"
           sources={{
-            light: "/img/data-model-light.svg",
-            dark: "/img/data-model-dark.svg",
+            light: "/img/datamodel-light.png",
+            dark: "/img/datamodel-dark.png",
           }}
           // className="logo"
           style={{ padding: "20px", width: "400px" }}

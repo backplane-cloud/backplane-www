@@ -115,10 +115,13 @@ const mainPage = () => {
           className="logo"
         />
         <br />
-        
+
         <h2>Open Source Cloud Abstraction API</h2>
 
-        <p>Simplifying multi-cloud governance and speeding up development of custom Internal Developer Portals.
+        <p>
+          {/* Simplifying multi-cloud governance and speeding up development of
+          custom Internal Developer Portals. */}
+          Enterprise Cloud Adoption, Enablement and Governance simplified!
         </p>
         <div className={styles.cta}>
           <div>
@@ -142,41 +145,39 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>What is project Backplane</h2>
+        <h2>Why Backplane ?</h2>
         <p>
           Backplane is an Open Source Cloud Abstraction API that simplifies
           multi-cloud governance (Cost, Access, Resource controls and
           Environment provisioning). Enabling platform engineering teams to be
-          able to build enterprise-scale internal developer platforms faster. Saving development time, effort, and offering
-          performance gains to consuming systems by offloading the Extract and
-          Transform overhead.
+          able to build enterprise-scale internal developer platforms faster.
+          Saving development time, effort, and offering performance gains to
+          consuming systems by offloading the Extract and Transform overhead.
         </p>
         <ThemedImage
           alt="Backplane themed image"
           sources={{
-            light: "/img/simple-black.svg",
-            dark: "/img/simple-dark.svg",
+            light: "/img/projectbackplane-light.png",
+            dark: "/img/projectbackplane-dark.png",
           }}
           // className="logo"
-          style={{ padding: "20px", width: "400px" }}
+          className={styles.image}
         />
         <br />
         <br />
         <h2>What problem is it trying to solve ? </h2>
         <p>
-          Enterprises that are undergoing a digital transformation and having a
-          cloud strategy often find themselves with a multi-cloud landscape.
-          This can be intentional through de-risking vendor lock-in, or
-          leveraging differentiating value, or a by-product from commercial
-          mergers and acquisitions. Governing multi-cloud environments can be
-          complex, and this is especially so at enterprise scale. By providing a
-          single abstraction API, the retrieval of Cost, Access and Resource
-          control data is drastically simplified, allowing for faster
-          integration times and being able to reason more easily about
-          governance data from different cloud platforms since the data is
-          presented in a uniform way. The Abstraction API takes care of Extract
-          and Transform processing which further alleviates this concern from
-          consuming systems.
+          Enterprises undergoing digital transformation often adopt multi-cloud
+          strategies, whether to avoid vendor lock-in, leverage unique
+          strengths, or due to mergers and acquisitions. Managing multi-cloud
+          environments at scale is complex.
+        </p>
+        <p>
+          Backplane's abstraction API streamlines access to Cost, Access, and
+          Resource control data, simplifying integration and enhancing
+          governance across platforms. With automated Extract and Transform
+          processes, consuming systems can effortlessly access uniform data,
+          easing management burdens.
         </p>
         <br />
         <h2>Who is it for ?</h2>

@@ -1,3 +1,8 @@
+.image {
+  margin: 20px;
+  width: 600px;
+}
+
 .container {
   width: 800px;
   /* margin: 0, auto; */
@@ -166,5 +171,10 @@
     border-radius: 10px;
     font-size: 0.5rem;
     /* color: #2a7fff; */
+  }
+
+  .image {
+    margin: 20px;
+    width: 450px;
   }
 }
