@@ -150,7 +150,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Problem</h2>
+        <h2>Background</h2>
         <p>
           Governing multi-cloud at scale is complex. Integrating custom tooling
           to cloud platforms requires subject matter expertise and effort. By
