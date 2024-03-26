@@ -28,7 +28,7 @@ const About = () => {
   return (
     <Layout>
       <div className={styles.container} style={{ marginTop: "20px" }}>
-        <h2>Backplane Core Team</h2>
+        <h2>Core Team</h2>
         <br />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div style={{ padding: "20px" }}>
@@ -104,7 +104,7 @@ const About = () => {
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <div style={{ padding: "20px" }} style={{ padding: "20px" }}>
+          <div style={{ padding: "20px" }}>
             <div style={{ marginTop: "20px" }}>
               <img src={saurabh} style={{ width: "100px" }} />
             </div>
