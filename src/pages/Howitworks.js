@@ -17,7 +17,7 @@ const Howitworks = () => {
   return (
     <Layout>
       <div className={styles.container} style={{ marginTop: "20px" }}>
-        <h2>Building the IDP MVP</h2>
+        <h2>Building an IDP MVP</h2>
 
         <p>
           Platform engineers and developers are spending time integrating their
@@ -83,7 +83,8 @@ const Howitworks = () => {
           Backplane supports the importing of Apps and Products (see import
           instructions).
         </p>
-        <h2>Why an Abstraction API ?</h2>
+
+        {/* <h2>Why an Abstraction API ?</h2>
         <p style={{ textAlign: "justify" }}>
           As enterprises journey towards cloud-native architectures, they are
           increasingly finding themselves with a multi-cloud environment they
@@ -118,7 +119,7 @@ const Howitworks = () => {
             governance and also reasoning about governance concerns across
             multiple cloud platforms.
           </p>
-        </p>
+        </p> */}
 
         <p>
           A multi-cloud landscape adds complexity with each cloud platform
@@ -131,7 +132,7 @@ const Howitworks = () => {
         <p>
           <br />
           <h4>Multi-Cloud Governance today</h4>
-          <img src={irregular} style={{ padding: "20px" }} />
+          <img src={irregular} style={{ padding: "20px", width: "400px" }} />
           <h2>Problems</h2>
           <ul style={{ textAlign: "left" }}>
             <li>

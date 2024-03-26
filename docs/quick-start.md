@@ -227,7 +227,7 @@ bp request add --appid app1 --requestType link --requestedForType product
 ::: -->
 
 :::note Powershell Users
-For **Powershell** users, run `pwsh` and then use the CLI commands with the `--stringify` or `-s` switch to return raw JSON, this can then be piped into Powershell with `ConvertFrom-JSON`.
+For **Powershell** users, run `pwsh` and then use the CLI commands with the `--stringify` or `-s` switch to return raw JSON, this can then be piped into Powershell with `ConvertFromJSON`.
 
 For example:
 

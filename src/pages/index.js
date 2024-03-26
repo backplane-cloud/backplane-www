@@ -3,6 +3,9 @@ import styles from "./index.module.css";
 import Link from "@docusaurus/Link";
 import ThemedImage from "@theme/ThemedImage";
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 // import clsx from "clsx";
 // import Heading from "@theme/Heading";
 
@@ -121,7 +124,7 @@ const mainPage = () => {
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
-          Enterprise Cloud Adoption, Enablement and Governance simplified!
+          Simplifying Cloud Adoption, Enablement and Governance for enterprises!
         </p>
         <div className={styles.cta}>
           <div>
@@ -154,6 +157,19 @@ const mainPage = () => {
           Saving development time, effort, and offering performance gains to
           consuming systems by offloading the Extract and Transform overhead.
         </p>
+        <p>
+          Enterprises undergoing digital transformation often adopt multi-cloud
+          strategies, whether to avoid vendor lock-in, leverage differentiating
+          features, or due to mergers and acquisitions. Managing multi-cloud
+          environments at enterprise-scale is complex.
+        </p>
+        <p>
+          Backplane's abstraction API helps by streamlining access to Cost,
+          Access, and Resource control data, simplifying integration and
+          enhancing governance across cloud platforms. Consuming systems can
+          rely on a uniform data shape, making it simpler to reason about
+          governance concerns.
+        </p>
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -163,130 +179,135 @@ const mainPage = () => {
           // className="logo"
           className={styles.image}
         />
-        <br />
-        <br />
-        <h2>What problem is it trying to solve ? </h2>
-        <p>
-          Enterprises undergoing digital transformation often adopt multi-cloud
-          strategies, whether to avoid vendor lock-in, leverage unique
-          strengths, or due to mergers and acquisitions. Managing multi-cloud
-          environments at scale is complex.
-        </p>
-        <p>
-          Backplane's abstraction API streamlines access to Cost, Access, and
-          Resource control data, simplifying integration and enhancing
-          governance across platforms. With automated Extract and Transform
-          processes, consuming systems can effortlessly access uniform data,
-          easing management burdens.
-        </p>
-        <br />
-        <h2>Who is it for ?</h2>
-        Backplane is designed and built for enterprise-scale cloud governance.
-        <br />
-        <br />
-        <table>
-          <tr>
-            <td>Enterprise Architects</td>
-            <td>
-              The Software Catalog provides a single-source-of-truth for all
-              Cloud workloads across the cloud platforms. In addition, with full
-              resource control visibility, ensuring workloads align with
-              reference architecture is simplified, with exemption management
-              workflows allowing for deviations where required subject to
-              approval controls.
-            </td>
-          </tr>
-          <tr>
-            <td>Cloud Governance engineers</td>
-            <td>
-              Enabling cloud platforms at enterprise-scale requires good
-              governance around cost, access, resource controls and
-              environments.
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: "30%" }}>Platform Engineers</td>
-            <td>
-              Building the MVP IDP for your organisation will require
-              integration with a Cloud Provider. If you use multiple Cloud
-              Providers then this task is significantly ardeous. With
-              Backplane's Single Cloud Abstraction API for environment
-              provisioning, you can get your MVP IDP up and running quickly!
-            </td>
-          </tr>
-          <tr>
-            <td>FinOps Engineers</td>
-            <td>
-              Backplane not only provides cost visibility across cloud
-              platforms, it allows that data to be viewed at the Organisation
-              scope, Platform, Product and even App level granularity.
-              Furthermore, Budgets can be set at each of these scopes with an
-              approval workflow engine to ensure that Product teams are
-              accountable for their cloud spend against their approved budget.
-            </td>
-          </tr>
-        </table>
-        <br />
-        <h2>What value does it provide ?</h2>
-        <p>
-          Whether you're building your organisations{" "}
-          <span className={styles.bluetext}>internal developer platform</span>{" "}
-          or integrating existing cloud management tools to consuming{" "}
-          <span className={styles.bluetext}>
-            multi-cloud governance data-as-a-service
-          </span>
-          , Backplane provides the following benefits:
-        </p>
-        <table>
-          <tr>
-            <td style={{ width: "30%" }}>
-              <b>Reduce Integration time</b>
-            </td>
-            <td>
+        <Tabs>
+          <TabItem value="speed" label="Speed-up Integration" default>
+            <p>
               Developers do not have to learn the API for each cloud provider to
               determine how to access Cost, Access and Resource control data,
               including creation of Environments. By having a single abstracted
               API, you effectively outsource the concerns to the abstraction API
               and it takes care of the details, allowing Developers to focus on
               value generating tasks.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Efficient Offload</b>
-            </td>
-            <td>
+            </p>
+          </TabItem>
+          <TabItem value="efficiency" label="Offload efficiency">
+            <p>
+              Building the MVP IDP for your organisation will require
+              integration with a Cloud Provider. If you use multiple Cloud
+              Providers then this task is significantly ardeous. With
+              Backplane's Single Cloud Abstraction API for environment
+              provisioning, you can get your MVP IDP up and running quickly!
+            </p>
+          </TabItem>
+          <TabItem value="business-process" label="Business Process">
+            <p>
               Improve performance in consuming systems by offloading the Extract
               and Transform processing to Backplane, alleviating logic and
               processing overhead for consuming systems and presenting data in a
               consistent shape.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Simplicity in Abstraction</b>
-            </td>
-            <td>
+            </p>
+          </TabItem>
+          <TabItem value="simplicity" label="Simplicity">
+            <p>
               The API transforms the data into standardised datashape, making it
               easier to reason about cost, access and resource controls across
               different cloud platforms.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b>Decoupling</b>
-            </td>
-            <td>
+            </p>
+          </TabItem>
+          <TabItem value="decouple" label="Decoupled">
+            <p>
               Maintaining integrations can create a tight coupling and cause
               your consuming systems to become brittle. Backplane makes for a
               more flexible and scalable solution for its consumers.
-            </td>
-          </tr>
-        </table>
+            </p>
+          </TabItem>
+        </Tabs>
+        <h2>Who is it for ?</h2>
+        Backplane is designed and built for enterprise-scale cloud governance.
+        <br />
+        <br />
+        <Tabs>
+          <TabItem
+            value="enterprise-architects"
+            label="Enterprise Architects"
+            default
+          >
+            <p>
+              The Software Catalog provides a single-source-of-truth for all
+              Cloud workloads across the cloud platforms. In addition, with full
+              resource control visibility, ensuring workloads align with
+              reference architecture is simplified, with exemption management
+              workflows allowing for deviations where required subject to
+              approval controls.
+            </p>
+          </TabItem>
+          <TabItem value="platform-engineers" label="Platform Engineers">
+            <p>
+              Building the MVP IDP for your organisation will require
+              integration with a Cloud Provider. If you use multiple Cloud
+              Providers then this task is significantly ardeous. With
+              Backplane's Single Cloud Abstraction API for environment
+              provisioning, you can get your MVP IDP up and running quickly!
+            </p>
+          </TabItem>
+          <TabItem value="governance" label="Governance Teams">
+            <p>
+              {" "}
+              Enabling cloud platforms at enterprise-scale requires good
+              governance around cost, access, resource controls and
+              environments.
+            </p>
+          </TabItem>
+          <TabItem value="finops" label="FinOps Teams">
+            <p>
+              Backplane not only provides cost visibility across cloud
+              platforms, it allows that data to be viewed at the Organisation
+              scope, Platform, Product and even App level granularity.
+              Furthermore, Budgets can be set at each of these scopes with an
+              approval workflow engine to ensure that Product teams are
+              accountable for their cloud spend against their approved budget.
+            </p>
+          </TabItem>
+        </Tabs>
+        <br />
+        <h2>Sample Use Cases</h2>
+        Here are some scenarios where Backplane's Cloud Abstraction API can
+        help:
+        <br />
+        <br />
+        <Tabs>
+          <TabItem value="building-idp" label="Building IDP MVP" default>
+            <p>
+              When building your IDP MVP, speed is of the essense. Off-loading
+              environment provisioning to Backplane Cloud Abstraction API
+              simplifies integration by providing a single integration point.
+              Also, it reduces the dependency upon subject matter expertise on
+              the developers and platform engineers tasked with coding.
+            </p>
+          </TabItem>
+          <TabItem value="multicloud-governance" label="Multi-cloud Governance">
+            <p>
+              Building the MVP IDP for your organisation will require
+              integration with a Cloud Provider. If you use multiple Cloud
+              Providers then this task is significantly ardeous. With
+              Backplane's Single Cloud Abstraction API for environment
+              provisioning, you can get your MVP IDP up and running quickly!
+            </p>
+          </TabItem>
+          <TabItem value="business-process" label="Business Process">
+            <p>
+              Building the MVP IDP for your organisation will require
+              integration with a Cloud Provider. If you use multiple Cloud
+              Providers then this task is significantly ardeous. With
+              Backplane's Single Cloud Abstraction API for environment
+              provisioning, you can get your MVP IDP up and running quickly!
+            </p>
+          </TabItem>
+        </Tabs>
       </div>
 
       <div className={styles.container}>
-        <div style={{ marginTop: "20px" }}>
+        <div>
           <Link
             className={`button button--secondary button--lg ${styles.blue}`}
             to="/docs/quick-start"
