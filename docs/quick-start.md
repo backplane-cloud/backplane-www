@@ -214,10 +214,6 @@ The downloaded JSON is now ready to be used in your Org.
 bp cloud gcp add --id "<OrgID>" --tenantid "<Enter Google Org ID>" --gcpsecret "<path-to-JSON-file>"
 ```
 
-:::note
-
-:::
-
 </TabItem>
 <TabItem value="AWS" label="AWS">
 AWS is not yet implemented. 
@@ -241,7 +237,7 @@ bp product add --displayname 'Product X' --platformid '<Platform ID>'
 ### Create your first App
 
 ```js
-bp app add --displayname 'App 1' --cloud azure
+bp app add --displayname "My first App" --cloud "azure | gcp | aws"
 ```
 
 :::info
