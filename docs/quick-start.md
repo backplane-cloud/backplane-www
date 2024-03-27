@@ -159,7 +159,10 @@ bp auth login -e "<your e-mail address>" -p "<Password>"
 
 After you've registered your Root user and Organisation, the first port of call is to establish Cloud Service Provider credentials. Once these are in place, you can create your first App.
 
-:::tip Creating a Service Principal in Azure
+<Tabs>
+    <TabItem value="Azure" label="Azure" default>
+
+    :::tip Creating a Service Principal in Azure
 
 To create credentials you'll need to create an App registration in Entra ID.
 
@@ -174,28 +177,52 @@ To create credentials you'll need to create an App registration in Entra ID.
 5. Assign the Service Principal you created with Contributor permission at the Subscription scope.
    :::
 
-<Tabs>
-    <TabItem value="Azure" label="Azure" default>
-  ```js
-bp cloud add --id "<orgID>"
---provider "azure"
+```js
+bp cloud azure add --id "<orgID>"
 --tenantid "<tenant ID>"
 --clientid "<client ID>"
 --clientsecret "<Your Client Secret>"
---subscriptionid "<default subscription GUID>" 
+--subscriptionid "<default subscription GUID>"
 ```
+
 :::note
-The Subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release. 
+The Subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release.
 :::
 
    </TabItem>
    <TabItem value="GCP" label="GCP">
-   Coming Soon
-   </TabItem>
-   <TabItem value="AWS" label="AWS">
-   Coming Soon
-   </TabItem>
-   </Tabs>
+   :::tip Creating a Service Principal in GCP
+
+1.  Login to console.cloud.google.com
+2.  Go to IAM and admin > Service accounts
+3.  Select a Project and click on Create Service Account
+4.  Enter a service account name e.g. `backplane-demo` and a description e.g. `For Backplane API environment provisioning`
+5.  Click Create and Continue
+6.  Click on Done.
+7.  Click on IAM and switch to the Organisation level.
+8.  Click on Grant Access
+9.  Enter the service principal name e.g. `backplane-demo@backplane-core.iam.gserfviceaccount.com`
+10. In role, find `Project Creator`, click Save.
+11. Go back to your Project and click on IAM and Admin and then Service Accounts
+12. Click on your Service Account and select Keys, Add Key, Create New Key. Use JSON as the Key Type. Click on Create. This will download a .json file.
+13. Finally, go to APIs and Services and ensure Cloud Resource Manager API is enabled.
+
+The downloaded JSON is now ready to be used in your Org.
+:::
+
+```js
+bp cloud gcp add --id "<OrgID>" --tenantid "<Enter Google Org ID>" --gcpsecret "<path-to-JSON-file>"
+```
+
+:::note
+
+:::
+
+</TabItem>
+<TabItem value="AWS" label="AWS">
+AWS is not yet implemented. 
+</TabItem>
+</Tabs>
 
 ### Create your first Platform
 
