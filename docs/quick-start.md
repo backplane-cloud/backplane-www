@@ -41,9 +41,15 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
   </TabItem>
 </Tabs>
 :::info demo server
-You can use the hosted Backplane API server at `https://api.backplane.dev/api` for Demo purposes. 
+You can use the hosted Backplane API server at `https://api.backplane.dev/api` for Demo purposes.
 :::
+Use the below command to verify installation has been successful:
+```js
+$ bp -V
 
+v0.3.0
+
+```
 ### Install API Server
 
 <Tabs>
@@ -51,7 +57,9 @@ You can use the hosted Backplane API server at `https://api.backplane.dev/api` f
 To set the CLI to use the demo server, use the following command:
 
 ```
+
 bp auth setserver --server https://api.backplane.dev/api
+
 ```
 
 </TabItem>
@@ -62,10 +70,12 @@ bp auth setserver --server https://api.backplane.dev/api
 Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
 
 ```
+
 mkdir backplane-api
 cd backplane-api
 npm init -y
 npm i express dotenv @backplane-software/backplane-api
+
 ```
 
 #### Step 2 - Setup Environment Variables
@@ -73,10 +83,11 @@ npm i express dotenv @backplane-software/backplane-api
 Create `.env` file, and provide the following:
 
 ```
+
 NODE_ENV=development
 PORT=8000
 
-JWT_SECRET=<provide-key> // Make up your own secret, this is used as the salt to CryptB for password Hashing. e.g. MyS3cureP&!00word*
+JWT_SECRET=<provide-key> // Make up your own secret, this is used as the salt to CryptB for password Hashing. e.g. MyS3cureP&!00word\*
 
 MONGO_URI=<provide-key>
 
@@ -85,6 +96,7 @@ MAILSENDER_PASSWORD=<provide-key>
 
 LOGTAIL_KEY=<provide-key>
 LOG_LEVEL=debug
+
 ```
 
 :::tip Setting up MongoDB
@@ -106,6 +118,7 @@ MailerSend is used as an SMTP mailrelay, so that User Registration e-mails can b
 Create `index.js` file and copy the below into it.
 
 ```
+
 import express from "express";
 import dotenv from "dotenv";
 import backplane from "@backplane-software/backplane-api";
@@ -122,9 +135,10 @@ backplane(app);
 // Start REST API Server
 const port = process.env.PORT || 5001;
 app.listen(port, () =>
-  console.log(`Backplane REST API Server started on port ${port}`)
+console.log(`Backplane REST API Server started on port ${port}`)
 );
-```
+
+````
 
 #### Step 4 - Update Package.json
 
@@ -141,13 +155,11 @@ Use `curl http://localhost:8000` to confirm server is running. If successful you
 
 </Tabs>
 
-## Setup Backplane
-
 ### Register Organisation
 
 ```js
 bp user register --displayname "<Display Name>" --email "<your e-mail address>" --password "<Password>" --orgname "<Your Organisation Name>"
-```
+````
 
 #### Login
 
@@ -155,9 +167,9 @@ bp user register --displayname "<Display Name>" --email "<your e-mail address>" 
 bp auth login -e "<your e-mail address>" -p "<Password>"
 ```
 
-### Add Cloud Credentials
+### Adding Cloud Credentials
 
-After you've registered your Root user and Organisation, the first port of call is to establish Cloud Service Provider credentials. Once these are in place, you can create your first App.
+Now that your Organisation and User account has been setup, you're now ready toregister your cloud platforms.
 
 <Tabs>
     <TabItem value="Azure" label="Azure" default>
@@ -177,6 +189,8 @@ To create credentials you'll need to create an App registration in Entra ID.
 5. Assign the Service Principal you created with Contributor permission at the Subscription scope.
    :::
 
+#### Add Azure Credentials
+
 ```js
 bp cloud azure add --id "<orgID>"
 --tenantid "<tenant ID>"
@@ -190,6 +204,7 @@ The Subscription ID is required in the MVP since App environments are provisione
 :::
 
    </TabItem>
+
    <TabItem value="GCP" label="GCP">
    :::tip Creating a Service Principal in GCP
 
@@ -210,31 +225,79 @@ The Subscription ID is required in the MVP since App environments are provisione
 The downloaded JSON is now ready to be used in your Org.
 :::
 
+#### Add AWS Credentials
+
 ```js
 bp cloud gcp add --id "<OrgID>" --tenantid "<Enter Google Org ID>" --gcpsecret "<path-to-JSON-file>"
 ```
 
 </TabItem>
 <TabItem value="AWS" label="AWS">
-AWS is not yet implemented. 
-</TabItem>
+
+:::tip Creating a Service Principal in AWS
+
+1. Login to AWS Management Console
+2. Go to IAM
+3. Click on Users
+4. Click on Create User
+5. Enter User Details e.g. backplane-aws, click next
+6. Permission Options, select attach policies directly
+7. Click on Create Policy and in Policy Editor select JSON. Paste in the below JSON
+
+```js
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "organizations:CreateAccount",
+                "organizations:DescribeOrganization"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+8. Click Next, give Policy Name Backplane-account-creator
+9. Click Create Policy
+10. Click Create User
+11. Click on the new User Created, and click on Security Credentials
+12. Click on Create Access Key
+13. Select Third-party service use-case and tick the confirmation and click Next
+14. Create access key, record Access key and Secret access key values. Click Done.
+
+:::
+
+#### Add AWS Credentials
+
+```js
+bp cloud aws add --id "<OrgId>" --clientid "<accessKey>" --clientsecret "<accessKeySecret>"
+```
+
+  </TabItem>
 </Tabs>
 
-### Create your first Platform
+### Create Platform
+
+An Organisation will have a number of Platforms that provide a business capability, and within those platforms will exist Products. The Platform acts as a container for Products, but also a governance boundary for Cost, Access and Policies. Let's create our first platform:
 
 ```js
 bp platform add --displayname 'Platform A'
 ```
 
-### Create your first Product
+As the creator of the Platform, you will be assigned as the Owner.
 
-A Product can contain one or many Apps, and an App can belong to a single Cloud Platform. For example, Product A can contain App X (Azure), App Y (AWS) and App Z (GCP). The Apps represent the Cloud Workload.
+### Create Product
+
+A Product can contain one or many Apps, and an App can belong to a single Cloud Platform. For example, Product A can contain App X (Azure), App Y (AWS) and App Z (GCP). The Apps represent the Cloud Workload and set of environments.
 
 ```js
 bp product add --displayname 'Product X' --platformid '<Platform ID>'
 ```
 
-### Create your first App
+### Create App
 
 ```js
 bp app add --displayname "My first App" --cloud "azure | gcp | aws"
