@@ -5,7 +5,7 @@ import ThemedImage from "@theme/ThemedImage";
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-
+import Feature from "@site/src/components/Feature";
 // import clsx from "clsx";
 // import Heading from "@theme/Heading";
 
@@ -16,51 +16,34 @@ const mainPage = () => {
       Svg: require("@site/static/img/catalog.svg").default,
       description: (
         <>
-          Enabling discovery by providing your organisation a central source of
-          truth for all cloud workloads and services.
+          Full directory of Cloud workloads organised by Platform and
+          Capability.
         </>
       ),
     },
     {
-      title: "Environment Provisioning",
+      title: "Provisioning",
       Svg: require("@site/static/img/provisioning.svg").default,
-      description: (
-        <>
-          Backplane API enables the creation of Cloud Environments in any
-          regsitered Cloud Service Provider.
-        </>
-      ),
+      description: <>Provisioning environments in Azure, GCP or AWS.</>,
     },
     {
       title: "Governance",
       Svg: require("@site/static/img/governance.svg").default,
       description: (
-        <>
-          Having Cost, Access and Policy visibility across your Organisation,
-          Platform and Products is critical for scaling Cloud Transformations.
-        </>
+        <>Full Cost, Access and Policy visibility across your Organisation.</>
       ),
     },
     {
       title: "Workflow Engine",
       Svg: require("@site/static/img/workflow.svg").default,
-      description: (
-        <>
-          Create Requests for budget approval, access to Products and other
-          scenarios with the Backplane Workflow Engine to customise processes
-          that require approval.
-        </>
-      ),
+      description: <>Create Budget and Access requests for approval.</>,
     },
 
     {
       title: "Integrate Services",
       Svg: require("@site/static/img/service.svg").default,
       description: (
-        <>
-          Plug in your favourite services from Github to any custom API with a{" "}
-          Service.
-        </>
+        <>Auto-provision third-party services as part of App creation.</>
       ),
     },
     {
@@ -68,41 +51,30 @@ const mainPage = () => {
       Svg: require("@site/static/img/cli.svg").default,
       description: (
         <>
-          The Backplane Abstraction API comes with a fully featured Command Line
-          Interface to enable full automation and orchestration of tasks.
+          Fully featured CLI to enable full automation and orchestration of
+          tasks.
         </>
       ),
     },
 
     {
-      title: "Extensions Marketplace",
+      title: "Modules",
       Svg: require("@site/static/img/marketplace.svg").default,
       description: (
-        <>
-          Extend Backplane's functionality by building your own custom
-          Extensions and publish them in the Backplane Marketplace.
-        </>
+        <>Extend Backplane's functionality by building your own modules.</>
       ),
     },
     {
       title: "App Templates",
       Svg: require("@site/static/img/template.svg").default,
       description: (
-        <>
-          Create Apps with preset environments and services onboarded. Examples
-          are Sandbox, Production etc.
-        </>
+        <>Create Apps with preset environments and services onboarded.</>
       ),
     },
     {
       title: "Budgeting",
       Svg: require("@site/static/img/budget.svg").default,
-      description: (
-        <>
-          Create an Organisation-level budget with budget request workflow for
-          Platform and Products.
-        </>
-      ),
+      description: <>Set Org, Platform and Product budgets and approval.</>,
     },
   ];
 
@@ -134,7 +106,7 @@ const mainPage = () => {
               className={`button button--secondary button--lg ${styles.gray}`}
               to="/docs/quick-start"
             >
-              Try it out
+              Get Started
             </Link>
           </div>
           <div>
@@ -146,27 +118,10 @@ const mainPage = () => {
             </Link>
           </div>
         </div>
-        <hr />
       </div>
 
       <div className={styles.container}>
-        <h2>Background</h2>
-        <p>
-          Governing multi-cloud at scale is complex. Integrating custom tooling
-          to cloud platforms requires subject matter expertise and effort. By
-          providing a single abstracted view of the concerns of Cloud Cost,
-          Access, Resource Controls and Environment provisioning, platform
-          engineering teams and developers can focus on speed of delivery and a
-          separation of concerns that makes it simpler and easier to reason
-          about multicloud governance.
-        </p>
-        <h2>Solution</h2>
-        The Backplane API sits in front of the cloud platforms and provides a
-        logical data model of Org, Platform, Product and App. The App is linked
-        to a Cloud Platform, and generic queries for Cost, Access, Policy and
-        Environment provisioning can be issued to the Backplane API, and it will
-        translate the request into the correct format for the underlying cloud
-        platform.
+        <h2>Multi-Cloud, One API!</h2>
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -176,9 +131,48 @@ const mainPage = () => {
           // className="logo"
           className={styles.image}
         />
+        <p>
+          Introducing the multi-cloud environment provisioning, cost, access and
+          policy API, aka Cloud Abstraction API. Simply create your Org,
+          register your cloud platforms, and you’re ready to create Apps in
+          Azure, AWS or GCP through a single command! Try out the Cloud
+          Abstraction API today to see how it can power your cloud
+          transformation journey.
+        </p>
+        <p>
+          <h2>Core Features</h2>
+          <div
+            style={{
+              display: "flex",
+              width: "auto",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            {FeatureList.map((feature, id) => (
+              <div>
+                <Feature
+                  key={id}
+                  title={feature.title}
+                  description={feature.description}
+                  Svg={feature.Svg}
+                />
+              </div>
+            ))}
+          </div>
+        </p>
+        {/* <h2>How it works</h2>
+        The Backplane API sits in front of the cloud platforms and provides a
+        logical data model of Org, Platform, Product and App. The App is linked
+        to a Cloud Platform, and generic queries for Cost, Access, Policy and
+        Environment provisioning can be issued to the Backplane API, and it will
+        translate the request into the correct format for the underlying cloud
+        platform.
+        <br /> */}
+        <br />
         <h2>Benefits</h2>
         <Tabs>
-          <TabItem value="speed" label="Speed-up IDP MVP creation" default>
+          <TabItem value="speed" label="Building IDP MVP" default>
             <p>
               Developers do not have to learn the API for each cloud provider to
               determine how to access Cost, Access and Resource control data,
@@ -220,11 +214,17 @@ const mainPage = () => {
             </p>
           </TabItem>
         </Tabs>
-        <h2>Our Customers</h2>
-        Backplane is designed and built for enterprise-scale cloud governance.
-        <br />
-        <br />
+        <h2>Who's it for ? </h2>
         <Tabs>
+          <TabItem value="platform-engineers" label="Platform Engineers">
+            <p>
+              Building the MVP IDP for your organisation will require
+              integration with a Cloud Provider. If you use multiple Cloud
+              Providers then this task is significantly ardeous. With
+              Backplane's Single Cloud Abstraction API for environment
+              provisioning, you can get your MVP IDP up and running quickly!
+            </p>
+          </TabItem>
           <TabItem
             value="enterprise-architects"
             label="Enterprise Architects"
@@ -239,15 +239,7 @@ const mainPage = () => {
               approval controls.
             </p>
           </TabItem>
-          <TabItem value="platform-engineers" label="Platform Engineers">
-            <p>
-              Building the MVP IDP for your organisation will require
-              integration with a Cloud Provider. If you use multiple Cloud
-              Providers then this task is significantly ardeous. With
-              Backplane's Single Cloud Abstraction API for environment
-              provisioning, you can get your MVP IDP up and running quickly!
-            </p>
-          </TabItem>
+
           <TabItem value="governance" label="Governance Teams">
             <p>
               {" "}
@@ -308,7 +300,7 @@ const mainPage = () => {
             className={`button button--secondary button--lg ${styles.gray}`}
             to="/docs/quick-start"
           >
-            Try it out
+            Get Started
           </Link>
         </div>
       </div>

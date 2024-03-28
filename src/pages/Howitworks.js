@@ -21,7 +21,6 @@ const Howitworks = () => {
     <Layout>
       <div className={styles.container} style={{ marginTop: "20px" }}>
         <h2>How it works ?</h2>
-
         <p>
           Platform engineers and developers are spending time integrating their
           internal developer portal by integrating with one or more cloud
@@ -37,7 +36,6 @@ const Howitworks = () => {
           style={{ width: "400px", margin: "20px 0" }}
         />
         <h2>Simplification through Abstraction</h2>
-
         <p>
           Backplane forms the governance plane and sits beneath the developer
           and integration plane. The abstraction API provides an interface that
@@ -53,13 +51,11 @@ const Howitworks = () => {
           }}
           style={{ width: "400px", margin: "20px 0" }}
         />
-
         {/* <br />
         <h5>Reference Architecture Diagram</h5>
         <img src={referencearchitecture} />
         <br />
         <br /> */}
-
         <h2>The Data model</h2>
         <p>
           Your Organisation entity will contain Cloud Service Provider
@@ -86,7 +82,6 @@ const Howitworks = () => {
           Backplane supports the importing of Apps and Products (see import
           instructions).
         </p>
-
         {/* <h2>Why an Abstraction API ?</h2>
         <p style={{ textAlign: "justify" }}>
           As enterprises journey towards cloud-native architectures, they are
@@ -123,7 +118,6 @@ const Howitworks = () => {
             multiple cloud platforms.
           </p>
         </p> */}
-
         <p>
           A multi-cloud landscape adds complexity with each cloud platform
           having their own specific way of handling Cost, Access, Resource
@@ -131,9 +125,25 @@ const Howitworks = () => {
           will need to integrate with each Cloud Platform's API and process the
           data to transform it into a suitable format.
         </p>
-
+        <br />
+        <h2>MVP progress</h2>
         <p>
-          <br />
+          The API Server supports Azure, GCP and AWS. The below matrix shows
+          what is implemented as of 28 Mar 2024. The functionality resides in
+          Backplane Library (@backplane-software/backplane-[cloud])
+        </p>
+        <p>
+          <ThemedImage
+            alt="Backplane themed image"
+            sources={{
+              light: "/img/mvpstatus-light.png",
+              dark: "/img/mvpstatus-dark.png",
+            }}
+            // className="logo"
+            // className={styles.image}
+            style={{ width: "450px", margin: "20px 0" }}
+          />
+          {/* <br />
           <h4>Multi-Cloud Governance today</h4>
           <img src={irregular} style={{ padding: "20px", width: "400px" }} />
           <h2>Problems</h2>
@@ -151,10 +161,8 @@ const Howitworks = () => {
               and effort.
             </li>
           </ul>
-          <br />
+          <br /> */}
         </p>
-        <br />
-        <img src={regular} style={{ padding: "20px" }} />
       </div>
     </Layout>
   );

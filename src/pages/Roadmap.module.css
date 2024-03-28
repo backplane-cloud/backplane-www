@@ -4,14 +4,14 @@
 }
 
 .container {
-  width: auto;
-  /* margin: 0, auto; */
+  width: 500px;
+  margin: 0, auto;
   padding: 20px;
   /* margin: 20px; */
   align-self: center;
   font-family: Poppins, sans-serif;
   justify-content: center;
-  display: flex;
+  /* display: flex; */
 
   /* background-color: #272727; */
 }

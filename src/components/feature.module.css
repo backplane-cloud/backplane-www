@@ -1,6 +1,6 @@
 .featureCard {
-  height: auto;
-  width: fill;
+  height: 200px;
+  width: 200px;
   background: #eff2f6;
   padding: 20px;
   margin: 15px;
@@ -17,7 +17,7 @@
 }
 
 .featureCard .description {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.6rem;
   margin-top: 10px;
   text-align: left;

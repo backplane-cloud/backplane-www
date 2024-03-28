@@ -56,6 +56,15 @@ const Roadmap = () => {
           }}
           className="logo"
         />
+        <div className={styles.container}>
+          <h1>Motivation</h1>
+          Enterprises are increasing adopting a mult-cloud landscape, driven by
+          platform differentiating features, mergers and acquisitions and a
+          growing need to avoid vendor lock-in.
+        </div>
+
+        <br />
+        <br />
       </div>
       <div className={styles.container}>
         <div className={styles.timeline}>

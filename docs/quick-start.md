@@ -225,7 +225,7 @@ The Subscription ID is required in the MVP since App environments are provisione
 The downloaded JSON is now ready to be used in your Org.
 :::
 
-#### Add AWS Credentials
+#### Add GCP Credentials
 
 ```js
 bp cloud gcp add --id "<OrgID>" --tenantid "<Enter Google Org ID>" --gcpsecret "<path-to-JSON-file>"
