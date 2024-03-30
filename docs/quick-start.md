@@ -180,7 +180,7 @@ To create credentials you'll need to create an App registration in Entra ID.
 
 1. Go to Microsoft Entra ID, and under Manage in the left side menu, select App registrations.
 
-2. Click on New Registration and gives it a name and click Register.
+2. Click on New Registration and provide a name (e.g. `backplane-api`) a name and click Register.
 
 3. Take note of the Tenant ID and Client ID.
 
@@ -211,7 +211,7 @@ The Subscription ID is required in the MVP since App environments are provisione
 1.  Login to console.cloud.google.com
 2.  Go to IAM and admin > Service accounts
 3.  Select a Project and click on Create Service Account
-4.  Enter a service account name e.g. `backplane-demo` and a description e.g. `For Backplane API environment provisioning`
+4.  Enter a service account name e.g. `backplane-api` and a description e.g. `For Backplane API environment provisioning`
 5.  Click Create and Continue
 6.  Click on Done.
 7.  Click on IAM and switch to the Organisation level.
@@ -240,7 +240,7 @@ bp cloud gcp add --id "<OrgID>" --tenantid "<Enter Google Org ID>" --gcpsecret "
 2. Go to IAM
 3. Click on Users
 4. Click on Create User
-5. Enter User Details e.g. backplane-aws, click next
+5. Enter User Details e.g. `backplane-api`, click next
 6. Permission Options, select attach policies directly
 7. Click on Create Policy and in Policy Editor select JSON. Paste in the below JSON
 
@@ -300,7 +300,7 @@ bp product add --displayname 'Product X' --platformid '<Platform ID>'
 ### Create App
 
 ```js
-bp app add --displayname "My first App" --cloud "azure | gcp | aws"
+bp app create --displayname "My first App" --cloud "azure | gcp | aws"
 ```
 
 :::info

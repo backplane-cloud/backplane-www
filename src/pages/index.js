@@ -121,7 +121,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Multi-Cloud, One API!</h2>
+        <h2>Cloud Hypervisor!</h2>
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -306,7 +306,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Get involved, Backplane Community </h2>
+        <h2>Community </h2>
         <p>
           We are a team of cloud engineers passionate about cloud adoption,
           enablement and governance. Feel free to get involved; whether
