@@ -144,12 +144,11 @@ const mainPage = () => {
         <p>
           At Backplane, we recognise the pivotal role of two core themes in
           driving organisational value: Developer Experience and Cloud Cost
-          Management. These are not just buzzwords; they represent the linchpins
-          upon which successful cloud strategies are built.
+          Management. These are not just buzzwords; they represent the
+          cornerstones upon which successful cloud strategies are built.
         </p>
         <p>
-          Our innovative solutions are tailored to address these critical areas
-          head-on:
+          Backplane addresses these critical areas head-on:
           <br />
           <br />
           <h2>Abstraction API</h2>
@@ -177,12 +176,9 @@ const mainPage = () => {
           </p>
         </p>
         <p>
-          In essence, Backplane is not just another vendor; we are the
-          foundational cornerstone upon which enterprise-scale cloud adoption
-          thrives. Our suite of offerings, including the Cloud Abstraction API
-          and our Cloud Governance Platform, empowers organisations to transcend
-          the complexities of multi-cloud environments and embrace the future of
-          cloud with confidence.
+          The Cloud Abstraction API and Cloud Governance Platform, empowers
+          organisations to transcend the complexities of multi-cloud
+          environments and embrace the future of cloud with confidence.
         </p>
         <div style={{ textAlign: "left" }}>
           <h2>Key Features</h2>
