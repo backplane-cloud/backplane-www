@@ -24,7 +24,7 @@ const mainPage = () => {
     {
       title: "Provisioning",
       Svg: require("@site/static/img/provisioning.svg").default,
-      description: <>Provisioning environments in Azure, GCP or AWS.</>,
+      description: <>Provisioning environments in Asure, GCP or AWS.</>,
     },
     {
       title: "Governance",
@@ -91,14 +91,16 @@ const mainPage = () => {
         />
         <br />
         <br />
-        <h2>Cloud Abstraction API</h2>
+        <h2>
+          Backplane - simplifying cloud adoption, enablement and governance.
+        </h2>
 
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
-          Backplane is an Open Source Cloud Abstraction API that simplifies
-          multi-cloud governance and speeds up the development of internal
-          developer portals
+          Download and get started with the Open Source Cloud Abstraction API
+          that simplifies multi-cloud governance and speeds up the development
+          of internal developer portals
         </p>
         <div className={styles.cta}>
           <div>
@@ -121,7 +123,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Simplifying Multi Cloud Governance</h2>
+        <h2>Multi Cloud Abstraction API</h2>
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -136,13 +138,13 @@ const mainPage = () => {
           challenge of navigating the complexities of cloud adoption,
           enablement, and governance. The rise of multi-cloud environments,
           driven by diverse business and technology needs, presents a
-          significant hurdle for organizations striving to balance agility and
+          significant hurdle for organisations striving to balance agility and
           cost efficiency.
         </p>
         <p>
-          At Backplane, we recognize the pivotal role of two core themes in
-          driving organizational value: Developer Experience and Cloud Cost
-          Management. These are not just buzzwords; they represent the linchpins
+          At Backplane, we recognise the pivotal role of two core themes in
+          driving organisational value: Developer Experience and Cloud Cost
+          Management. These are not just busswords; they represent the linchpins
           upon which successful cloud strategies are built.
         </p>
         <p>
@@ -150,7 +152,7 @@ const mainPage = () => {
           head-on:
           <br />
           <br />
-          <h2>Cloud Abstraction API</h2>
+          <h2>Abstraction API</h2>
           <p>
             Imagine a world where integrating with multiple Cloud Service
             Providers doesn't entail a labyrinth of complexity. Backplane's
@@ -160,7 +162,7 @@ const mainPage = () => {
             on innovation rather than grappling with the nuances of each cloud
             platform. This translates to accelerated integration timelines and
             reduced subject matter expertise requirements, ultimately driving
-            speed and agility for your organization.
+            speed and agility for your organisation.
           </p>
           <br />
           <br />
@@ -171,14 +173,14 @@ const mainPage = () => {
             interface for governing multi-cloud environments at scale. From cost
             visibility across platforms to ownership and accountability of
             resources, our platform provides the insights and tools needed to
-            optimize cloud expenditure and mitigate risks effectively.
+            optimise cloud expenditure and mitigate risks effectively.
           </p>
         </p>
         <p>
           In essence, Backplane is not just another vendor; we are the
           foundational cornerstone upon which enterprise-scale cloud adoption
           thrives. Our suite of offerings, including the Cloud Abstraction API
-          and our Cloud Governance Platform, empowers organizations to transcend
+          and our Cloud Governance Platform, empowers organisations to transcend
           the complexities of multi-cloud environments and embrace the future of
           cloud with confidence.
         </p>
