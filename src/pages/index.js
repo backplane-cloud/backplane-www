@@ -144,7 +144,7 @@ const mainPage = () => {
         <p>
           At Backplane, we recognise the pivotal role of two core themes in
           driving organisational value: Developer Experience and Cloud Cost
-          Management. These are not just busswords; they represent the linchpins
+          Management. These are not just buzzwords; they represent the linchpins
           upon which successful cloud strategies are built.
         </p>
         <p>
