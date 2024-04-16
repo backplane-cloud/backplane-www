@@ -90,7 +90,7 @@ const mainPage = () => {
           className="logo"
         />
         <br />
-
+        <br />
         <h2>Cloud Abstraction API</h2>
 
         <p>
@@ -121,7 +121,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Cloud Hypervisor!</h2>
+        <h2>Simplifying Multi Cloud Governance</h2>
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -132,13 +132,71 @@ const mainPage = () => {
           className={styles.image}
         />
         <p>
-          Introducing the multi-cloud environment provisioning, cost, access and
-          policy API, aka Cloud Abstraction API. Simply create your Org,
-          register your cloud platforms, and you’re ready to create Apps in
-          Azure, AWS or GCP through a single command! Try out the Cloud
-          Abstraction API today to see how it can power your cloud
-          transformation journey.
+          In today's dynamic business landscape, enterprises face the daunting
+          challenge of navigating the complexities of cloud adoption,
+          enablement, and governance. The rise of multi-cloud environments,
+          driven by diverse business and technology needs, presents a
+          significant hurdle for organizations striving to balance agility and
+          cost efficiency.
         </p>
+        <p>
+          At Backplane, we recognize the pivotal role of two core themes in
+          driving organizational value: Developer Experience and Cloud Cost
+          Management. These are not just buzzwords; they represent the linchpins
+          upon which successful cloud strategies are built.
+        </p>
+        <p>
+          Our innovative solutions are tailored to address these critical areas
+          head-on:
+          <br />
+          <br />
+          <h2>Cloud Abstraction API</h2>
+          <p>
+            Imagine a world where integrating with multiple Cloud Service
+            Providers doesn't entail a labyrinth of complexity. Backplane's
+            Cloud Abstraction API serves as a beacon of simplicity in a sea of
+            intricacy. By abstracting over concerns such as Cost, Access,
+            Policy, and Environment provisioning, we empower developers to focus
+            on innovation rather than grappling with the nuances of each cloud
+            platform. This translates to accelerated integration timelines and
+            reduced subject matter expertise requirements, ultimately driving
+            speed and agility for your organization.
+          </p>
+          <br />
+          <br />
+          <h2>Cloud Governance Platform</h2>
+          <p>
+            In the realm of multi-cloud governance, transparency and control are
+            paramount. Backplane's SaaS solution offers a comprehensive
+            interface for governing multi-cloud environments at scale. From cost
+            visibility across platforms to ownership and accountability of
+            resources, our platform provides the insights and tools needed to
+            optimize cloud expenditure and mitigate risks effectively.
+          </p>
+        </p>
+        <p>
+          In essence, Backplane is not just another vendor; we are the
+          foundational cornerstone upon which enterprise-scale cloud adoption
+          thrives. Our suite of offerings, including the Cloud Abstraction API
+          and our Cloud Governance Platform, empowers organizations to transcend
+          the complexities of multi-cloud environments and embrace the future of
+          cloud with confidence.
+        </p>
+        <div style={{ textAlign: "left" }}>
+          <h2>Key Features</h2>
+          <p>
+            <ul>
+              <li>Multi Cloud Environment Provisioning</li>
+              <li>Comprehensive Cost, Access, and Policy Management</li>
+              <li>Dynamic Software Catalog</li>
+              <li>Robust Workflow Approval Engine</li>
+              <li>Seamless Service Integration and Orchestration</li>
+              <li>FinOps-driven Cost and Budget Management</li>
+            </ul>
+            Join us on the journey to unlock the full potential of
+            enterprise-scale multi-cloud adoption and governance.
+          </p>
+        </div>
         <p>
           <h2>Core Features</h2>
           <div
@@ -214,7 +272,7 @@ const mainPage = () => {
             </p>
           </TabItem>
         </Tabs>
-        <h2>Who's it for ? </h2>
+        <h2>Who can benefit from Backplane ? </h2>
         <Tabs>
           <TabItem value="platform-engineers" label="Platform Engineers">
             <p>
@@ -260,7 +318,7 @@ const mainPage = () => {
           </TabItem>
         </Tabs>
         <br />
-        <h2>Use Cases</h2>
+        <h2>Scenarios</h2>
         Here are some scenarios where Backplane's Cloud Abstraction API can
         help:
         <Tabs>
