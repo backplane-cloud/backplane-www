@@ -91,16 +91,15 @@ const mainPage = () => {
         />
         <br />
         <br />
-        <h2>
-          Backplane - simplifying cloud adoption, enablement and governance.
-        </h2>
+        <h2>Plug into the Backplane to simplify multi-cloud governance.</h2>
 
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
-          Download and get started with the Open Source Cloud Abstraction API
-          that simplifies multi-cloud governance and speeds up the development
-          of internal developer portals
+          Download and get started today with the Open Source Cloud Abstraction
+          API that simplifies multi-cloud adoption, enablement and governance,
+          and helps accelerate the development of your internal developer
+          portal.
         </p>
         <div className={styles.cta}>
           <div>
