@@ -24,7 +24,7 @@ const mainPage = () => {
     {
       title: "Provisioning",
       Svg: require("@site/static/img/provisioning.svg").default,
-      description: <>Provisioning environments in Asure, GCP or AWS.</>,
+      description: <>Provisioning environments in Azure, GCP or AWS.</>,
     },
     {
       title: "Governance",
@@ -91,15 +91,15 @@ const mainPage = () => {
         />
         <br />
         <br />
-        <h2>Plug into the Backplane to simplify multi-cloud governance.</h2>
-
+        <h2>Cloud Abstraction API</h2>
+        <h3>simplifying multi-cloud governance</h3>
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
-          Download and get started today with the Open Source Cloud Abstraction
+          {/* Download and get started today with the Open Source Cloud Abstraction
           API that simplifies multi-cloud adoption, enablement and governance,
           and helps accelerate the development of your internal developer
-          portal.
+          portal. */}
         </p>
         <div className={styles.cta}>
           <div>
@@ -122,8 +122,72 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Multi Cloud Abstraction API</h2>
-        <ThemedImage
+        <h2>Introduction</h2>
+        <p>
+          Backplane is a Cloud Governance platform that helps simplify
+          multi-cloud governance for enterprises by providing a single
+          abstraction API to serve as the integration point for environment
+          provisioning and retrieval of cost, access and policy data across
+          public cloud service providers such as Azure, AWS and GCP.
+          <br />
+          <br />
+          Backplane is built by engineers, for engineers, focused on the
+          concerns of cloud adoption, enablement, platform engineering and
+          FinOps practices to deliver a frictionless Developer experience.
+        </p>
+      </div>
+
+      <div className={styles.container}>
+        <h2>Motivation</h2>
+        <p style={{ textAlign: "left" }}>
+          <ul>
+            <li style={{ marginTop: "15px" }}>
+              Enterprise-scale multi-cloud governance is complicated, requiring
+              knowledge of each public cloud vendors' cloud platform.
+            </li>
+            <li style={{ marginTop: "15px" }}>
+              Governance at scale if not implemented correct can hamstring To
+              streamline the governance friction often encountered by Developers
+              and improve the developer experience and team agility.
+            </li>
+            <li style={{ marginTop: "15px" }}>
+              To provide better cross-cloud cost visibility and management.
+            </li>
+
+            <li style={{ marginTop: "15px" }}>
+              To enable cross-cloud Cost budgeting and deliver on FinOps
+              practices
+            </li>
+          </ul>
+        </p>
+      </div>
+
+      <div className={styles.container}>
+        <h2>Getting Started</h2>
+        <p>
+          You can get started with Backplane in a number of ways depending upon
+          your scenario:
+          <br />
+          <br />
+          <Tabs style={{ textAlign: "center" }}>
+            <TabItem value="api" label="Cloud Abstraction API" default>
+              <p>
+                The Backplane API comes in two flavours, a JSON-based API with a
+                CLI, or a Hypermedia-based API with a UI. By hosting Backplane
+                API your integrations can outsource environment provisioning and
+                consumption of governance data across the major cloud platforms.
+              </p>
+            </TabItem>
+            <TabItem value="saas" label="Backplane Cloud (SaaS)">
+              <p>
+                Backplane Cloud is a SaaS Enterprise Cloud Governance Platform
+                for governing and managing your multi-cloud landscape.
+              </p>
+            </TabItem>
+          </Tabs>
+        </p>
+
+        {/* <ThemedImage
           alt="Backplane themed image"
           sources={{
             light: "/img/projectbackplane-light.png",
@@ -131,70 +195,8 @@ const mainPage = () => {
           }}
           // className="logo"
           className={styles.image}
-        />
-        <p>
-          In today's dynamic business landscape, enterprises face the daunting
-          challenge of navigating the complexities of cloud adoption,
-          enablement, and governance. The rise of multi-cloud environments,
-          driven by diverse business and technology needs, presents a
-          significant hurdle for organisations striving to balance agility and
-          cost efficiency.
-        </p>
-        <p>
-          At Backplane, we recognise the pivotal role of two core themes in
-          driving organisational value: Developer Experience and Cloud Cost
-          Management. These are not just buzzwords; they represent the
-          cornerstones upon which successful cloud strategies are built.
-        </p>
-        <p>
-          Backplane addresses these critical areas head-on:
-          <br />
-          <br />
-          <h2>Abstraction API</h2>
-          <p>
-            Imagine a world where integrating with multiple Cloud Service
-            Providers doesn't entail a labyrinth of complexity. Backplane's
-            Cloud Abstraction API serves as a beacon of simplicity in a sea of
-            intricacy. By abstracting over concerns such as Cost, Access,
-            Policy, and Environment provisioning, we empower developers to focus
-            on innovation rather than grappling with the nuances of each cloud
-            platform. This translates to accelerated integration timelines and
-            reduced subject matter expertise requirements, ultimately driving
-            speed and agility for your organisation.
-          </p>
-          <br />
-          <br />
-          <h2>Cloud Governance Platform</h2>
-          <p>
-            In the realm of multi-cloud governance, transparency and control are
-            paramount. Backplane's SaaS solution offers a comprehensive
-            interface for governing multi-cloud environments at scale. From cost
-            visibility across platforms to ownership and accountability of
-            resources, our platform provides the insights and tools needed to
-            optimise cloud expenditure and mitigate risks effectively.
-          </p>
-        </p>
-        <p>
-          The Cloud Abstraction API and Cloud Governance Platform, empowers
-          organisations to transcend the complexities of multi-cloud
-          environments and embrace the future of cloud with confidence.
-        </p>
-        <div style={{ textAlign: "left" }}>
-          <h2>Key Features</h2>
-          <p>
-            <ul>
-              <li>Multi Cloud Environment Provisioning</li>
-              <li>Comprehensive Cost, Access, and Policy Management</li>
-              <li>Dynamic Software Catalog</li>
-              <li>Robust Workflow Approval Engine</li>
-              <li>Seamless Service Integration and Orchestration</li>
-              <li>FinOps-driven Cost and Budget Management</li>
-            </ul>
-            Join us on the journey to unlock the full potential of
-            enterprise-scale multi-cloud adoption and governance.
-          </p>
-        </div>
-        <p>
+        /> */}
+        {/* <p>
           <h2>Core Features</h2>
           <div
             style={{
@@ -215,7 +217,7 @@ const mainPage = () => {
               </div>
             ))}
           </div>
-        </p>
+        </p> */}
         {/* <h2>How it works</h2>
         The Backplane API sits in front of the cloud platforms and provides a
         logical data model of Org, Platform, Product and App. The App is linked
@@ -224,10 +226,10 @@ const mainPage = () => {
         translate the request into the correct format for the underlying cloud
         platform.
         <br /> */}
-        <br />
+        {/* <br />
         <h2>Benefits</h2>
         <Tabs>
-          <TabItem value="speed" label="Building IDP MVP" default>
+          <TabItem value="speed" label="Developer Productivity" default>
             <p>
               Developers do not have to learn the API for each cloud provider to
               determine how to access Cost, Access and Resource control data,
@@ -237,7 +239,7 @@ const mainPage = () => {
               value generating tasks.
             </p>
           </TabItem>
-          <TabItem value="efficiency" label="Offload efficiency">
+          <TabItem value="efficiency" label="Simplify Integration">
             <p>
               Building the MVP IDP for your organisation will require
               integration with a Cloud Provider. If you use multiple Cloud
@@ -245,31 +247,33 @@ const mainPage = () => {
               Backplane's Single Cloud Abstraction API for environment
               provisioning, you can get your MVP IDP up and running quickly!
             </p>
-          </TabItem>
-          <TabItem value="business-process" label="Business Process">
+          </TabItem> */}
+        {/* <TabItem value="business-process" label="Business Process">
             <p>
               Improve performance in consuming systems by offloading the Extract
               and Transform processing to Backplane, alleviating logic and
               processing overhead for consuming systems and presenting data in a
               consistent shape.
             </p>
-          </TabItem>
-          <TabItem value="simplicity" label="Simplicity">
-            <p>
+          </TabItem> */}
+        {/* <TabItem value="simplicity" label="Cost Transparency"> */}
+        {/* <p>
               The API transforms the data into standardised datashape, making it
               easier to reason about cost, access and resource controls across
               different cloud platforms.
-            </p>
-          </TabItem>
-          <TabItem value="decouple" label="Decoupled">
+            </p> */}
+        {/* </TabItem> */}
+        {/* <TabItem value="decouple" label="Decoupled">
             <p>
               Maintaining integrations can create a tight coupling and cause
               your consuming systems to become brittle. Backplane makes for a
               more flexible and scalable solution for its consumers.
             </p>
-          </TabItem>
-        </Tabs>
-        <h2>Who can benefit from Backplane ? </h2>
+          </TabItem> */}
+        {/* </Tabs>
+        <br />
+        <br /> */}
+        {/* <h2>Who is Backplane for ? </h2>
         <Tabs>
           <TabItem value="platform-engineers" label="Platform Engineers">
             <p>
@@ -313,17 +317,12 @@ const mainPage = () => {
               accountable for their cloud spend against their approved budget.
             </p>
           </TabItem>
-        </Tabs>
-        <br />
-        <h2>Scenarios</h2>
-        Here are some scenarios where Backplane's Cloud Abstraction API can
-        help:
+        </Tabs> */}
+        {/* <br />
+        <h2>Sample Use Cases</h2>
+
         <Tabs>
-          <TabItem
-            value="building-idp"
-            label="Building Enterprise IDP MVP"
-            default
-          >
+          <TabItem value="building-idp" label="Building IDP MVP" default>
             <p>
               When building your IDP MVP, speed is of the essense. Off-loading
               environment provisioning to Backplane Cloud Abstraction API
@@ -332,21 +331,24 @@ const mainPage = () => {
               the developers and platform engineers tasked with coding.
             </p>
           </TabItem>
-          <TabItem value="multicloud-governance" label="Multi-cloud Governance">
+          <TabItem
+            value="multicloud-governance"
+            label="Governance-as-a-Service"
+          >
             <p>
               Being able to retrieve Cost, Access and Policy data across
               multiple clouds and in a datashape that allows side-by-side
               analysis.
             </p>
           </TabItem>
-          <TabItem value="business-process" label="Business Process">
+          <TabItem value="business-process" label="Implementing FinOps">
             <p>
               Business processes such as Budget Approvals are handled through
               Backplane's Workflow Engine. By creating a Request, it is sent to
               the appropiate approval authority.
             </p>
           </TabItem>
-        </Tabs>
+        </Tabs> */}
       </div>
 
       <div className={styles.container}>

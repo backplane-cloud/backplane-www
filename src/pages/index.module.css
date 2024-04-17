@@ -12,6 +12,21 @@
   font-family: Poppins, sans-serif;
   text-align: center;
 }
+.containerLeft {
+  width: 800px;
+  /* margin: 0, auto; */
+  padding: 20px;
+  /* margin: 20px; */
+  align-self: center;
+  font-family: Poppins, sans-serif;
+  text-align: left;
+}
+
+.containerLeft h2 {
+  font-family: Poppins, sans-serif;
+  font-size: 2rem;
+  color: black;
+}
 
 .container h1 {
   font-family: Orbitron, Poppins, sans-serif;
@@ -42,7 +57,7 @@
   font-weight: bold;
 }
 
-.container p {
+.containerLeft p {
   font-size: 1.2rem;
   color: #393a3d;
   /* text-align: left; */
