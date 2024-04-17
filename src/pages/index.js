@@ -91,8 +91,8 @@ const mainPage = () => {
         />
         <br />
         <br />
-        <h2>Cloud Abstraction API</h2>
-        <h3>simplifying multi-cloud governance</h3>
+        <h2>Multi-Cloud Governance Platform</h2>
+        <p>Simplifying multi-cloud governance and developer experience.</p>
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
@@ -146,12 +146,11 @@ const mainPage = () => {
               knowledge of each public cloud vendors' cloud platform.
             </li>
             <li style={{ marginTop: "15px" }}>
-              Governance at scale if not implemented correct can hamstring To
-              streamline the governance friction often encountered by Developers
-              and improve the developer experience and team agility.
+              Governance at scale can become a point of friction, slowing down
+              developer agility and delivery.
             </li>
             <li style={{ marginTop: "15px" }}>
-              To provide better cross-cloud cost visibility and management.
+              To provide cross-cloud cost transparency.
             </li>
 
             <li style={{ marginTop: "15px" }}>
@@ -163,7 +162,7 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Getting Started</h2>
+        <h2>Get Started</h2>
         <p>
           You can get started with Backplane in a number of ways depending upon
           your scenario:
@@ -176,6 +175,16 @@ const mainPage = () => {
                 CLI, or a Hypermedia-based API with a UI. By hosting Backplane
                 API your integrations can outsource environment provisioning and
                 consumption of governance data across the major cloud platforms.
+                <br />
+                <br />
+                <div>
+                  <Link
+                    className={`button button--secondary button--lg ${styles.gray}`}
+                    to="/docs/quick-start"
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </p>
             </TabItem>
             <TabItem value="saas" label="Backplane Cloud (SaaS)">
@@ -349,17 +358,6 @@ const mainPage = () => {
             </p>
           </TabItem>
         </Tabs> */}
-      </div>
-
-      <div className={styles.container}>
-        <div>
-          <Link
-            className={`button button--secondary button--lg ${styles.gray}`}
-            to="/docs/quick-start"
-          >
-            Get Started
-          </Link>
-        </div>
       </div>
 
       <div className={styles.container}>
