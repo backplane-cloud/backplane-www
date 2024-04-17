@@ -110,12 +110,20 @@ const mainPage = () => {
               Get Started
             </Link>
           </div>
-          <div>
+          {/* <div>
             <Link
-              className={`button button--secondary button--lg ${styles.blue}`}
+              className={`button button--secondary button--lg ${styles.darkgray}`}
               to="/docs/cli"
             >
               Download CLI
+            </Link>
+          </div> */}
+          <div>
+            <Link
+              className={`button button--secondary button--lg ${styles.blue}`}
+              to="https://api.backplane.dev/"
+            >
+              Demo{" "}
             </Link>
           </div>
         </div>
@@ -162,38 +170,40 @@ const mainPage = () => {
       </div>
 
       <div className={styles.container}>
-        <h2>Get Started</h2>
+        <h2>Quick Start</h2>
         <p>
-          You can get started with Backplane in a number of ways depending upon
-          your scenario:
+          The Backplane API can be used as a JSON-based API with a CLI, or a
+          Hypermedia-based API with a UI. By hosting Backplane API your
+          integrations can out-source cloud environment provisioning and
+          consumption of cloud governance data across your enterprise's cloud
+          platforms.
           <br />
           <br />
-          <Tabs style={{ textAlign: "center" }}>
-            <TabItem value="api" label="Cloud Abstraction API" default>
+          <div>
+            <Link
+              className={`button button--secondary button--lg ${styles.gray}`}
+              to="/docs/quick-start"
+            >
+              Get Started
+            </Link>
+          </div>
+          {/* <Tabs> */}
+          {/* <TabItem value="library" label="Client Library Only">
               <p>
-                The Backplane API comes in two flavours, a JSON-based API with a
-                CLI, or a Hypermedia-based API with a UI. By hosting Backplane
-                API your integrations can outsource environment provisioning and
-                consumption of governance data across the major cloud platforms.
-                <br />
-                <br />
-                <div>
-                  <Link
-                    className={`button button--secondary button--lg ${styles.gray}`}
-                    to="/docs/quick-start"
-                  >
-                    Get Started
-                  </Link>
-                </div>
+                You can install the client library from NPM to integrate into
+                your project.
               </p>
-            </TabItem>
-            <TabItem value="saas" label="Backplane Cloud (SaaS)">
+            </TabItem> */}
+          {/* <TabItem value="api" label="Cloud Abstraction API" default>
+              
+            </TabItem> */}
+          {/* <TabItem value="saas" label="Backplane Cloud (SaaS)">
               <p>
                 Backplane Cloud is a SaaS Enterprise Cloud Governance Platform
                 for governing and managing your multi-cloud landscape.
               </p>
-            </TabItem>
-          </Tabs>
+            </TabItem> */}
+          {/* </Tabs> */}
         </p>
 
         {/* <ThemedImage
