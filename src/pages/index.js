@@ -92,7 +92,10 @@ const mainPage = () => {
         <br />
         <br />
         <h2>Multi-Cloud Governance Platform</h2>
-        <p>Simplifying multi-cloud governance and developer experience.</p>
+        <p>
+          Simplifying multi-cloud governance and building internal developer
+          portals
+        </p>
         <p>
           {/* Simplifying multi-cloud governance and speeding up development of
           custom Internal Developer Portals. */}
