@@ -35,6 +35,10 @@
   color: black;
 }
 
+.ui {
+  height: 300px;
+  border-radius: 10px;
+}
 .terminal {
   height: 200px;
   border-radius: 10px;

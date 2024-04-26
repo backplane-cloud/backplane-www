@@ -93,7 +93,8 @@ const mainPage = () => {
         <p>
           Simplifying cloud adoption, enablement and governance to form the
           foundation of your cloud transformation and developer experience
-        </p>{" "}
+        </p>
+
         <ThemedImage
           alt="Backplane themed image"
           sources={{
@@ -102,6 +103,7 @@ const mainPage = () => {
           }}
           className="terminal"
         />
+
         <div className={styles.cta}>
           <div>
             <Link
@@ -133,17 +135,19 @@ const mainPage = () => {
       <div className={styles.container}>
         <h2>Introduction</h2>
         <p>
-          Powered by Backplane's Cloud Abstraction API, Backplane offers a
-          modular and extensible platform to help guide cloud adoption, speed-up
-          enablement and simplify multi-cloud governance at enterprise-scale.
+          Backplane stands at the forefront of cloud transformation, offering
+          organisations a robust platform to navigate the complexities of cloud
+          adoption, enablement, and governance with ease. Our innovative
+          platform empower enterprises to accelerate their journey to the cloud
+          while ensuring seamless integration and efficient management every
+          step of the way.
         </p>
         <p>
-          Enabling and governing multicloud environments can be complex. From
-          ensuring strong cost management, to access posture management to
-          architectural and security alignment. Backplane has governance in its
-          DNA, developed by engineers focused on cloud governance for one of the
-          largest companies in the world.
+          With Backplane, organisations can swiftly build internal developer
+          portals utilising its powerful Cloud Abstraction API.
         </p>
+        Let Backplane get your organisation started on maximising value from
+        cloud and adopting, enabling and governing multi-cloud landscapes.
       </div>
 
       <div className={styles.container}>
@@ -161,21 +165,12 @@ const mainPage = () => {
               simpler to reason about and govern multiple cloud platforms.
             </li>
             <li style={{ marginTop: "15px" }}>
-              Value-over-Cost - Whilst organisations care about Cloud Cost, they
-              really care about Cloud Value, and having a platform that
-              articulates value through a Value Score metric is more meaningful
-              that blindly trying to reduce cost.
-            </li>
-            <li style={{ marginTop: "15px" }}>
-              By having good cloud governance, you can accelerate development
-              with confidence.
-            </li>
-            <li style={{ marginTop: "15px" }}>
-              Cloud Transformations are complicated.
+              Designed with FinOps in mind, with cost management and budgeting
+              for Org, Platform and Product owners.
             </li>
 
             <li style={{ marginTop: "15px" }}>
-              Platform Engineering and FinOps practices are still maturing.
+              Pluggable feature functionality
             </li>
           </ul>
         </p>
@@ -183,6 +178,15 @@ const mainPage = () => {
 
       <div className={styles.container}>
         <h2>Quick Start</h2>
+        <ThemedImage
+          alt="Backplane themed image"
+          sources={{
+            light: "/img/ui.png",
+            dark: "/img/ui.png",
+          }}
+          className="ui"
+        />
+
         <p>
           Get up and running quickly with Backplane API. The Backplane API can
           be used as a JSON-based API with a CLI, or a Hypermedia-based API with
