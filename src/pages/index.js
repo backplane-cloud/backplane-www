@@ -84,17 +84,24 @@ const mainPage = () => {
         <ThemedImage
           alt="Backplane themed image"
           sources={{
-            light: "/img/terminal.gif",
-            dark: "/img/terminal.gif",
+            light: "/img/backplane-logo-blue.svg",
+            dark: "/img/backplane-logo-white.svg",
           }}
           className="logo"
         />
-        <br />
         <h1>An open source cloud engineering platform</h1>
         <p>
           Simplifying cloud adoption, enablement and governance to form the
           foundation of your cloud transformation and developer experience
-        </p>
+        </p>{" "}
+        <ThemedImage
+          alt="Backplane themed image"
+          sources={{
+            light: "/img/terminal.gif",
+            dark: "/img/terminal.gif",
+          }}
+          className="terminal"
+        />
         <div className={styles.cta}>
           <div>
             <Link

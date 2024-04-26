@@ -35,10 +35,12 @@
   color: black;
 }
 
-.logo {
+.terminal {
   height: 200px;
-
   border-radius: 10px;
+}
+.logo {
+  height: 100px;
 }
 
 body {
