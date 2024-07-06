@@ -1,0 +1,36 @@
+---
+draft: false
+title: "Connect to GCP"
+snippet: "Create a GCP Service Principal"
+publishDate: "2023-02-05 08:00"
+image: { src: "/src/assets/gcp.svg", alt: "GCP" }
+category: "tutorial"
+author: "Lewis Sheridan"
+tags: [gcp]
+---
+
+import Button from "@components/ui/button.astro";
+
+#### Creating a Service Principal in GCP
+
+1.  Login to [https://console.cloud.google.com](https://console.cloud.google.com)
+2.  Go to `IAM and admin > Service accounts`
+3.  Select a Project and click on Create Service Account
+4.  Enter a service account name e.g. `backplane-api` and a description e.g. `For Backplane API environment provisioning`
+5.  Click Create and Continue
+6.  Click on Done.
+7.  Click on IAM and switch to the Organisation level.
+8.  Click on Grant Access
+9.  Enter the service principal name e.g. `backplane-demo@backplane-core.iam.gserfviceaccount.com`
+10. In role, find `Project Creator`, click Save.
+11. Go back to your Project and click on IAM and Admin and then Service Accounts
+12. Click on your Service Account and select Keys, Add Key, Create New Key. Use JSON as the Key Type. Click on Create. This will download a .json file.
+13. Finally, go to APIs and Services and ensure Cloud Resource Manager API is enabled.
+
+The downloaded JSON is now ready to be used in your Org.
+
+#### Add GCP Credentials via CLI
+
+```js
+bp cloud gcp add --id "<OrgID>" --tenantid "<Enter Google Org ID>" --gcpsecret "<path-to-JSON-file>"
+```

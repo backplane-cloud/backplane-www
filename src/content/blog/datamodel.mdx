@@ -1,0 +1,79 @@
+---
+draft: false
+title: "Data Model"
+snippet: "Explains Backplane's Data Model and taxonomy"
+publishDate: "2024-03-05 08:00"
+image: { src: "/src/assets/data.svg", alt: "Data Model" }
+category: "reference"
+author: "Lewis Sheridan"
+tags: [data model]
+---
+
+import Button from "@components/ui/button.astro";
+
+Understanding the Backplane data model is key to leveraging Backplane.
+
+The table below shows the entity relationships.
+
+### Data Hierarchy
+
+| Scope        | Description                                                      |    Parent    | Budget Scope |
+| :----------- | :--------------------------------------------------------------- | :----------: | -----------: |
+| Organisation | This is the root of your tenancy                                 |      -       |          Yes |
+| Platform     | Contains many Products                                           | Organisation |          Yes |
+| Product      | Contains one or many Apps                                        |   Platform   |          Yes |
+| App          | App belongs to a single Cloud                                    |   Product    |            - |
+| Environment  | Apps contain one or many environments depending on template used |     App      |            - |
+
+### Organisations
+
+- Organisations represent the highest level in the data model hierarchy. Organisations provide the context and logical container for Platforms, Products and Apps.
+
+- Cloud Credentials are set at the Organisation level.
+
+- All Users belong to a single Organisation.
+
+- This is where an Organisation Budget is set.
+
+### Platforms
+
+- Platforms contain many Products.
+
+- Platforms provide a governance boundary for Cost, Access and Policy data.
+
+- Platforms will request and receive a budget allocation from the Organisation by raising a **Budget Request**.
+
+CLI:
+To add a new platform, first [Login](/login) e.g. `bp auth login -e user@backplane.cloud -p *****`
+
+```js
+bp platform add --displayname 'My new Platform'
+```
+
+### Products
+
+- Products contain many Apps.
+
+To add a new Product
+
+```js
+bp product add --displayname 'My new Product'
+```
+
+### Apps
+
+- Apps are synonymous with environments, they represent the Cloud workload.
+
+- For example: A product may contain an App based in GCP and an App based in Azure. Collectively, these Apps underpin the Product. This allows for multi cloud Products.
+
+- Apps can have many environments.
+
+tip
+To add an App to an existing Product
+
+```js
+bp app add --displayname 'My new App' --cloud azure --template default
+```
+
+info
+Multi Organisation and Specifying Platform and Product-level Cloud Credentials is on the [Roadmap](/roadmap)

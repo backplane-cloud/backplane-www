@@ -1,0 +1,78 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("blog", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+---
+
+<Layout title="Blog">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Documentation</Fragment>
+      <Fragment slot="desc">
+        Guides to using Backplane
+      </Fragment>
+    </Sectionhead>
+    <main class="mt-16">
+      
+      <ul class="grid md:grid-cols-4 gap-16 max-w-4xl mx-auto">
+        
+        {
+          publishedBlogEntries.map((blogPostEntry, index) => (
+            <li>
+              <a href={`/blog/${blogPostEntry.slug}`}>
+                <div class="grid md:grid-cols-1 gap-5 md:gap-10">
+                  <Picture
+                    src={blogPostEntry.data.image.src}
+                    alt={blogPostEntry.data.image.alt}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    width={75}
+                    height={150}
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    decoding={index <= 2 ? "sync" : "async"}
+                    class="srounded-md object-cover object-center bg-white"
+                  />
+                  <div>
+                    <span class="text-indigo-700 uppercase tracking-wider text-xs font-medium">
+                      {blogPostEntry.data.category}
+                    </span>
+
+                    <h2 class="text-lg font-semibold mt-1 ">
+                      {blogPostEntry.data.title}
+                    </h2>
+                    <h2 class="text-xs font-normal text-gray-600 mt-3 ">
+                      {blogPostEntry.data.snippet}
+                    </h2>
+
+                    <div class="flex gap-2 mt-3">
+                      {/* <span class="text-gray-400 text-sm">
+                        {blogPostEntry.data.author}
+                      </span> */}
+                      
+                      {/* <time
+                        class="text-gray-400 text-sm"
+                        datetime={blogPostEntry.data.publishDate.toISOString()}>Published: 
+                        {blogPostEntry.data.publishDate.toDateString()}
+                      </time> */}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>

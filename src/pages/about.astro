@@ -1,0 +1,97 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="Our Mission">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Mission</Fragment>
+      <Fragment slot="desc" class="mt-10">
+      
+      </Fragment>
+    </Sectionhead>
+
+    <figure class="max-w-screen-md mx-auto text-center">
+       
+      <blockquote>
+          <p class="text-2xl font-medium text-gray-800 dark:text-white leading-9">
+            To simplify and accelerate multi-cloud adoption, enablement and governance through a single API
+          </p>
+      </blockquote>
+      <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+          <img class="w-18 h-18 rounded-full" src="/src/assets/lewis-lg.png" alt="profile picture">
+          <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+              <cite class="pe-3 font-medium text-gray-900 dark:text-white">Lewis Sheridan</cite>
+              <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">Founder @ Backplane</cite>
+          </div>
+      </figcaption>
+    </figure>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        About
+      </h2>
+      
+      
+       
+          <p class="text-lg leading-relaxed text-slate-500">
+            Backplane Software was established in 2023 by Lewis Sheridan. Drawing on his extensive experience with integrating Azure, GCP, and AWS in one of the world's largest global enterprises, Lewis gained unique insights into optimal strategies for adopting, enabling, and governing multi-cloud platforms at an enterprise scale.
+
+            Our flagship project, the Open Source Cloud Abstraction API, offers an extensible, unified API designed to streamline cloud adoption, enablement, and governance for organizations of all sizes.          </p>
+
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        People. Purpose. Passion.
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Building great software is as much about hiring great people as it is about writing great code. For this reason, we double down on people as one of our core values. 
+        People need purpose, and there's no greater purpose at Backplane than to simplify multi-cloud governance, and enable small or large organisations around the world to consume cloud in an optimial and efficient manner.
+        Passion drives what we do. 
+   </p>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Community
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Backplane is a community-driven project, built by engineers for engineers. It's Open, free, and our ambition is to develop the Cloud Abstraction API to be the tool in every organisations toolbox for their multi-cloud journeys. And our ambition is to give the project to the Cloud Native Compute Foundation.
+   </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-xl mt-12 mb-48">
+      {
+      //   publishedTeamMembers.map((teamMemberEntry) => (
+      //     <div class="group">
+      //       <div class="w-full aspect-square">
+      //         <Picture
+      //           src={teamMemberEntry.data.avatar.src}
+      //           alt={teamMemberEntry.data.avatar.alt}
+      //           sizes="(max-width: 800px) 100vw, 400px"
+      //           width={400}
+      //           height={400}
+      //           class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
+      //         />
+      //       </div>
+
+      //       <div class="mt-4 text-center">
+      //         <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
+      //         <h3 class="text-sm text-slate-500">
+      //           {teamMemberEntry.data.title}
+      //         </h3>
+      //       </div>
+      //     </div>
+      //   ))
+      // }
+    </div>
+  </Container>
+</Layout>

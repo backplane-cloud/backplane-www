@@ -1,0 +1,33 @@
+---
+draft: false
+title: "Create App"
+snippet: "Tutorial to create your first App in Backplane"
+publishDate: "2024-02-05 08:00"
+image: { src: "/src/assets/app.svg", alt: "Create App" }
+category: "tutorial"
+author: "Lewis Sheridan"
+tags: []
+---
+
+import Button from "@components/ui/button.astro";
+
+Backplane takes an abstracted view of creating cloud _'space'_. Whether it's a **Resource Group** in Azure, or a **Folder** in GCP, an **account** in AWS or an **compartment** in OCI, Backplane API will take care of provisioning the necessary containers.
+
+### Creating an App
+
+Environments belong to an App, so to create an App in Azure for example:
+
+```js
+bp app add --displayname 'My App' --cloud azure --template default
+```
+
+#### About App Templates
+
+App Templates specify which environments to create. By default, a `Prod`, `Non Prod`, `Dev` and `Test` environment are created. Use `--template sandbox` to create a single environment called Sandbox.
+
+You can create your own custom App Templates to define the environments created for your App. In addition, App Templates allow you to specify Services to onboard with the creatio of the App. For example, if a Github service is added, the App template can specify this service so that a Repo can be provisioned for the App.
+
+#### Backlog Items
+
+- Need to implement the creation of a Service Principal scoped to the App environments.
+- Need to add Service Princial assignment to Environments.

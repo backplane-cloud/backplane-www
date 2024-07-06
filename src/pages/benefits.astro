@@ -1,0 +1,174 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Icon } from "astro-icon/components";
+import Link from "@components/ui/link.astro";
+
+const cases = [
+  
+  {
+    title: "Building an Internal Developer Platform ? ",
+    benefits: [
+      {
+        title: "Reduce Integration Time", 
+        description: "With a single integration point, integration time is drastically reduced", 
+        icon: "bx:bxs-time"
+      },
+      {
+        title: "Add Additional Clouds", 
+        description: "With a single integration point, integration time is drastically reduced", 
+        icon: "bx:bxs-plus-square"
+      },
+      {
+        title: "Reduced Complexity", 
+        description: "With a single data shape for cost, access and policies and the Cloud Account provisioning, you can manage multiple clouds with a single cloud experience", 
+        icon: "bx:bxs-shapes"
+      },
+      {
+        title: "Platform Operating Model", 
+        description: "Backplane's Platform manager allows easy management of workloads", 
+        icon: "bx:bxs-layer"
+      },
+      {
+        title: "Single Source of Truth", 
+        description: "Backplane's Service Catalog provides a single source of truth for your Cloud workloads", 
+        icon: "bx:bxs-map-pin"
+      }
+    ],
+    description:
+      "So you're building your own custom IDP and need to provision Cloud accounts across various Cloud Platforms. Let Backplane Cloud Abstraction API take care of this and be your single integration point to multiple clouds for the purposes of Account Provisioning and retrieval of Cost, Access and Policy data. With this in place you can focus on the developer experience and less time on integration.",
+    icon: "bx:bxs-terminal",
+    colour: "text-slate-900 w-8 h-8"
+  },
+  {
+    title: "Governing Multiple Clouds ? ",
+    benefits: [
+      {
+        title: "Heterogeneity", 
+        description: "Cloud service providers will present their Access, Policy and Cost data in different shapes. Backplane gives a uniform and standardised data shape, creating a heterogeneous dataset for multi-cloud governance that scales", 
+        icon: "bx:bx-shape-square"
+      },
+      {
+        title: "Full Cost, Access and Policy Visibility", 
+        description: "View Cloud Spend, Access and Policies through the lens of your organisation, platform, products or app. A granular view of Cloud spend across your workloads across your Cloud platforms ", 
+        icon: "bx:bxs-shield"
+      },
+      {
+        title: "Remove Vendor Lock-in", 
+        description: "Having the flexibility to adopt, enable and govern multiple cloud platforms helps de-risk vendor lock-in.", 
+        icon: "bx:bxs-lock-open-alt"
+      },
+      {
+        title: "Governance-as-a-Service", 
+        description: "Existing tools and systems can easily connect to Backplane to retrieve Cost, Access and Policy data as required.", 
+        icon: "bx:bxs-plug"
+      },
+      {
+        title: "Mergers & Acquisitions", 
+        description: "Have you acquired a new cloud platform and need to quickly get governance on it ? Backplane connects to your Cloud platform seamless to provide a single pane of glass view across cloud workloads, access, policies and cost", 
+        icon: "bx:bxs-business"
+      }
+    ],
+    description:
+      "Achieving cost visibility across organisation, platforms, products, and apps for effective financial management",
+    icon: "bx:bxs-terminal",
+    colour: "text-slate-900 w-8 h-8"
+  },
+  {
+    title: "Building a FinOps Platform ? ",
+    benefits: [
+      {
+        title: "Budget Management", 
+        description: "Cloud service providers will present their Access, Policy and Cost data in different shapes. Backplane gives a unform and standardised data shape, creating a heterogeneous dataset for multi-cloud governance that scales", 
+        icon: "bx:bxs-wallet"
+      },
+      {
+        title: "Cost Visibility", 
+        description: "View Cloud Spend through the lens of your Organisation, Platform, Products or App. A granular view of Cloud spend across your workloads across your Cloud platforms", 
+        icon: "bx:bxs-badge-dollar"
+      },
+   
+    ],
+    description:
+      "Governing multiple clouds can be complex. Backplane's Abstraction API provides a standardised datashape on Cloud Cost, Access and Policy data, enabling your systems to consume Cloud Governance-as-a-service into your tools",
+    icon: "bx:bxs-terminal",
+    colour: "text-slate-900 w-8 h-8"
+  }
+];
+
+---
+
+<Layout title="Use Cases">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Benefits</Fragment>
+      <Fragment slot="desc">
+Backplane's Cloud Abstraction API offers a host of benefits for a number of use cases
+
+</Fragment>
+    </Sectionhead>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-0">
+
+    <div class="mt-5">
+      <ul role="list" class="divide-y divide-gray-100"></ul>
+      {
+        cases.map((item) => (
+        <li class="flex justify-between gap-x-6 py-5 mb-10">
+   
+          <div class="flex gap-12 items-start w-full justify-between">
+       
+            <div>
+              <h3 class="font-bold text-3xl">{item.title}
+
+              </h3>
+              <p class="text-slate-500 mt-2 leading-relaxed">
+                
+                {item.description}</p>
+
+              <p class="mt-5">
+                <ul>
+                {
+                  item.benefits.map((benefit) => (
+                  <div class="ml-10 grid sm:grid-cols-2 md:grid-cols-1 mt-8 gap-16">
+                    <div class="flex gap-4 items-start">
+                      <div class="mt-1 bg-gray-200 rounded-full  p-2 w-12 h-12 shrink-0">
+                        <Icon class='text-indigo-700 w-8 h-8'} name={benefit.icon} />
+                      </div>
+                      <div>
+                        <h3 class="font-semibold text-lg">{benefit.title}</h3>{" "}
+                        <p class="text-slate-500 mt-2 leading-relaxed">{benefit.description}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  ))
+                }
+                </ul>
+                
+              </p>
+      
+            </div>
+     
+          </div>
+          </li>
+        ))
+      }    
+      </ul>
+  
+    
+    </div>  
+    <div class="w-full justify-center flex">
+      <a href="/blog" class="inline-flex items-center mt-5 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">View Documentation <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg></a>
+    </div>
+   
+    
+      
+ 
+    
+
+    
+  </Container>
+</Layout>

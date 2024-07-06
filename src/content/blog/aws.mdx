@@ -1,0 +1,54 @@
+---
+draft: false
+title: "Connect to AWS"
+snippet: "Create an AWS Service Principal"
+publishDate: "2023-01-05 08:00"
+image: { src: "/src/assets/aws.svg", alt: "Cloud Vending" }
+category: "tutorial"
+author: "Lewis Sheridan"
+tags: []
+---
+
+import Button from "@components/ui/button.astro";
+
+#### Creating a Service Principal in AWS
+
+1. Login to AWS Management Console
+2. Go to IAM
+3. Click on Users
+4. Click on Create User
+5. Enter User Details e.g. `backplane-api`, click next
+6. Permission Options, select attach policies directly
+7. Click on Create Policy and in Policy Editor select JSON. Paste in the below JSON
+
+```js
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "organizations:CreateAccount",
+                "organizations:DescribeOrganization",
+                "iam:ListUsers",
+                "organizations:ListPolicies"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+8. Click Next, give Policy Name Backplane-account-creator
+9. Click Create Policy
+10. Click Create User
+11. Click on the new User Created, and click on Security Credentials
+12. Click on Create Access Key
+13. Select Third-party service use-case and tick the confirmation and click Next
+14. Create access key, record Access key and Secret access key values. Click Done.
+
+#### Add AWS Credentials via CLI
+
+```js
+bp cloud aws add --id "<OrgId>" --clientid "<accessKey>" --clientsecret "<accessKeySecret>"
+```

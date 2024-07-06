@@ -1,0 +1,99 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+
+const questions = [
+  {
+    title: 'What problem is Backplane addressing ?',
+    // answer: "Backplane sets to bring standardisation to the governance concerns of Cloud. It takes concepts of Cloud Account provisioning, Cost, Access and Policy and provides a uniform and standard datashape for those. It accomplishes this through the Abstraction API which can be considered a translation service. Backplane solves the problem of multiple cloud governance complexity by introducing a single API."
+    answer: "Backplane is solving the problem of multiple cloud governance and integration complexity, by providing a single abstracted and standardised format for Cloud Account provisioning, Cost, Access and Policy data retrieval."
+  },
+  {
+    title: "Who is Backplane for ?",
+    answer: "Backplane is for Cloud Engineers, Platform Engineers and organisations adopting, enabling and governing multiple cloud environments."
+  },
+  {
+    title: "Is Backplane free ?",
+    answer: "Yes. Backplane is Open Source and Free for the community to use. We are actively encouraging community members to contribute to the API to ensure good coverage across all service providers. "
+  }, 
+  {
+    title: "What are typical use cases for Backplane's Cloud Abstraction API ?",
+    answer: "Building an Internal Developer Platform is a common use case. Here, the complexity of integrating to 'n' Cloud platforms is vastly simplified with a single integration point by way of the Abstraction API. Allow rapid provisioning of Cloud Accounts and data feeds on Cost, Access and Policy."
+  }
+]
+
+const questionsright = [
+  {
+    title: 'How does Backplane make money ?',
+    answer: "Backplane.dev is the Open Source arm of Backplane Software Ltd, which focuses on building Cloud tooling. Backplane.dev will remain Free and Open Source."
+  },
+  {
+    title: "Who owns Backplane ?",
+    answer: 'Backplane.dev and the Cloud Abstraction API is fully Open Sourced by Backplane Software Ltd. A UK-based company. Backplane began as a project to simplify multi-cloud adoption, enablement and governance. Its author, Lewis Sheridan released it to the Open Source community on the 8th July 2024'
+  },
+  {
+    title: "Can I sponsor Backplane ?",
+    answer: "Yes, we welcome any contributions to the project. An important part of the Backplane philosophy are its people, their passion, and of course the purpose of the project. If you find value in it, and it helps you and your organisation, that alone puts a smile on our faces. If you want to contribute financially, that too will help us in our mission to make Backplane the universal API to simplify cloud adoption! "
+  }, 
+  {
+    title: "How do I contribute to Backplane ?",
+    answer: "Bring some energy, passion and coding skills and I look forward to the community building upon the base API to make Backplane something great! Take a look at the Backlog and feel free to contribute, we look forward to your Pull Request!"
+  }
+]
+---
+
+<Layout title="FAQ">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">FAQ</Fragment>
+      <Fragment slot="desc" class="mt-10">
+Below are frequently asked questions.      </Fragment>
+    </Sectionhead>
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <h3 class="font-bold text-3xl mb-6">Frequently asked questions</h3>   
+          <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+              <div>
+                {
+                    questions.map((question) => (
+                    <div class="mb-10">
+                      <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                          <svg class="flex-shrink-0 mr-2 w-6 h-6 text-indigo-700 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                          {question.title}
+                      </h3>
+                      <p class="text-gray-500 dark:text-gray-400">{question.answer}</p>
+                  </div>
+                    ))
+
+                }
+          
+         
+                  
+           
+              </div>
+              <div>
+                {
+                  questionsright.map((question) => (
+                  <div class="mb-10">
+                    <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                        <svg class="flex-shrink-0 mr-2 w-6 h-6 text-indigo-700 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                        {question.title}
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400">{question.answer}</p>
+                </div>
+                  ))
+
+              }
+              </div>
+          </div>
+      </div>
+    </section>
+
+  
+  </Container>
+</Layout>

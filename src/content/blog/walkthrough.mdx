@@ -1,0 +1,273 @@
+---
+draft: false
+title: "Step-by-step Walkthrough"
+snippet: "End-to-end walkthrough of using Backplane"
+publishDate: "2024-06-4 08:00"
+image: { src: "/src/assets/walkthrough.svg", alt: "Command Line Interface" }
+category: "demo"
+author: "Lewis Sheridan"
+tags: []
+---
+
+import Button from "@components/ui/button.astro";
+
+Step-by-step video demo of Backplane API and CLI. Instructions are provided below should you wish to follow along.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/ehGFfYwjXbM?si=1I96shVBvb5B0bCr"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen></iframe>
+
+## Step-by-Step Walkthrough instructions
+
+### Create Organisation
+
+#### Register User and Org
+
+```js
+bp user register --displayname 'Backplane Demo' --email backplanedemo@gmail.com --password 12345 --orgname 'Backplane Demo'
+```
+
+#### Login User
+
+```js
+bp auth login --email backplanedemo@gmail.com --password 12345
+```
+
+#### Create Platforms
+
+```js
+bp platform create --displayname 'Cloud Engineering' --description 'Platform for Cloud Engineering Products'
+```
+
+#### Create Products
+
+```js
+bp product create --displayname 'Product Alpha' --description 'This is a description for Product Alpha' --platformid 665ef85664dcaff2a820d218
+```
+
+```js
+bp product create --displayname 'Product Beta' --description 'This is a description for Product Beta' --platformid 665ef85664dcaff2a820d218
+```
+
+```js
+bp org show --id 665ee76d64dcaff2a820cffc --tree
+```
+
+### Add Cloud Credentials
+
+#### Azure
+
+```js
+bp cloud azure add --tenantid d47fe008-774b-4765-97f9-ef224ad333c8 --clientid 4e6d07d7-ec0b-4f61-af45-7b11240e8702 --clientsecret GiP8Q~GRtmwG6NDWkH5FKm56o4IpkStEJ2hlKaC- --subscriptionid 2a04f460-f517-4085-808d-7877fd30ea72 --id
+```
+
+#### AWS
+
+```js
+bp cloud aws add --clientid <clientid> --clientsecret <client-secret> --id
+```
+
+#### GCP
+
+```js
+bp cloud gcp add --gcpsecret <gcpfile.json> --tenantid <gcp> --id
+```
+
+#### OCI
+
+```js
+bp cloud oci add --ocisecret <ocifile.json>  --id
+```
+
+### Creating Apps
+
+#### Azure
+
+```js
+// View Templates available
+bp template list —id
+
+// Create App
+bp app create --displayname 'My App' --cloud <azure | gcp | aws | oci>
+bp app list
+bp app show --id <app-id>
+```
+
+#### AWS
+
+```js
+bp app create --displayname "My GCP App" --cloud aws
+bp app show --id <app-id>
+```
+
+````
+
+### View App Access
+
+```js
+bp app access list --id 665eeec064dcaff2a820d1bc
+````
+
+#### Using Powershell for easier manipulation of terminal display
+
+```ps
+pwsh
+bp app access list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
+$access = bp app access list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
+$access[0].assignments | ft name, principalId, principalType, description
+
+```
+
+### View App Policy
+
+```js
+bp app policy list --id <app-id>
+```
+
+#### User Powershell for easier display
+
+```ps
+$policy = bp app policy list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
+```
+
+### View App Cost
+
+```js
+bp app cost show --id <app-id>
+```
+
+### Link App to Product
+
+#### Create Request to Link App A to Product A
+
+```js
+bp request create —requestType link —requestedForType product —requestedForId 6660de51f06537999ef1cb4c —appid 6660777522b46a1376075592
+```
+
+#### View Request on Product
+
+```js
+bp request list
+bp product request list -i 6660de51f06537999ef1cb4c
+```
+
+#### Show Product has no Apps linked
+
+```js
+bp product show --id 6660de51f06537999ef1cb4c
+```
+
+#### Approve Request
+
+```js
+bp request approve -i 6660e044bdc6142a33665406 --code 12949173
+```
+
+#### Check Product has App Associated
+
+```js
+bp app show —id 6660777522b46a1376075592
+```
+
+### Budgeting
+
+#### Set Budget for Org
+
+```js
+bp budget create --year 2024 --amount 1000000 --currency usd --id
+```
+
+### Request Budget for Platform
+
+#### Create Budget Request - Platform Request Budget from Org
+
+```js
+bp request create —requestType budget —requestedForType platform —requestedForId 66617f4a3834862e4e740793 —budget 500000
+```
+
+### Approve Budget Request for Platform
+
+```js
+bp request approve -i 6662e7e700ec6722807076e6 --code 53866367
+```
+
+### Show Budget Allocated has increased by Requested Amount
+
+```js
+bp org budget list -i 66617edc3834862e4e740771
+```
+
+````js
+p platform budget show --id 66617f4a3834862e4e740793
+```Show Platform has Budget
+      b
+
+### Request Budget for Product
+
+#### Create Budget Request - Platform Request Budget from Org
+
+```js
+bp request create --requestType budget --requestedForType product --requestedForId 66617f903834862e4e7407a4 --budget 100000
+````
+
+#### Approve Budget Request for Platform
+
+```js
+bp request approve -i 6662ea8300ec672280707760 --code 34092354
+```
+
+### Show Budget Allocated has increased by Requested Amount
+
+```js
+bp platform budget show --id 66617f4a3834862e4e740793
+```
+
+#### Show Product has Budget
+
+```js
+bp product budget show -i 66617f903834862e4e7407a4
+```
+
+```js
+bp org show --id 665ee76d64dcaff2a820cffc --tree
+```
+
+### Recap
+
+- We’ve created a new Org, Platform, Product,
+- We’ve created Apps with environments in Azure, GCP and AWS and linked to Parent Products
+- We’ve viewed Cost, Access and Policy across each App.
+- We’ve viewed Cost propagated at Org, Platform and Product level.
+
+### Add New User and Assign Role (Optional)
+
+#### Create User
+
+```js
+bp user create --displayname 'Mike Tyson' --email mike@tyson.com --password 12345
+```
+
+#### View Roles
+
+```js
+bp role list
+```
+
+#### View Assignments
+
+```js
+bp assign list
+```
+
+### Add Role Assignments
+
+```js
+bp assign create -h
+bp assign create --assigntype user --principal 665f0129790877778edd158f --scope /orgs/665ee76d64dcaff2a820cffc --role 665ee76d64dcaff2a820d003
+```

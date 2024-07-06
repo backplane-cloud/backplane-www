@@ -1,0 +1,45 @@
+---
+draft: false
+title: "Approval Workflow Engine"
+snippet: "The Approval Workflow Engine explained with examples of how to raise requests for Budget and linking Apps to Products."
+publishDate: "2023-12-05 08:00"
+image: { src: "/src/assets/hand.svg", alt: "Approval Workflow Engine" }
+category: "tutorial"
+author: "Lewis Sheridan"
+tags: []
+---
+
+import Button from "@components/ui/button.astro";
+
+Configuring Atlas hosted MongoDB
+
+1. Go to MongoDB.com and click on [Try Free](https://www.mongodb.com/cloud/atlas/register)
+2. Complete the Sign up form and click on Create your Access account. You will receive an e-mail verification. Once verified, click continue.
+3. Complete the form until you get to the section Deploy your database.
+4. Select M0 - Free
+5. Using the defaults, choose your underlying Cloud Provider and region and then click on Create Deployment
+
+6. Create MongoDB user e.g. mongo-admin
+7. Click Choose a connection method
+8. Click on Connect to your application > Drivers
+9. Copy connection string to `.env` file.
+
+```
+MONGO_URI=mongodb+srv://mongo-admin:<password>@cluster0.q4oeiru.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+```
+
+10. Click on Review Setup Steps and then Done.
+
+This will complete the setup of your MongoDB instance ready for Backplane API Server to connect to.
+
+info
+Copy the connection string to your `.env` file and ensure that the environment variable is called MONGO_URI
+
+`MONGO_URI=mongodb+srv://mongo-admin:<password>@cluster0.q4oeiru.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+
+tip
+Ensure your IP Address is allowed at the MongoDB end for your Development machine.
+
+On the left-hand side menu under SECURITY, click on Network Access and add the respective IP addresses of your Cloud Provider or your Development machine.
+
+For production you'll need to update this for the Cloud Provider. Example if hosted in Azure Web App, [Find Out Web App IP Addresses](https://learn.microsoft.com/en-us/azure/app-service/overview-inbound-outbound-ips#find-outbound-ips)

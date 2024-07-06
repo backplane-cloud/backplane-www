@@ -1,0 +1,40 @@
+---
+draft: false
+title: "Connect to Azure"
+snippet: "Create an Azure Service Principal"
+publishDate: "2023-03-05 08:00"
+image: { src: "/src/assets/azure.svg", alt: "Cloud Vending" }
+category: "tutorial"
+author: "Lewis Sheridan"
+tags: []
+---
+
+import Button from "@components/ui/button.astro";
+
+#### Creating a Service Principal in Azure
+
+To create credentials you'll need to create an App registration in Entra ID.
+
+1. Go to Microsoft Entra ID, and under Manage in the left side menu, select App registrations.
+
+2. Click on New Registration and provide a name (e.g. `backplane-api`) a name and click Register.
+
+3. Take note of the Tenant ID and Client ID.
+
+4. Create a new Client Secret, click on Add a certificate or secret, New client secret, type a description, set expiry and click Add. Make a note of the Secret Value.
+
+5. Assign the Service Principal you created with Contributor permission at the Subscription scope.
+
+#### Add Azure Credentials via CLI
+
+```js
+bp cloud azure add --id "<orgID>"
+--tenantid "<tenant ID>"
+--clientid "<client ID>"
+--clientsecret "<Your Client Secret>"
+--subscriptionid "<default subscription GUID>"
+```
+
+#### Note:
+
+The Subscription ID is required in the MVP since App environments are provisioned as Resource Groups as opposed to Subscriptions. Subscription environments will be in a future release.

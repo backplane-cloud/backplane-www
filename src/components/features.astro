@@ -1,0 +1,175 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const benefits = [
+
+
+  {
+    title: "Avoid Lock-in",
+    description:
+      "Easily connect your Cloud Service Providers and deploy your workloads seamlessly, with the flexibility to move them between platforms effortlessly.",
+    icon: "bx:bxs-lock-open-alt",
+
+  },
+  {
+    title: "Drive Cost Efficiency",
+    description:
+      "Cloud is about delivering value and optimising cloud spend. Backplane's API offers complete cost visibility across workloads and cloud platforms, ensuring you maximize the value of your cloud investment",
+    icon: "bx:bx-line-chart-down",
+
+  },
+  {
+    title: "Optimise Workload Placement",
+    description:
+      "Deploy your workload in the most effective Cloud Platform to meet your business requirements.",
+    icon: "bx:bx-current-location",
+
+  },
+  
+
+]
+
+const features = [
+  {
+    title: "Cloud Account Vending",
+    description:
+      "Create your Apps with Azure Subscriptions, GCP Projects, AWS Accounts or OCI compartments",
+    icon: "bx:bxs-cloud",
+
+  },
+  {
+    title: "Access Manager",
+    description:
+      "View all RBAC access in a standarised data shape so you can effective govern privilege across your cloud estate.",
+    icon: "bx:bxs-user-check",
+  },
+  {
+    title: "Policy Manager",
+    description:
+      "Full visibility of resource policies across your cloud platforms",
+    icon: "bx:bxs-check-shield",
+  },
+  {
+    title: "Service Catalog",
+    description:
+      "Products requesting Budget from parent platform, or Platform requesting budget from Org, the Approval Workflow engine ensures all cost is approved and owned.",
+    icon: "bx:bxs-data",
+    colour: "text-slate-900 w-8 h-8"
+
+  },
+  {
+    title: "Platform Manager",
+    description:
+      "Products requesting Budget from parent platform, or Platform requesting budget from Org, the Approval Workflow engine ensures all cost is approved and owned.",
+    icon: "bx:bxs-layer",
+    colour: "text-slate-900 w-8 h-8"
+
+  },
+
+  {
+    title: "Budget & Cost Management",
+    description:
+      "Backplane support Cost Budget Management out-of-the-box",
+    icon: "bx:bxs-bank",
+    colour: "text-slate-900 w-8 h-8"
+
+  },
+
+  
+  {
+    title: "Approval Workflows",
+    description:
+      "Products requesting Budget from parent platform, or Platform requesting budget from Org, the Approval Workflow engine ensures all cost is approved and owned.",
+    icon: "bx:bxs-cog",
+    colour: "text-indigo-700 w-8 h-8"
+
+  },
+    {
+    title: "Service Connectors",
+    description:
+      "Add Services to Backplane is easily, e.g. Add Github service so that when a Product is created a Github Repo is automatically provisioned!",
+    icon: "bx:bxs-plug",
+    colour: "text-indigo-700 w-8 h-8"
+
+  },
+  {
+    title: "App Templates",
+    description:
+      "Create custom App templates for Production and Sandbox environments that onboard different services.",
+    icon: "bx:bxs-copy",
+    colour: "text-indigo-700 w-8 h-8"
+
+  },
+  {
+    title: "Command Line Interface (CLI)",
+    description:
+      "Backplane ships with a fully featured CLI to aid in engineering automation scenarios.",
+    icon: "bx:bxs-terminal",
+    colour: "text-indigo-700 w-8 h-8"
+
+  },
+    
+    {
+    title: "Cloud Console",
+    description:
+      "Lightweight UI leveraging HTMX for a SPA-experience to Cloud Management",
+    icon: "bx:bxs-window-alt",
+    colour: "text-indigo-700 w-8 h-8"
+  },
+];
+---
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-4xl font-bold lg:tracking-tight">
+    Multi-cloud, with a single-cloud experience!
+    <!-- One API. Multiple Clouds. -->
+    <!-- The Cloud Simplification Engine. Features: -->
+  </h2>
+  <p class="text-lg mt-5 text-slate-600">
+    
+    <div class="flex">
+
+      { benefits.map((benefit) => (
+        <div class="ml-10 grid sm:grid-cols-2 md:grid-cols-1 mt-8 gap-16 w-96">
+        <div class="flex gap-4 items-start">
+          <div class="mt-1 bg-indigo-700 rounded-full  p-2 w-12 h-12 shrink-0">
+            <Icon class='text-slate-100 w-8 h-8' name={benefit.icon} />
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg">{benefit.title}</h3>
+            <p class="text-slate-500 mt-2 leading-relaxed">{benefit.description}</p>
+          </div>
+        </div>
+      </div>
+      ))}
+      
+
+      
+    </div>
+</p>
+</div>
+<div class="mt-16 md:mt-16">
+  <h2 class="text-4xl lg:text-4xl font-bold lg:tracking-tight">
+    Features:
+    <!-- The Cloud Simplification Engine. Features: -->
+  </h2>
+  <p class="text-lg mt-5 text-slate-600">
+    Power your Cloud transformation journey with Backplane's Cloud Abstraction API - Simplifying the Cloud experience. Simply begin by plugging-in your Cloud Service Providers and begin provisioning Platforms, Products and Apps quickly and easily. 
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-gray-200 rounded-full  p-2 w-12 h-12 shrink-0">
+          <Icon class={item.colour ? item.colour : 'text-slate-900 w-8 h-8'} name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

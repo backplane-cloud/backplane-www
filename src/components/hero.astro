@@ -1,0 +1,67 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/hero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}
+      alt="Backplane UI and CLI"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      class="rounded-xl"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      
+      Backplane <span class='text-indigo-700'>API</span>. Free. Open Source. 
+    </h1>
+    <p class="text-lg mt-5 leading-9 text-slate-600 max-w-xl">
+      Cloud Abstraction API that enables <span class='text-slate-900 font-bold'>Mutli-Cloud Account vending</span> and simplifies the retrieval of <span class='text-slate-900 font-bold'>Cost</span>, <span class='text-slate-900 font-bold'>Access</span> and <span class='text-slate-900 font-bold'>Policy</span> data. 
+   
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      
+
+      <Link
+      href="#"
+      href="/blog/quick-start"
+      target="_blank"
+      class="flex gap-1 items-center justify-center bg-slate-900"
+      rel="noopener">
+      <Icon class="text-white w-5 h-5" name="bx:bx-code" />
+
+      Quick Start</Link>
+
+
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/backplane-cloud/backplane-www"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+         GitHub Repo
+      </Link>
+
+      <Link
+        href="#"
+        href="https://api.backplane.dev"
+        target="_blank"
+        class="flex gap-1 items-center justify-center bg-indigo-600"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bx-cloud" />Try it out</Link>
+      
+    </div>
+    
+  </div>
+</main>
