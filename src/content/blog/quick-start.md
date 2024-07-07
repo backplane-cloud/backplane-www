@@ -2,7 +2,7 @@
 draft: false
 title: "Quick Start"
 snippet: "Getting started guide to using Backplane"
-image: { src: "/src/assets/quickstart.svg", alt: "Quick start" }
+image: { src: "/assets/quickstart.svg", alt: "Quick start" }
 publishDate: "2024-06-30 02:39"
 category: "tutorial"
 author: "Lewis Sheridan"

@@ -3,7 +3,7 @@ draft: false
 title: "Connect to OCI"
 snippet: "Create an OCI Service Principal"
 publishDate: "2023-03-05 08:00"
-image: { src: "/src/assets/oci.png", alt: "Oracle Cloud" }
+image: { src: "/assets/oci.png", alt: "Oracle Cloud" }
 category: "tutorial"
 author: "Lewis Sheridan"
 tags: []
