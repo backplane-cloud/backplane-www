@@ -17,11 +17,11 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
 ### Binaries
 
-|   OS    | Download                         |
-| :-----: | :------------------------------- |
-| Windows | [bp.exe](/src/assets/bp.exe)     |
-| Mac OSX | [bp-mac](/src/assets/bp-mac)     |
-|  Linux  | [bp-linux](/src/assets/bp-linux) |
+|   OS    | Download                     |
+| :-----: | :--------------------------- |
+| Windows | [bp.exe](/assets/bp.exe)     |
+| Mac OSX | [bp-mac](/assets/bp-mac)     |
+|  Linux  | [bp-linux](/assets/bp-linux) |
 
 ### NPM
 
