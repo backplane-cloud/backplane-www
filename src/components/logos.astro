@@ -1,14 +1,12 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon/components";
+// import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
 
-import azure from "assets/images/azure-logo.png";
-import gcp from "assets/images/gcp-logo.png";
-import aws from "assets/images/aws-logo.png";
-import alibaba from "assets/images/alibaba-logo.png";
-import digitalocean from "assets/images/digitalocean-logo.png";
-import oci from "assets/images/oci.png";
+import azure from "/src/assets/azure.svg";
+import gcp from "/src/assets/gcp.svg";
+import aws from "/src/assets/aws.svg";
+import oci from "/src/assets/oci.svg";
 
 ---
 
@@ -18,10 +16,55 @@ import oci from "assets/images/oci.png";
     
   </div>
   <div class="flex gap-10 mt-5 justify-center">
-    <img src="/assets/azure.svg" />
-    <img src="/assets/gcp.svg" />
-    <img src="/assets/aws.svg" />
-    <img src="/assets/oci.svg" />
+    <div >
+      <Picture
+        src={azure}
+        alt="Microsoft Azure"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
+        format="avif"
+        class="w-18"
+      />
+    </div>
+    <div>
+      <Picture
+        src={gcp}
+        alt="Google Cloud Platform"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
+        format="avif"
+        class="w-18"
+      />
+    </div>
+    <div>
+      <Picture
+        src={aws}
+        alt="Amazon Web Services"
+        widths={[200, 400, 600]}
+        sizes="(max-width: 800px) 100vw, 620px"
+        loading="eager"
+        format="avif"
+        class=" w-18"
+      />
+    </div>
+    <div>
+      <Picture
+      src={oci}
+      alt="Oracle Cloud Infrastructure"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      class="w-18"
+    />
+    </div>
+    
+    
+   
+    
+    
     
   </div>
   

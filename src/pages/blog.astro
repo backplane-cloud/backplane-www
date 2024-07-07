@@ -16,7 +16,7 @@ publishedBlogEntries.sort(function (a, b) {
 });
 ---
 
-<Layout title="Blog">
+<Layout title="Documentation">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Documentation</Fragment>
@@ -26,7 +26,7 @@ publishedBlogEntries.sort(function (a, b) {
     </Sectionhead>
     <main class="mt-16">
       
-      <ul class="grid md:grid-cols-4 gap-16 max-w-4xl mx-auto">
+      <ul class="grid sm:grid-cols-2 md:grid-cols-4 gap-16 max-w-4xl mx-auto">
         
         {
           publishedBlogEntries.map((blogPostEntry, index) => (
@@ -48,10 +48,10 @@ publishedBlogEntries.sort(function (a, b) {
                       {blogPostEntry.data.category}
                     </span>
 
-                    <h2 class="text-lg font-semibold mt-1 ">
+                    <h2 class="text-lg font-semibold mt-1 w-32">
                       {blogPostEntry.data.title}
                     </h2>
-                    <h2 class="text-xs font-normal text-gray-600 mt-3 ">
+                    <h2 class="text-xs font-normal text-gray-600 mt-3 w-32">
                       {blogPostEntry.data.snippet}
                     </h2>
 
