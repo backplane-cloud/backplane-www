@@ -24,9 +24,9 @@ publishedBlogEntries.sort(function (a, b) {
         Guides to using Backplane
       </Fragment>
     </Sectionhead>
-    <main class="mt-16">
+    <main class="mt-16 flex justify-center">
       
-      <ul class="flex flex-wrap justify-center sm:grid-cols-2 md:grid-cols-4 gap-16 max-w-4xl mx-auto">
+      <ul class="flex flex-wrap justify-center gap-16 md:w-4/6">
         
         {
           publishedBlogEntries.map((blogPostEntry, index) => (
@@ -73,6 +73,7 @@ publishedBlogEntries.sort(function (a, b) {
           ))
         }
       </ul>
+
     </main>
   </Container>
 </Layout>
