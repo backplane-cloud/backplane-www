@@ -1,3 +1,8 @@
+---
+import microsoft from "assets/microsoft.png";
+import { Picture } from "astro:assets";
+---
+
 <footer class="py-14 bg-slate-100 border-t border-slate-100 mt-10">
   <div class="max-w-screen-xl mx-auto px-5">
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -11,33 +16,25 @@
             >DEV</span
           >
         </a>
-        <p class="mt-4 text-sm text-slate-700 max-w-xs">
+        <p class="mt-4 text-xs text-slate-700 max-w-xs">
           Backplane.dev is an Open Source project from Backplane Software Ltd. (15079797) Registered in the United Kingdom.
 
 
         </p>
-        <div class="flex gap-3 mt-4 items-center">
+        <div class="flex gap-3 mt-0 items-center">
          
           
-          <a
-            href="https://linkedin.com/"
-            target="https://www.linkedin.com/company/backplane-software"
-            rel="noopener noreferrer"
-            class="bg-slate-200 hover:bg-slate-300 rounded w-8 h-8 inline-flex items-center justify-center text-slate-500">
-            <svg
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-              class="w-8 h-8"
-              data-icon="bx:bxl-linkedin-square">
-              <symbol id="ai:bx:bxl-linkedin-square">
-                <path
-                  d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096a1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277c-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387c2.704 0 3.203 1.778 3.203 4.092v4.71z"
-                  fill="currentColor"></path>
-              </symbol>
-              <use xlink:href="#ai:bx:bxl-linkedin-square"></use></svg
-            ><span class="sr-only">Linkedin</span></a
-          >
+          
+
+          <Picture
+          src={microsoft}
+          alt="Backplane UI and CLI"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif"
+          class="rounded-xl w-48"
+        />
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
+
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -18,6 +19,9 @@ import { Icon } from "astro-icon/components";
       class="rounded-xl"
     />
   </div>
+  
+    
+  
   <div>
     <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
       Backplane <span class="text-indigo-700">API</span> Free. Open Source.
@@ -27,7 +31,7 @@ import { Icon } from "astro-icon/components";
       Cloud Abstraction Engine that simplifies <span class='text-slate-900 font-bold'>Multi-Cloud Account Provisioning</span> and the retrieval of <span class='text-slate-900 font-bold'>Cost</span>, <span class='text-slate-900 font-bold'>Access</span> and <span class='text-slate-900 font-bold'>Policy</span> data. 
    
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <div class="mt-6 flex justify-center flex-col sm:flex-row gap-3">
       
 
       <Link
@@ -61,6 +65,7 @@ import { Icon } from "astro-icon/components";
         <Icon class="text-white w-5 h-5" name="bx:bx-cloud" />Demo Server</Link>
       
     </div>
-    
+
+   
   </div>
 </main>

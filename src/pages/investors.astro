@@ -1,0 +1,74 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const team = [
+  {
+    name: "Fernando Serrano",
+    role: "Cloud Solution Architect",
+    img: "/assets/fernando.png"
+  },
+  {
+    name: "Fatima Moohktiar",
+    role: "Architect, Product & Strategy",
+    img: "/assets/fatima.png"
+  },
+  {
+    name: "Dave Brown",
+    role: "Enterprise Architect",
+    img: "/assets/dave.png"
+  },
+  {
+    name: "Marek Cielniaszek",
+    role: "Cloud Solution Architect",
+    img: "/assets/marek.png"
+  },
+  {
+    name: "Alan Kelly",
+    role: "Lead Platform Engineer",
+    img: "/assets/alan.png"
+  },
+  {
+    name: "Riccardo Pomato",
+    role: "Cloud Solution Architect",
+    img: "/assets/riccardo.png"
+  },
+  {
+    name: "Manish Agrahari",
+    role: "Cloud Security Engineer",
+    img: "/assets/manish.png"
+  },
+  {
+    name: "Saurabh Mishra",
+    role: "Cloud Security Engineer",
+    img: "/assets/saurabh.png"
+  },
+]
+
+---
+
+<Layout title="Investors">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Investors</Fragment>
+      <Fragment slot="desc" class="mt-10">
+        Backplane is an early stage start-up, seeking seed funding  </Fragment>
+    </Sectionhead>
+
+    <section class="flex ">
+      <div class="justify-center py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+       
+       If you are a Venture Capitalist and interested in receiving the Investor Deck, please e-mail lewis@backplane.cloud.
+                  
+           
+              
+             
+      </div>
+      </section>
+
+  
+  </Container>
+</Layout>
