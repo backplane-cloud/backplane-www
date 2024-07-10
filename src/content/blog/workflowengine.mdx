@@ -11,35 +11,99 @@ tags: []
 
 import Button from "@components/ui/button.astro";
 
-Configuring Atlas hosted MongoDB
+Backplane supports `Requests` and `Approvals` for business processes such as requesting budget or assigning access.
 
-1. Go to MongoDB.com and click on [Try Free](https://www.mongodb.com/cloud/atlas/register)
-2. Complete the Sign up form and click on Create your Access account. You will receive an e-mail verification. Once verified, click continue.
-3. Complete the form until you get to the section Deploy your database.
-4. Select M0 - Free
-5. Using the defaults, choose your underlying Cloud Provider and region and then click on Create Deployment
+### Link App to Product
 
-6. Create MongoDB user e.g. mongo-admin
-7. Click Choose a connection method
-8. Click on Connect to your application > Drivers
-9. Copy connection string to `.env` file.
+- [x] Create Request to Link App A to Product A
 
-```
-MONGO_URI=mongodb+srv://mongo-admin:<password>@cluster0.q4oeiru.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+```js
+bp request create —requestType link —requestedForType product —requestedForId 6660de51f06537999ef1cb4c —appid 6660777522b46a1376075592
 ```
 
-10. Click on Review Setup Steps and then Done.
+- [x] View Request on Product
 
-This will complete the setup of your MongoDB instance ready for Backplane API Server to connect to.
+```js
+bp request list
+bp product request list -i 6660de51f06537999ef1cb4c
+```
 
-info
-Copy the connection string to your `.env` file and ensure that the environment variable is called MONGO_URI
+- [x] Show Product has no Apps linked
 
-`MONGO_URI=mongodb+srv://mongo-admin:<password>@cluster0.q4oeiru.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+```js
+bp product show --id 6660de51f06537999ef1cb4c
+```
 
-tip
-Ensure your IP Address is allowed at the MongoDB end for your Development machine.
+- [x] Approve Request
 
-On the left-hand side menu under SECURITY, click on Network Access and add the respective IP addresses of your Cloud Provider or your Development machine.
+```js
+bp request approve -i 6660e044bdc6142a33665406 --code 12949173
+```
 
-For production you'll need to update this for the Cloud Provider. Example if hosted in Azure Web App, [Find Out Web App IP Addresses](https://learn.microsoft.com/en-us/azure/app-service/overview-inbound-outbound-ips#find-outbound-ips)
+- [x] Check Product has App Associated
+
+```js
+bp app show —id 6660777522b46a1376075592
+```
+
+## Budgeting
+
+#### Set Budget for Org
+
+- [ ] Set Organisation Budget
+
+```
+bp budget create --year 2024 --amount 1000000 --currency usd --id
+```
+
+Request Budget for Platform
+
+- [x] Create Budget Request - Platform Request Budget from Org
+
+```
+bp request create —requestType budget —requestedForType platform —requestedForId 66617f4a3834862e4e740793 —budget 500000
+```
+
+- [x] Approve Budget Request for Platform
+
+```
+bp request approve -i 6662e7e700ec6722807076e6 --code 53866367
+```
+
+- [x] Show Budget Allocated has increased by Requested Amount
+
+```
+bp org budget list -i 66617edc3834862e4e740771
+```
+
+- [x] Show Platform has Budget
+
+```
+bp platform budget show --id 66617f4a3834862e4e740793
+```
+
+Request Budget for Product
+
+- [x] Create Budget Request - Platform Request Budget from Org
+
+```
+bp request create --requestType budget --requestedForType product --requestedForId 66617f903834862e4e7407a4 --budget 100000
+```
+
+- [x] Approve Budget Request for Platform
+
+```
+bp request approve -i 6662ea8300ec672280707760 --code 34092354
+```
+
+- [x] Show Budget Allocated has increased by Requested Amount
+
+```
+bp platform budget show --id 66617f4a3834862e4e740793
+```
+
+- [x] Show Product has Budget
+
+```
+bp product budget show -i 66617f903834862e4e7407a4
+```

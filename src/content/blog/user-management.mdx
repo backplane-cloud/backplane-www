@@ -11,6 +11,29 @@ tags: []
 
 import Button from "@components/ui/button.astro";
 
-- Create User in Org
-- Register User
-- Create Role Assignment
+### Add New User and Assign Role (Optional)
+
+#### Create User
+
+```js
+bp user create --displayname 'Mike Tyson' --email mike@tyson.com --password 12345
+```
+
+#### View Roles
+
+```js
+bp role list
+```
+
+#### View Assignments
+
+```js
+bp assign list
+```
+
+### Add Role Assignments
+
+```js
+bp assign create -h
+bp assign create --assigntype user --principal 665f0129790877778edd158f --scope /orgs/665ee76d64dcaff2a820cffc --role 665ee76d64dcaff2a820d003
+```
