@@ -111,7 +111,7 @@ LOG_LEVEL=debug
 
 #### Step 3 - Setting up MongoDB
 
-Backplane API Server uses MongoDB as the backend datastore. See [Setting up MongoDB](mongosetup).
+Backplane API Server uses MongoDB as the backend datastore. See [Setting up MongoDB](/blog/mongosetup).
 
 #### Step 4 - Setting up MailerSend
 
