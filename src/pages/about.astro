@@ -1,9 +1,15 @@
 ---
 import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
+import platformengineeringlogo from "assets/platformlogo.svg";
+import opentofulogo from "assets/opentofu.svg";
+import finopslogo from "assets/finopsfoundation.svg";
+
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Community from "@components/community.astro";
+
 
 // Filter team entries with 'draft: false' & date before current date
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -69,6 +75,8 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <p class="text-lg leading-relaxed text-slate-500">
         Backplane is a community-driven project, built by engineers for engineers. It's Open, Free, and our ambition is to develop the Cloud Abstraction API to be the tool in every organisations toolbox for their multi-cloud journeys and donate the project to the Cloud Native Compute Foundation.
    </p>
+
+   <Community />
  
    </div>
    <div class="mx-auto justify-center flex mt-16">
