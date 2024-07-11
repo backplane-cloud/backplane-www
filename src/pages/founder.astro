@@ -1,0 +1,213 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import platformengineeringlogo from "assets/platformlogo.svg";
+import opentofulogo from "assets/opentofu.svg";
+import finopslogo from "assets/finopsfoundation.svg";
+
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Certifications from "@components/certifications.astro";
+
+
+// Filter team entries with 'draft: false' & date before current date
+const experience = [
+      {
+        logo: "/assets/backplane-logo.svg",
+        date: "2023 - present day (1 yrs)",
+        title: "Founder & CEO",
+        company: "Backplane Software",
+        description: "SaaS-based Startup specialising in Cloud tooling and software to simplify multi-cloud integration and accelerate cloud native transformations."
+      },
+      {
+        logo: "/assets/maersk.svg",
+        date: "2018 - 2023 (5 yrs)",
+        title: "Lead Cloud Engineer",
+        company: "Maersk",
+        description: "Leading a team of Cloud Architects, Engineers and Developers to build capabilities around Cloud Adoption, Enablement and Governance. "
+      },
+      {
+        logo: "/assets/mco.svg",
+        date: "2012 - 2017 (5 yrs)",
+        title: "IT Systems Manager",
+        company: "McAllister Olivarius",
+        description: "Managing the IT infrastructure of a transatlantic law firm. "
+      },
+      {
+        logo: "/assets/evolve.svg",
+        date: "2010 - 2012 (2 yrs)",
+        title: "Senior Technical Consultant",
+        company: "Evolve Computers",
+        description: "Technical lead and engineer for an IT managed services company"
+      },
+      {
+        logo: "/assets/ziptech.svg",
+
+        date: "2006 - 2010 (4 yrs)",
+        title: "Team Leader",
+        company: "Ziptech Services",
+        description: "Technical lead and engineer for an IT managed services company"
+      },
+      {
+        logo: "/assets/nextiraone.svg",
+        date: "2003 - 2006 (3 yrs)",
+        title: "Server Engineer",
+        company: "NextiraOne",
+        description: "Maintained IT infrastructure and develped a web-based ticketing system deployed across EMEA region. (ASP 3.0, VBScript, MySQL)"
+      }
+    ]
+
+    const projects = [
+    { 
+        title: "Backplane Cloud Abstraction API",
+        date: "2023",
+        description: "Wrote a web-based helpdesk in early 2000s, based on ASP/VBScript. It was n-tier architecture and deployed across EMEA region for a european data and telecoms enterprise."
+      },
+      { 
+        title: "Access Management Automation with Powershell",
+        date: "2018 - 2019",
+        description: "Wrote an automation to audit server-based Administrator access and reconcile against authorisation requests in Service Now. This was post 2017 cyber attack and brough privilege access down from circa ~50k access control entries to less than ~5k, and a compliance position less than 0.1%."
+      },
+      { 
+        title: "EMEA Web-based Helpdesk",
+        date: "2004 - 2005",
+        description: "Wrote a web-based helpdesk and asset management system in early 2000s, based on ASP/VBScript and SQL Server backend. It was an n-tier architecture and deployed across EMEA region. "
+      }
+    ]
+
+
+---
+
+<Layout title="Founder">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Founder</Fragment>
+      <Fragment slot="desc" class="mt-10">
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col justify-center max-w-screen-md mx-auto text-center">
+      <div class=" mx-auto">
+        <img class="w-48 h-48 rounded-full p-5" src="/assets/lewis-lg.png" alt="profile picture">
+      </div>
+      <div class="pe-3 text-3xl mb-3 font-medium text-gray-900">Lewis Sheridan</div>
+      <div class="ps-3 text-md text-indigo-700 font-semibold ">Founder @ Backplane Software Ltd.</div>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-semibold text-3xl text-gray-800">
+        Profile
+      </h2>
+      
+      
+       
+          <p class="text-lg leading-relaxed text-slate-500">
+
+            Hi, I'm Lewis, the Founder and CEO of Backplane Software. 
+
+            I've been in the tech industry a little over 20 years now, with the last several years heavily focused on Cloud adoption, enablement and governance. 
+
+            I am passionate about technology, both from the engineering perspective, and also from the people perspective. 
+
+            Below is a summary of my skills and experience. 
+            
+           
+          </p>
+          <div class="justify-end flex mt-5">
+            <p>
+             <a href="/careers" class="inline-flex items-center mt-0 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 ">More<svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/></svg></a>
+            </p>
+          
+            </div>  
+
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-semibold text-3xl text-gray-800">
+        Experience
+      </h2>
+      <p>
+        My background and career in tech has spanned over 20 years, holding senior positions leading engineering teams around infrastructure. 
+      </p>
+      <div class="m-5">
+        <ol class="relative border-s border-gray-200 dark:border-gray-700">        
+  
+
+          {
+            experience.map((job) => (
+              <li class="mb-10 ms-4">
+                <div></div>
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <div><img src={job.logo} class="h-6 inline-block m-2" /></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{job.date}</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{job.title} @ {job.company}</h3>
+                    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{job.description}</p>
+                   
+                </li>
+            ))
+          }
+        
+        
+          
+          
+        </ol>
+      </div>
+
+      <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+        <h2 class="font-semibold text-3xl text-gray-800">
+          Career Highlights
+        </h2>
+        <p>
+          My background and career in tech has spanned over 20 years, holding senior positions leading engineering teams around infrastructure. 
+        </p>
+        <div class="m-5">
+          <ol class="relative border-s border-gray-200 dark:border-gray-700">        
+    
+  
+            {
+              projects.map((project) => (
+                <li class="mb-1 ms-4">
+                  <div></div>
+                      <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                      <div><img src={project.logo} class="h-6 inline-block m-2" /></div>
+                      <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{project.date}</time>
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{project.title} </h3>
+                      <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{project.description}</p>
+                     
+                  </li>
+              ))
+            }
+          
+          
+            
+            
+          </ol>
+        </div>
+
+
+
+
+   
+    </div>
+ 
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-5">
+      <h2 class="font-semibold text-3xl text-gray-800">
+        Certifications
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Backplane is a community-driven project, built by engineers for engineers. It's Open, Free, and our ambition is to develop the Cloud Abstraction API to be the tool in every organisations toolbox for their multi-cloud journeys and donate the project to the Cloud Native Compute Foundation.
+  
+   
+      </p>
+
+      <Certifications />
+ 
+   </div>
+
+
+    </div>
+
+  </Container>
+</Layout>
