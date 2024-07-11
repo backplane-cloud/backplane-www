@@ -1,0 +1,71 @@
+---
+
+
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+---
+
+<Layout title="Community">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Community</Fragment>
+      <Fragment slot="desc" class="mt-10">
+        Backplane is a community-driven project
+      </Fragment>
+    </Sectionhead>
+
+
+<div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 mb-">
+
+      <div class="flex gap-10">
+        <div class="w-96">
+          <img src="/assets/platformlogo.svg" class="" />
+        </div>
+        <div>
+          <p class="text-lg leading-relaxed text-slate-500">
+             Backplane's Cloud Abstraction API can help with the development of customer internal developer portals by simplifying integration to a single API. 
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-10 mt-10">
+        <div class="w-96">
+          <img src="/assets/finopsfoundation.svg" class="" />
+        </div>
+        <div>
+          <p class="text-lg leading-relaxed text-slate-500">
+            The Backplane Cost Extraction Engine effectively performs an extract, transform and load (ETL) pattern. Aligning the schema to FinOps FOCUS specification helps align concerns.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-10 mt-10">
+        <div class="w-96">
+          <img src="/assets/cncf.png" class="" />
+        </div>
+        <div>
+          <p class="text-lg leading-relaxed text-slate-500">
+            It is our objective to submit Backplane's Cloud Abstraction API to the CNCF to help promote and further the objects of Cloud Native.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-10 mt-10 mb-72">
+        <div class="w-96">
+          <img src="/assets/opentofu.png" />
+        </div>
+        <div>
+          <p class="text-lg leading-relaxed text-slate-500">
+            Having the ability to leverage IaC that is Open Source is crucial to the build and deploy aspects that rest upon Backplane. 
+          </p>
+        </div>
+      </div>
+ 
+</div>
+
+   
+    
+  </Container>
+</Layout>
