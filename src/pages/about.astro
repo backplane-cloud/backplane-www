@@ -10,11 +10,6 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Community from "@components/community.astro";
 
-
-// Filter team entries with 'draft: false' & date before current date
-const publishedTeamMembers = await getCollection("team", ({ data }) => {
-  return !data.draft && data.publishDate < new Date();
-});
 ---
 
 <Layout title="Our Mission">
@@ -31,7 +26,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       
           <p class="text-4xl font-medium text-gray-800 leading-9">
             
-            Streamlining multi-cloud integration to maximise cloud value with a unified Cloud Abstraction API.
+            Simplifying multi-cloud integration to maximise cloud value with a unified Cloud Abstraction API.
           </p>
       <figcaption class="flex items-center justify-center mt-12 space-x-3 rtl:space-x-reverse">
           <img class="w-12 h-12 rounded-full" src="/assets/lewis-lg.png" alt="profile picture">
