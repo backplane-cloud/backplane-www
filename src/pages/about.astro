@@ -1,9 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "astro:assets";
-import platformengineeringlogo from "assets/platformlogo.svg";
-import opentofulogo from "assets/opentofu.svg";
-import finopslogo from "assets/finopsfoundation.svg";
+
 
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
@@ -27,8 +24,9 @@ import Community from "@components/community.astro";
           <p class="text-3xl font-medium text-gray-800 leading-9">
             <!-- To provide a unified multi-cloud experience through a Cloud Abstraction API, reducing multi-cloud complexity and simplifying integration effort -->
           <!-- To provide a logical Backplane that simplifies multi-cloud complexity and offers a unified multi-cloud experience. -->
-
+          <img src="/assets/quote-left.svg" class="inline-block mb-4" />
           To deliver a simplified multi-cloud experience through a unified Cloud Abstraction API
+          <img src="/assets/quote-right.svg" class="inline-block mb-4" />
         </p>
       <figcaption class="flex items-center justify-center mt-12 space-x-3 rtl:space-x-reverse">
           <img class="w-12 h-12 rounded-full" src="/assets/lewis-lg.png" alt="profile picture">
