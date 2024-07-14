@@ -75,7 +75,7 @@ bp auth setserver --server https://api.backplane.dev/api
 
 ```js
 mkdir backplane
-git clone https://github.com/backplane-cloud/backplane.git
+git clone https://github.com/backplane-cloud/backplane-api.git
 ```
 
 #### Docker
