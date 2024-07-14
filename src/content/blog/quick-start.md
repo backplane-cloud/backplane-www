@@ -17,16 +17,33 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
 ### Binaries
 
-|   OS    | Download                     |
-| :-----: | :--------------------------- |
-| Windows | [bp.exe](/assets/bp.exe)     |
-| Mac OSX | [bp-mac](/assets/bp-mac)     |
-|  Linux  | [bp-linux](/assets/bp-linux) |
+|                                      OS                                       | Download                   |
+| :---------------------------------------------------------------------------: | :------------------------- |
+| <img class="inline-block w-5 m-0 mr-3" src="/assets/appleicon.svg" /> Mac OSX | [ARM64](/cli/mac/bp.zip)   |
+|  <img class="inline-block w-6 m-0 mr-3" src="/assets/windows.svg" /> Windows  | [x64](/cli/windows/bp.zip) |
+|     <img class="inline-block w-6 m-0 mr-3" src="/assets/tux.svg" /> Linux     | [x64](/cli/linux/bp.zip)   |
+
+#### Running on Mac or Linux
+
+```js
+// Validate SHASUM
+shasum -a 256 -c bp.sha256
+// Move the file to your path
+sudo mv bp /usr/local/bin/
+// Make the file executable
+sudo chmod +x /usr/local/bin/bp
+```
 
 ### NPM
 
 ```
 npm i @backplane-software/backplane-cli -g
+```
+
+Once the CLI has been installed, within the directory containing the `package.json`, run the `npm link` command to make the file executable.
+
+```js
+npm link
 ```
 
 Use the below command to verify installation has been successful:
