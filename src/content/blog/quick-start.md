@@ -11,7 +11,7 @@ tags: [30 mins]
 
 Guide to download Backplane CLI and log into the API Server.
 
-## Download CLI
+## CLI Download & Installation
 
 Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
@@ -23,20 +23,57 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 |  <img class="inline-block w-6 m-0 mr-3" src="/assets/windows.svg" /> Windows  | [x64](/cli/windows/bp.zip) |
 |     <img class="inline-block w-6 m-0 mr-3" src="/assets/tux.svg" /> Linux     | [x64](/cli/linux/bp.zip)   |
 
-#### Running on Mac or Linux
+#### Step-by-Step Installation Instructions
+
+<details>
+    <summary>Mac OS</summary>
+
+- **Download** the Backplane CLI by clicking on **ARM64** link above.
+<div class="rounded-lg bg-slate-100 p-3 ml-10 text-sm">
+  <img src='/assets/warning.svg' class="inline-block m-0 w-8"/>
+ If the Web Browser alerts that the bp.zip file is suspicious, allow the file
+</div>
+
+- Extract **bp.zip** by double-clicking on the file
+
+<div class="rounded-lg bg-slate-100 p-3 ml-10 text-sm">
+  <img src='/assets/warning.svg' class="inline-block m-0 w-8"/> Before you can run 'bp' for the first time, 'Right-click' on the extracted 'bp' file and select Open from the context menu and Accept any security warning that appears.
+</div>
+
+- Open **Terminal** and from the directory **bp** has been extracted to, run the following command to move the file to your executable path:
+
+  ```js
+  sudo mv bp /usr/local/bin/
+  ```
+
+- To verify that **bp** is successfully installed, run:
+  ```js
+  bp --version
+  1.0.0
+  ```
+
+</details>
+<details>
+    <summary>Linux</summary>
+</details>
+<details>
+    <summary>Windows</summary>
+</details>
+
+#### To validate SHASUM on Mac OSX or Linux
 
 ```js
-// Validate SHASUM
 shasum -a 256 -c bp.sha256
-// Move the file to your path
-sudo mv bp /usr/local/bin/
-// Make the file executable
-sudo chmod +x /usr/local/bin/bp
 ```
 
 ### NPM
 
-```
+Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
+
+```js
+mkdir backplane-cli
+cd backplane-api
+npm init -y
 npm i @backplane-software/backplane-cli -g
 ```
 
