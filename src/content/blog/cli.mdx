@@ -13,261 +13,133 @@ import Button from "@components/ui/button.astro";
 
 The Backplane Command Line Interface is developed with full parity with the Open API (aka Swagger) specification. Enabling Cloud engineers to integrate and automate as quickly as possible.
 
-### Create Organisation
+## CLI Download & Installation
 
-#### Register User and Org
+Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
-```js
-bp user register --displayname 'Backplane Demo' --email backplanedemo@gmail.com --password 12345 --orgname 'Backplane Demo'
-```
+### Binaries
 
-#### Login User
+The easiest way to get started is to download the Backplane CLI executable, available as a ZIP archive containing **bp** executable and **bp.sha256**
+| OS | Download Link |
+| :---------------------------------------------------------------------------: | :------------------------- |
+| <img class="inline-block w-5 m-0 mr-3" src="/assets/appleicon.svg" /> Mac OSX | [ARM64](/cli/mac/bp.zip) |
+| <img class="inline-block w-6 m-0 mr-3" src="/assets/windows.svg" /> Windows | [x64](/cli/windows/bp.zip) |
+| <img class="inline-block w-6 m-0 mr-3" src="/assets/tux.svg" /> Linux | [x64](/cli/linux/bp.zip) |
 
-```js
-bp auth login --email backplanedemo@gmail.com --password 12345
-```
-
-#### Create Platforms
-
-```js
-bp platform create --displayname 'Cloud Engineering' --description 'Platform for Cloud Engineering Products'
-```
-
-#### Create Products
+#### Validating download integrity with SHASUM (Mac OSX & Linux)
 
 ```js
-bp product create --displayname 'Product Alpha' --description 'This is a description for Product Alpha' --platformid 665ef85664dcaff2a820d218
+shasum -a 256 -c bp.sha256
+bp: OK
 ```
 
-```js
-bp product create --displayname 'Product Beta' --description 'This is a description for Product Beta' --platformid 665ef85664dcaff2a820d218
-```
+#### Installation Instructions
 
-```js
-bp org show --id 665ee76d64dcaff2a820cffc --tree
-```
+<details>
+    <summary>Mac OS</summary>
 
-### Add Cloud Credentials
+- **Download** [bp.zip](/cli/mac/bp.zip)
 
-#### Azure
+  <div class="rounded-lg bg-slate-100 p-3 ml-10 text-sm">
+    <img src="/assets/warning.svg" class="inline-block m-0 w-8" />
+    If the Web Browser alerts that the bp.zip file is suspicious, allow the file
+  </div>
 
-```js
-bp cloud azure add --tenantid d47fe008-774b-4765-97f9-ef224ad333c8 --clientid 4e6d07d7-ec0b-4f61-af45-7b11240e8702 --clientsecret GiP8Q~GRtmwG6NDWkH5FKm56o4IpkStEJ2hlKaC- --subscriptionid 2a04f460-f517-4085-808d-7877fd30ea72 --id
-```
+- Extract **bp.zip** by double-clicking on the file
 
-#### AWS
+<div class="rounded-lg bg-slate-100 p-3 ml-10 text-sm">
+  <img src="/assets/warning.svg" class="inline-block m-0 w-8" /> Before you can
+  run 'bp' for the first time, 'Right-click' on the extracted 'bp' file and
+  select Open from the context menu and Accept any security warning that
+  appears.
+</div>
 
-```js
-bp cloud aws add --clientid <clientid> --clientsecret <client-secret> --id
-```
+- Open **Terminal** and from the directory **bp** has been extracted to, run the following command to move the file to your executable path:
 
-#### GCP
+  ```bash
+  sudo mv bp /usr/local/bin/
+  ```
 
-```js
-bp cloud gcp add --gcpsecret <gcpfile.json> --tenantid <gcp> --id
-```
+- To verify that **bp** is successfully installed, run:
+  ```bash
+  bp --version
+  1.0.0
+  ```
 
-#### OCI
+</details>
 
-```js
-bp cloud oci add --ocisecret <ocifile.json>  --id
-```
+<details>
+    <summary>Windows</summary>
+    
+- **Download** [bp.zip](/cli/windows/bp.zip)
+- **Extract** contents to folder
+    ```ps
+    expand-archive bp.zip c:\backplane
+    ```
 
-### Creating Apps
+- Add **bp.exe** file system environment path
 
-#### Azure
+  ```ps
+  $newPath = "C:\backplane"
+  $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+  [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;$newPath", "Machine")
+  ```
 
-```js
-// View Templates available
-bp template list —id
+- **Verify** installation - To check if **bp.exe** is successfully installed, run:
 
-// Create App
-bp app create --displayname 'My Azure App' --cloud azure
-bp app list
-bp app show --id <app-id>
-```
+  ```ps
+  bp --version
+  1.0.0
+  ```
 
-#### AWS
+</details>
 
-```js
-bp app create --displayname "My GCP App" --cloud aws
-bp app show --id <app-id>
-```
+<details>
+    <summary>Linux</summary>
 
-#### GCP
+- **Download** [bp.zip](/cli/linux/bp.zip)
+- **Extract** executable from ZIP file.
 
-```js
-bp app create --displayname "My GCP App" --cloud gcp
-bp app show --id <app-id>
-```
+  ```bash
+  sudo apt install unzip
+  unzip bp.zip
+  ```
 
-#### OCI
+- Move the file to your executable path
 
-```js
-bp app create --displayname "My OCI App" --cloud oci
-bp app show --id <app-id>
-```
+  ```bash
+  sudo mv ./bp /usr/local/bin/bp
+  ```
 
-### View App Access
+- **Verify** installation to check that **bp** is successfully installed, run:
 
-```js
-bp app access list --id 665eeec064dcaff2a820d1bc
-```
+  ```bash
+  bp --version
+  1.0.0
+  ```
 
-#### Using Powershell for easier manipulation of terminal display
+</details>
 
-```ps
-pwsh
-bp app access list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
-$access = bp app access list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
-$access[0].assignments | ft name, principalId, principalType, description
+### NPM
 
-```
+- Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
 
-### View App Policy
+  ```bash
+  mkdir backplane-cli
+  cd backplane-api
+  npm init -y
+  npm i @backplane-software/backplane-cli -g
+  ```
 
-```js
-bp app policy list --id <app-id>
-```
+- Once the CLI has been installed, within the directory containing the `package.json`, run the `npm link` command to make the file executable.
 
-#### User Powershell for easier display
-
-```ps
-$policy = bp app policy list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
-```
-
-### View App Cost
-
-```js
-bp app cost show --id <app-id>
-```
-
-### Link App to Product
-
-#### Create Request to Link App A to Product A
-
-```js
-bp request create —requestType link —requestedForType product —requestedForId 6660de51f06537999ef1cb4c —appid 6660777522b46a1376075592
-```
-
-#### View Request on Product
-
-```js
-bp request list
-bp product request list -i 6660de51f06537999ef1cb4c
-```
-
-#### Show Product has no Apps linked
-
-```js
-bp product show --id 6660de51f06537999ef1cb4c
-```
-
-#### Approve Request
-
-```js
-bp request approve -i 6660e044bdc6142a33665406 --code 12949173
-```
-
-#### Check Product has App Associated
-
-```js
-bp app show —id 6660777522b46a1376075592
-```
-
-### Budgeting
-
-#### Set Budget for Org
-
-```js
-bp budget create --year 2024 --amount 1000000 --currency usd --id
-```
-
-### Request Budget for Platform
-
-#### Create Budget Request - Platform Request Budget from Org
-
-```js
-bp request create —requestType budget —requestedForType platform —requestedForId 66617f4a3834862e4e740793 —budget 500000
-```
-
-### Approve Budget Request for Platform
-
-```js
-bp request approve -i 6662e7e700ec6722807076e6 --code 53866367
-```
-
-### Show Budget Allocated has increased by Requested Amount
-
-```js
-bp org budget list -i 66617edc3834862e4e740771
-```
-
-````js
-p platform budget show --id 66617f4a3834862e4e740793
-```Show Platform has Budget
-      b
-
-### Request Budget for Product
-
-#### Create Budget Request - Platform Request Budget from Org
-
-```js
-bp request create --requestType budget --requestedForType product --requestedForId 66617f903834862e4e7407a4 --budget 100000
-````
-
-#### Approve Budget Request for Platform
-
-```js
-bp request approve -i 6662ea8300ec672280707760 --code 34092354
-```
-
-### Show Budget Allocated has increased by Requested Amount
-
-```js
-bp platform budget show --id 66617f4a3834862e4e740793
-```
-
-#### Show Product has Budget
-
-```js
-bp product budget show -i 66617f903834862e4e7407a4
-```
-
-```js
-bp org show --id 665ee76d64dcaff2a820cffc --tree
-```
-
-### Recap
-
-- We’ve created a new Org, Platform, Product,
-- We’ve created Apps with environments in Azure, GCP and AWS and linked to Parent Products
-- We’ve viewed Cost, Access and Policy across each App.
-- We’ve viewed Cost propagated at Org, Platform and Product level.
-
-### Add New User and Assign Role (Optional)
-
-#### Create User
-
-```js
-bp user create --displayname 'Mike Tyson' --email mike@tyson.com --password 12345
-```
-
-#### View Roles
-
-```js
-bp role list
-```
-
-#### View Assignments
-
-```js
-bp assign list
-```
-
-### Add Role Assignments
-
-```js
-bp assign create -h
-bp assign create --assigntype user --principal 665f0129790877778edd158f --scope /orgs/665ee76d64dcaff2a820cffc --role 665ee76d64dcaff2a820d003
-```
+  ```bash
+  npm link
+  ```
+
+  Use the below command to verify installation has been successful:
+
+  ```bash
+  $ bp -V
+  v0.11.0
+  ```

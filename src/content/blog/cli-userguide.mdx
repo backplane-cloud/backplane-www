@@ -1,31 +1,17 @@
 ---
 draft: false
-title: "Step-by-step Walkthrough"
-snippet: "End-to-end walkthrough of using Backplane"
-publishDate: "2024-06-4 08:00"
-image: { src: "/assets/walkthrough.svg", alt: "Command Line Interface" }
-category: "demo"
+title: "CLI User Guide"
+snippet: "Learn the basic commands for the Backplane CLI"
+publishDate: "2024-06-01 08:00"
+image: { src: "/assets/terminaloutline.svg", alt: "Command Line Interface" }
+category: "reference"
 author: "Lewis Sheridan"
 tags: []
 ---
 
-import Button from "@components/ui/button.astro";
+This guide covers all the basic commands and options. Use `bp <subcommand> -h` for help on options available for each command.
 
-Step-by-step video demo of Backplane API and CLI. Instructions are provided below should you wish to follow along.
-
-<iframe
-  width="375"
-  height="315"
-  src="https://www.youtube.com/embed/ehGFfYwjXbM?si=1I96shVBvb5B0bCr"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen></iframe>
-
-## Step-by-Step Walkthrough instructions
-
-### Create Organisation
+### Organisation
 
 #### Register User and Org
 
@@ -39,13 +25,13 @@ bp user register --displayname 'Backplane Demo' --email backplanedemo@gmail.com 
 bp auth login --email backplanedemo@gmail.com --password 12345
 ```
 
-#### Create Platforms
+### Platforms
 
 ```js
 bp platform create --displayname 'Cloud Engineering' --description 'Platform for Cloud Engineering Products'
 ```
 
-#### Create Products
+### Products
 
 ```js
 bp product create --displayname 'Product Alpha' --description 'This is a description for Product Alpha' --platformid 665ef85664dcaff2a820d218
@@ -85,7 +71,7 @@ bp cloud gcp add --gcpsecret <gcpfile.json> --tenantid <gcp> --id
 bp cloud oci add --ocisecret <ocifile.json>  --id
 ```
 
-### Creating Apps
+### Apps
 
 #### Azure
 
@@ -94,7 +80,7 @@ bp cloud oci add --ocisecret <ocifile.json>  --id
 bp template list —id
 
 // Create App
-bp app create --displayname 'My App' --cloud <azure | gcp | aws | oci>
+bp app create --displayname 'My Azure App' --cloud azure
 bp app list
 bp app show --id <app-id>
 ```
@@ -106,7 +92,21 @@ bp app create --displayname "My GCP App" --cloud aws
 bp app show --id <app-id>
 ```
 
-### View App Access
+#### GCP
+
+```js
+bp app create --displayname "My GCP App" --cloud gcp
+bp app show --id <app-id>
+```
+
+#### OCI
+
+```js
+bp app create --displayname "My OCI App" --cloud oci
+bp app show --id <app-id>
+```
+
+### Access
 
 ```js
 bp app access list --id 665eeec064dcaff2a820d1bc
@@ -119,21 +119,22 @@ pwsh
 bp app access list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
 $access = bp app access list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
 $access[0].assignments | ft name, principalId, principalType, description
+
 ```
 
-### View App Policy
+### Policy
 
 ```js
 bp app policy list --id <app-id>
 ```
 
-#### Using Powershell for easier display
+#### User Powershell for easier display
 
 ```ps
 $policy = bp app policy list --id 665eeec064dcaff2a820d1bc --stringify | convertfrom-json
 ```
 
-### View App Cost
+### Cost
 
 ```js
 bp app cost show --id <app-id>
@@ -200,9 +201,10 @@ bp request approve -i 6662e7e700ec6722807076e6 --code 53866367
 bp org budget list -i 66617edc3834862e4e740771
 ```
 
-```js
-bp platform budget show --id 66617f4a3834862e4e740793
-```
+````js
+p platform budget show --id 66617f4a3834862e4e740793
+```Show Platform has Budget
+      b
 
 ### Request Budget for Product
 
@@ -210,7 +212,7 @@ bp platform budget show --id 66617f4a3834862e4e740793
 
 ```js
 bp request create --requestType budget --requestedForType product --requestedForId 66617f903834862e4e7407a4 --budget 100000
-```
+````
 
 #### Approve Budget Request for Platform
 
@@ -233,6 +235,13 @@ bp product budget show -i 66617f903834862e4e7407a4
 ```js
 bp org show --id 665ee76d64dcaff2a820cffc --tree
 ```
+
+### Recap
+
+- We’ve created a new Org, Platform, Product,
+- We’ve created Apps with environments in Azure, GCP and AWS and linked to Parent Products
+- We’ve viewed Cost, Access and Policy across each App.
+- We’ve viewed Cost propagated at Org, Platform and Product level.
 
 ### Add New User and Assign Role (Optional)
 
