@@ -302,7 +302,7 @@ Backplane needs to connect to your Cloud Platforms by adding Cloud Service Provi
 #### Instructions to create Service Principal
 
 <details>
-<summary>Azure</summary>
+<summary class="text-blue-700">Azure</summary>
 
 #### Creating a Service Principal in Azure
 
@@ -334,7 +334,7 @@ The Subscription ID is required in the MVP since App environments are provisione
 
 </details>
 <details>
-<summary>GCP</summary>
+<summary class="text-blue-700">GCP</summary>
 
 #### Creating a Service Principal in GCP
 
@@ -362,7 +362,7 @@ bp cloud gcp add --id "<OrgID>" --tenantid "<Enter Google Org ID>" --gcpsecret "
 
 </details>
 <details>
-<summary>AWS</summary>
+<summary class="text-blue-700">AWS</summary>
 
 #### Creating a Service Principal in AWS
 
@@ -409,7 +409,7 @@ bp cloud aws add --id "<OrgId>" --clientid "<accessKey>" --clientsecret "<access
 </details>
 
 <details>
-<summary>OCI</summary>
+<summary class="text-blue-700">OCI</summary>
 
 #### Creating a Service Principal in OCI
 
