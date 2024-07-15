@@ -60,7 +60,7 @@ bp: OK
 - Extract **bp.zip** by double-clicking on the file
 
 <div class="rounded-lg bg-slate-100 p-3 ml-10 text-sm">
-  <img src='/assets/warning.svg' class="inline-block m-0 w-8"/> Before you can run 'bp' for the first time, 'Right-click' on the extracted 'bp' file and select Open from the context menu and Accept any security warning that appears.
+  <img src='/assets/warning.svg' class="inline-block m-0 w-8"/> Before you can run 'bp' for the first time, 'Right-click' on the extracted 'bp' file and select Open from the context menu and Accept any security warning that appears. A terminal window will open and execute the file. Simply close this window as this will mean it is now allowed. 
 </div>
 
 - Open **Terminal** and from the directory **bp** has been extracted to, run the following command to move the file to your executable path:
