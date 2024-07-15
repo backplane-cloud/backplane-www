@@ -3,10 +3,10 @@ draft: false
 title: "Quick Start"
 snippet: "Getting started guide to using Backplane"
 image: { src: "/assets/quickstart.svg", alt: "Quick start" }
-publishDate: "2024-06-30 02:39"
+publishDate: "2024-07-15 02:39"
 category: "tutorial"
 author: "Lewis Sheridan"
-tags: [30 mins]
+tags: []
 ---
 
 Welcome to the Backplane Quick Start guide to get you up and running with Backplane API and CLI.
@@ -22,7 +22,7 @@ The Backplane API is currently an MVP in BETA. The below table shows the Cloud I
 |  <img src="/assets/aws.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |  -   |
 |  <img src="/assets/oci.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |                              -                              |                              -                              |  -   |
 
-### Get Involved
+#### Want to get involved ?
 
 If you want to get involved and contribute to the Project, please visit [Backplane API Github Repo](https://github.com/backplane-cloud/backplane-api)
 
@@ -49,7 +49,7 @@ bp: OK
 #### Installation Instructions
 
 <details>
-    <summary>Mac OS</summary>
+    <summary class="text-blue-700">Mac OS</summary>
 
 - **Download** [bp.zip](/cli/mac/bp.zip)
 <div class="rounded-lg bg-slate-100 p-3 ml-10 text-sm">
@@ -78,7 +78,7 @@ bp: OK
 </details>
 
 <details>
-    <summary>Windows</summary>
+    <summary class="text-blue-700">Windows</summary>
     
 - **Download** [bp.zip](/cli/windows/bp.zip)
 - **Extract** contents to folder
@@ -104,7 +104,7 @@ bp: OK
 </details>
 
 <details>
-    <summary>Linux</summary>
+    <summary class="text-blue-700">Linux</summary>
 
 - **Download** [bp.zip](/cli/linux/bp.zip)
 - **Extract** executable from ZIP file.
@@ -155,8 +155,9 @@ bp: OK
 
 ## API Server Setup
 
-<details open>
-    <summary>Demo API Server</summary>
+The fastest way to get started with Backplane API is to use the Demo API Server. This is a hosted instance of the API which you can use the CLI client to interact with.
+
+### Demo API Server
 
 - A demo server is hosted at `https://api.backplane.dev/api`
 
@@ -166,35 +167,12 @@ bp: OK
   bp auth setserver --server https://api.backplane.dev/api
   ```
 
-</details>
+- Now you are ready to [Start Using Backplane](#start-using-backplane)
+
+### Self-Hosted API Server
 
 <details>
-<summary>Self-Hosted (Docker)</summary>
-
-#### Clone Repo
-
-```js
-mkdir backplane
-git clone https://github.com/backplane-cloud/backplane-api.git
-```
-
-#### Docker
-
-```js
-docker build -t backplanesoftware/backplaneapi:0.26.1 .
-
-docker network create my-network
-
-docker run --network my-network --name api -p 8000:8000 backplanesoftware/backplaneapi:0.2
-6.1
-
-docker run —network my-network —name cli -p 3000:3000 backplanesoftware/backplanecli:0.0.1
-```
-
-</details>
-
-<details>
-<summary>Self-Hosted</summary>
+<summary class="text-blue-700">Self-Hosted</summary>
 
 #### Step 1 - Install Node
 
@@ -273,6 +251,31 @@ app.listen(port, () =>
 `npm run server` to start the server on localhost port 8000.
 
 Use `curl http://localhost:8000` to confirm server is running. If successful you should see: `Backplane REST API Server is ready`.
+
+</details>
+<details>
+<summary class="text-blue-700">Docker</summary>
+
+#### Clone Repo
+
+```js
+mkdir backplane
+cd backplane
+git clone https://github.com/backplane-cloud/backplane-api.git
+npm i
+```
+
+#### Docker
+
+```js
+docker build -t backplanesoftware/backplaneapi:0.26.1 .
+
+docker network create my-network
+
+docker run --network my-network --name api -p 8000:8000 backplanesoftware/backplaneapi:0.26.1
+
+docker run —network my-network —name cli -p 3000:3000 backplanesoftware/backplanecli:0.0.1
+```
 
 </details>
 
