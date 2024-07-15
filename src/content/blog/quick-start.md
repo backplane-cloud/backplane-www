@@ -17,18 +17,25 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
 ### Binaries
 
-|                                      OS                                       | Download                   |
+The easiest way to get started is to download the Backplane CLI executable, available as a ZIP archive containing **bp** executable and **bp.sha256**
+| OS | Download Link |
 | :---------------------------------------------------------------------------: | :------------------------- |
-| <img class="inline-block w-5 m-0 mr-3" src="/assets/appleicon.svg" /> Mac OSX | [ARM64](/cli/mac/bp.zip)   |
-|  <img class="inline-block w-6 m-0 mr-3" src="/assets/windows.svg" /> Windows  | [x64](/cli/windows/bp.zip) |
-|     <img class="inline-block w-6 m-0 mr-3" src="/assets/tux.svg" /> Linux     | [x64](/cli/linux/bp.zip)   |
+| <img class="inline-block w-5 m-0 mr-3" src="/assets/appleicon.svg" /> Mac OSX | [ARM64](/cli/mac/bp.zip) |
+| <img class="inline-block w-6 m-0 mr-3" src="/assets/windows.svg" /> Windows | [x64](/cli/windows/bp.zip) |
+| <img class="inline-block w-6 m-0 mr-3" src="/assets/tux.svg" /> Linux | [x64](/cli/linux/bp.zip) |
 
-#### Step-by-Step Installation Instructions
+#### Validating download integrity with SHASUM (Mac OSX & Linux)
+
+```js
+shasum -a 256 -c bp.sha256
+```
+
+#### Installation Instructions
 
 <details>
     <summary>Mac OS</summary>
 
-- **Download** the Backplane CLI by clicking on **ARM64** link above.
+- **Download** [bp.zip](/cli/mac/bp.zip)
 <div class="rounded-lg bg-slate-100 p-3 ml-10 text-sm">
   <img src='/assets/warning.svg' class="inline-block m-0 w-8"/>
  If the Web Browser alerts that the bp.zip file is suspicious, allow the file
@@ -53,18 +60,33 @@ Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
   ```
 
 </details>
+
+<details>
+    <summary>Windows</summary>
+    
+- **Download** [bp.zip](/cli/windows/bp.zip)
+- **Extract** contents to folder
+    ```ps
+    PS C:\> expand-archive bp.zip c:\backplane
+    ```
+
+- Add **bp.exe** file system environment path
+
+  ```ps
+  PS C:\> $env:path += 'c:\backplane'
+  ```
+
+- **Verify** installation - To check if **bp.exe** is successfully installed, run:
+  ```ps
+  PS C:\> bp --version
+  1.0.0
+  ```
+
+</details>
+
 <details>
     <summary>Linux</summary>
 </details>
-<details>
-    <summary>Windows</summary>
-</details>
-
-#### To validate SHASUM on Mac OSX or Linux
-
-```js
-shasum -a 256 -c bp.sha256
-```
 
 ### NPM
 
