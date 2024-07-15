@@ -13,4 +13,18 @@ import Button from "@components/ui/button.astro";
 
 Backplane is developed using a microservices design architecture.
 
-#### Coming Soon
+### REST Endpoints
+
+For more details view the Swagger Spec [Open API](https://api.backplane.dev/openapi)
+
+| API Endpoint | Description                                                                      |
+| :----------- | :------------------------------------------------------------------------------- |
+| /orgs        | This is the highest management scope                                             |
+| /platforms   | Orgs have many platforms for technology capabilities                             |
+| /products    | Platforms Contain many Products                                                  |
+| /apps        | Apps represent the Cloud workload                                                |
+| /services    | Services are for provisioning integrations like Github                           |
+| /requests    | The Workflow Approval Engine for budgets is managed through the Request endpoint |
+| /users       | To Authenticate to Backplane you need a User Account                             |
+| /assignments | Assignments of Users to Roles at management scope                                |
+| /roles       | These are the allow actions permitted on an endpoint at a particular scope       |

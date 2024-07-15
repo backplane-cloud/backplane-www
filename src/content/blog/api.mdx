@@ -1,0 +1,90 @@
+---
+draft: false
+title: "Server Installation"
+snippet: "Configuring the Backplane API Server"
+publishDate: "2024-05-05 08:00"
+image: { src: "/assets/backplane.svg", alt: "Command Line Interface" }
+category: "tutorial"
+author: "Lewis Sheridan"
+tags: []
+---
+
+## Setting up your Development Environment
+
+### NPM
+
+- Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
+
+  ```bash
+  mkdir backplane-api
+  cd backplane-api
+  npm init -y
+  npm i express dotenv @backplane-software/backplane-api
+  ```
+
+### Setup Environment Variables
+
+- Create `.env` file, and provide the following:
+
+  ```bash
+  NODE_ENV=development
+  PORT=8000
+
+  JWT_SECRET=<provide-key> // Make up your own secret, this is used as the salt to CryptB for password Hashing. e.g. MyS3cureP&!00word\*
+
+  MONGO_URI=<provide-key>
+
+  MAILSENDER_USERNAME=<your-username>
+  MAILSENDER_PASSWORD=<provide-key>
+
+  LOGTAIL_KEY=<provide-key>
+  LOG_LEVEL=debug
+  ```
+
+#### MongoDB
+
+- Backplane API Server uses MongoDB as the backend datastore. See [Setting up MongoDB](/blog/mongosetup).
+
+#### MailerSend
+
+- MailerSend is used as an SMTP mailrelay, so that User Registration e-mails can be sent as well as approval request e-mails. Create an account here: [MailerSend](https://www.mailersend.com/)
+
+#### LogTail
+
+- `/utils/logger.js` is used as Middleware for logging purposes. It leverages LogTail, now known as Better Stack is used as a Log Repository. It's free up to 1GB a month with 3-day retention. Create an account here: [LogTail](https://betterstack.com/logs).
+
+#### Create Index.js
+
+- Create `index.js` file and copy the below into it.
+
+  ```js
+  import express from "express";
+  import dotenv from "dotenv";
+  import backplane from "@backplane-software/backplane-api";
+
+  // Load Environment Configuration
+  dotenv.config();
+
+  // Create Express Instance
+  const app = express();
+
+  // Initialise Backplane Server with Instance
+  backplane(app);
+
+  // Start REST API Server
+  const port = process.env.PORT || 5001;
+  app.listen(port, () =>
+    console.log(`Backplane REST API Server started on port ${port}`)
+  );
+  ```
+
+#### Update Package.json
+
+- Add `"type": "module"` so the script can load ES modules.
+- Add `"server": "node index.js"` to the scripts section. Be sure to separate with a `,`.
+
+### Run API Server
+
+`npm run server` to start the server on localhost port 8000.
+
+Use `curl http://localhost:8000` to confirm server is running. If successful you should see: `Backplane REST API Server is ready`.

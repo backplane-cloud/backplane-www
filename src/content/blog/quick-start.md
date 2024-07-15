@@ -9,7 +9,22 @@ author: "Lewis Sheridan"
 tags: [30 mins]
 ---
 
-Guide to download Backplane CLI and log into the API Server.
+Welcome to the Backplane Quick Start guide to get you up and running with Backplane API and CLI.
+
+## Project Status
+
+The Backplane API is currently an MVP in BETA. The below table shows the Cloud Integration progress across the concerns of Account Provisioning, Access, Policy and Cost data retrieval.
+
+|                                                              |                           Account                           |                           Access                            |                           Policy                            | Cost |
+| :----------------------------------------------------------: | :---------------------------------------------------------: | :---------------------------------------------------------: | :---------------------------------------------------------: | :--: |
+| <img src="/assets/azure.svg" class="w-10 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |  -   |
+|  <img src="/assets/gcp.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |  -   |
+|  <img src="/assets/aws.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |  -   |
+|  <img src="/assets/oci.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |                              -                              |                              -                              |  -   |
+
+### Get Involved
+
+If you want to get involved and contribute to the Project, please visit [Backplane API Github Repo](https://github.com/backplane-cloud/backplane-api)
 
 ## CLI Download & Installation
 
@@ -28,6 +43,7 @@ The easiest way to get started is to download the Backplane CLI executable, avai
 
 ```js
 shasum -a 256 -c bp.sha256
+bp: OK
 ```
 
 #### Installation Instructions
@@ -49,12 +65,12 @@ shasum -a 256 -c bp.sha256
 
 - Open **Terminal** and from the directory **bp** has been extracted to, run the following command to move the file to your executable path:
 
-  ```js
+  ```bash
   sudo mv bp /usr/local/bin/
   ```
 
 - To verify that **bp** is successfully installed, run:
-  ```js
+  ```bash
   bp --version
   1.0.0
   ```
@@ -67,18 +83,21 @@ shasum -a 256 -c bp.sha256
 - **Download** [bp.zip](/cli/windows/bp.zip)
 - **Extract** contents to folder
     ```ps
-    PS C:\> expand-archive bp.zip c:\backplane
+    expand-archive bp.zip c:\backplane
     ```
 
 - Add **bp.exe** file system environment path
 
   ```ps
-  PS C:\> $env:path += 'c:\backplane'
+  $newPath = "C:\backplane"
+  $currentPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+  [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;$newPath", "Machine")
   ```
 
 - **Verify** installation - To check if **bp.exe** is successfully installed, run:
+
   ```ps
-  PS C:\> bp --version
+  bp --version
   1.0.0
   ```
 
@@ -86,44 +105,66 @@ shasum -a 256 -c bp.sha256
 
 <details>
     <summary>Linux</summary>
-</details>
+
+- **Download** [bp.zip](/cli/linux/bp.zip)
+- **Extract** executable from ZIP file.
+
+  ```bash
+  sudo apt install unzip
+  unzip bp.zip
+  ```
+
+- Move the file to your executable path
+
+  ```bash
+  sudo mv ./bp /usr/local/bin/bp
+  ```
+
+- **Verify** installation to check that **bp** is successfully installed, run:
+
+  ```bash
+  bp --version
+  1.0.0
+  ```
+
+  </details>
 
 ### NPM
 
-Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
+- Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
 
-```js
-mkdir backplane-cli
-cd backplane-api
-npm init -y
-npm i @backplane-software/backplane-cli -g
-```
+  ```bash
+  mkdir backplane-cli
+  cd backplane-api
+  npm init -y
+  npm i @backplane-software/backplane-cli -g
+  ```
 
-Once the CLI has been installed, within the directory containing the `package.json`, run the `npm link` command to make the file executable.
+- Once the CLI has been installed, within the directory containing the `package.json`, run the `npm link` command to make the file executable.
 
-```js
-npm link
-```
+  ```bash
+  npm link
+  ```
 
-Use the below command to verify installation has been successful:
+  Use the below command to verify installation has been successful:
 
-```js
-$ bp -V
-v0.11.0
-```
+  ```bash
+  $ bp -V
+  v0.11.0
+  ```
 
 ## API Server Setup
 
-<details>
-<summary>Demo Server (Hosted)</summary>
+<details open>
+    <summary>Demo API Server</summary>
 
-### Using CLI
+- A demo server is hosted at `https://api.backplane.dev/api`
 
-To set the CLI to use the demo server, use the following command:
+- To configure the CLI client to target the demo server, simply run the following CLI command:
 
-```js
-bp auth setserver --server https://api.backplane.dev/api
-```
+  ```bash
+  bp auth setserver --server https://api.backplane.dev/api
+  ```
 
 </details>
 
@@ -235,15 +276,17 @@ Use `curl http://localhost:8000` to confirm server is running. If successful you
 
 </details>
 
-## Server Configuration
+## Start Using Backplane
 
-### Create Organisation and First User
+With the CLI and API Server configured, create your Organisation and first User.
 
-```js
+#### Create Organisation and First User
+
+```bash
 bp user register --displayname "<Display Name>" --email "<your e-mail address>" --password "<Password>" --orgname "<Your Organisation Name>"
 ```
 
-### Login
+#### Login
 
 ```js
 bp auth login -e "<your e-mail address>" -p "<Password>"
@@ -251,7 +294,7 @@ bp auth login -e "<your e-mail address>" -p "<Password>"
 
 ### Connect Cloud Service Providers
 
-Now that your Organisation and User account has been setup, you're now ready toregister your cloud platforms.
+Backplane needs to connect to your Cloud Platforms by adding Cloud Service Provider credentials. A Service Principal will be required for Authentication and Authorisation, instructions are provided below:
 
 #### Instructions to create Service Principal
 
@@ -424,12 +467,15 @@ bp product add --displayname 'Product X' --platformid '<Platform ID>'
 ### Create App
 
 ```js
-bp app create --displayname "My first App" --cloud "azure | gcp | aws"
+bp app create --displayname "My first App" --cloud "azure | gcp | aws | oci"
 ```
 
-#### App Templates Note:
+#### App Templates:
 
-App templates define what environments are created and optionally onboarding of a service, for example a Github repository. The _default_ template will create prod, nonprod, test and dev. Custom App Templates can be added such as Sandbox whereby only a single environment is provisioned.
+<div class="rounded-lg bg-slate-100 p-3 ml-0 text-md">
+<img src='/assets/bulb.svg' class="inline-block m-0 w-8"/>
+App templates define what environments are created and which services are onboarded upon App creation. For example a service can provision a Github repository. The _default_ template will create prod, nonprod, test and dev. Custom App Templates can be added such as Sandbox whereby only a single environment is provisioned.
+</div>
 
 <!-- :::tip
 To link an App to a Product, you will need to create a Link Request. e.g.
@@ -440,14 +486,12 @@ bp request add --appid app1 --requestType link --requestedForType product
 
 ::: -->
 
-#### PowerShell Users Note:
+#### PowerShell Note:
 
-For **Powershell** users, run `pwsh` and then use the CLI commands with the `--stringify` or `-s` switch to return raw JSON, this can then be piped into Powershell with `ConvertFromJSON`.
-
-For example:
+The CLI commands have a with the `--stringify` or `-s` switch to return raw JSON, this can then be piped into Powershell with `ConvertFromJSON`.
 
 ```ps
 bp product list --stringify | Convert-FromJSON
 ```
 
-Congraulations, you have completed the Quick Start.
+Congraulations, this completes the Quick Start.
