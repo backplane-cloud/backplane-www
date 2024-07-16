@@ -8,9 +8,6 @@ dependencies:
   "@astrojs/mdx":
     specifier: ^3.0.1
     version: 3.0.1(astro@4.8.7)
-  "@astrojs/partytown":
-    specifier: ^2.1.1
-    version: 2.1.1
   "@astrojs/sitemap":
     specifier: ^3.1.5
     version: 3.1.5
