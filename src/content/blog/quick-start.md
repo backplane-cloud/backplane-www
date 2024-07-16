@@ -500,41 +500,84 @@ bp cloud aws add --id "<OrgId>" --clientid "<accessKey>" --clientsecret "<access
 
 #### Creating a Service Principal in OCI
 
-Creating a service principal in Oracle Cloud Infrastructure (OCI) involves setting up a dynamic group and a policy to allow a non-human entity, such as an application or script, to perform actions on your behalf. Here’s how you can set up and use a service principal for authentication:
-Step 1: Create a Dynamic Group
+Here’s how you can set up and use a service principal for authenticating Backplane with OCI
 
-1. Log in to the Oracle Cloud Console.
-2. Navigate to Identity & Security > Dynamic Groups.
-3. Create a New Dynamic Group:
-   _ Click on "Create Dynamic Group".
-   _ Enter a Name and Description for the dynamic group.
-   _ Define the Matching Rules to include the instances or resources that you want this dynamic group to manage. For example, to include all instances in your tenancy, you might use:plaintextCopy codeALL {instance.compartment.id = '<your_compartment_ocid>'}
-   _
-   Step 2: Create a Policy
-4. Navigate to Identity & Security > Policies.
-5. Create a New Policy:
-   _ Click on "Create Policy".
-   _ Enter a Name, Description, and Compartment for the policy.
-   _ Add the required Policy Statements. For example, to allow the dynamic group to manage all resources, you might use:plaintextCopy codeAllow dynamic-group <your_dynamic_group_name> to manage all-resources in tenancy
-   _
-   Step 5: Collect Information
-   Collect the following information:
+### Create a Dynamic Group
 
-- User OCID
-- Tenancy OCID
-- Region
-- API Signing Key (private key content)
-- Fingerprint
+1. **Log in** to the [Oracle Cloud Console](https://cloud.oracle.com).
+2. Obtain the Root Compartment OCID from **Identity & Security** -> **Compartments**
+3. Navigate to **Identity & Security** -> **Domains** -> **Click on Domain** -> **Dynamic Groups**
+4. Create a New Dynamic Group:
 
-Save the file as oci.json
+- Click on "Create Dynamic Group".
+- Enter a Name and Description for the dynamic group
 
-#### Add OCI Credentials via CLI
+  | Field       | Value                                                          |
+  | :---------- | :------------------------------------------------------------- |
+  | Name        | `Backplane API`                                                |
+  | Description | `Service Credentials for Backplane API to create compartments` |
+
+- Define the Matching Rules to include the instances or resources that you want this dynamic group to manage. For example, to include all instances in your tenancy:
+
+  #### Matching Rule
+
+  ```js
+  ALL {instance.compartment.id = '<your_compartment_ocid>'}
+  ```
+
+  - Click **Create**
+
+### Create a Policy
+
+- Navigate to **Identity & Security** > **Policies**
+
+- Click **Create Policy**
+
+  - Enter a Name, Description, and Compartment for the policy.
+  - In Policy Builder, toggle it to show manual editor and add the required Policy Statement/s. For example, to allow the **Dynamic Group** to manage all resources:
+
+  ```js
+  Allow dynamic-group '<Domain>'/'<Dynamic Group Name>' to manage all-resources in tenancy
+  ```
+
+  - Click **Create**
+
+### Collect Information
+
+| Field                         | How                                                                                                                                                                              |
+| :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| User OCID                     | Go to **Identity & Security** -> **Domain** -> **Users**                                                                                                                         |
+| Tenancy OCID                  | Go to **Governance & Administrator** -> **Tenancy Details**                                                                                                                      |
+| Region                        | Same as above                                                                                                                                                                    |
+| API Signing Key / private key | Go to **Identity & Security** -> **Domains** -> **Users** -> **Resources** -> **API Key** -> **Add API Key** -> **Generate API key pair** -> **Download Private Key** -> **Add** |
+| Fingerprint                   | Copy Fingerprint from **Resources** -> **API Keys**                                                                                                                              |
+
+- Create an `oci.json` file as per template below with the information collected
+
+#### Example oci.json
+
+```bash
+{
+  "tenancyId": "ocid1.tenancy.oc1..aaaaaaaane...",
+  "userId": "ocid1.user.oc1..aaaaaaaayuatcpsk...",
+  "fingerprint": "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx",
+  "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEv...n-----END PRIVATE KEY-----\n",
+  "region": "uk-london-1",
+  "passphrase": null
+}
+```
+
+### Add OCI Credentials via CLI
 
 ```js
 bp cloud oci add -i 66681fa21440f6afb76522e6 --ocisecret ../oci.json
 ```
 
+- OCI Credentials are now added to Backplane for Compartment Creation
+
 </details>
+
+---
 
 ### Create Platform
 

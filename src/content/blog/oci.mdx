@@ -9,57 +9,73 @@ author: "Lewis Sheridan"
 tags: []
 ---
 
-## Creating a Service Principal in OCI
+#### Creating a Service Principal in OCI
 
-Creating a service principal in Oracle Cloud Infrastructure (OCI) involves setting up a dynamic group and a policy to allow a non-human entity, such as an application or script, to perform actions on your behalf. Here’s how you can set up and use a service principal for authentication:
+Creating a service principal in Oracle Cloud Infrastructure (OCI) involves setting up a:
 
-### Step 1: Create a Dynamic Group
+- Dynamic Group
+- Policy to allow a non-human entity, such as an application or script, to perform actions on your behalf.
 
-1. Log in to the Oracle Cloud Console.
-2. Navigate to Identity & Security > Dynamic Groups.
-3. Create a New Dynamic Group:
+Here’s how you can set up and use a service principal for authenticating Backplane with OCI
+
+### Create a Dynamic Group
+
+1. **Log in** to the [Oracle Cloud Console](https://cloud.oracle.com).
+2. Obtain the Root Compartment OCID from **Identity & Security** -> **Compartments**
+3. Navigate to **Identity & Security** -> **Domains** -> **Click on Domain** -> **Dynamic Groups**
+4. Create a New Dynamic Group:
 
 - Click on "Create Dynamic Group".
-- Enter a Name and Description for the dynamic group.
-- Define the Matching Rules to include the instances or resources that you want this dynamic group to manage. For example, to include all instances in your tenancy, you might use:
+- Enter a Name and Description for the dynamic group
 
-```js
-ALL {instance.compartment.id = '<your_compartment_ocid>'}
-```
+  | Field       | Value                                                          |
+  | :---------- | :------------------------------------------------------------- |
+  | Name        | `Backplane API`                                                |
+  | Description | `Service Credentials for Backplane API to create compartments` |
 
-### Step 2: Create a Policy
+- Define the Matching Rules to include the instances or resources that you want this dynamic group to manage. For example, to include all instances in your tenancy:
 
-1. Navigate to Identity & Security > Policies.
-2. Create a New Policy:
+  #### Matching Rule
 
-   - Click on "Create Policy".
-   - Enter a Name, Description, and Compartment for the policy.
-   - Add the required Policy Statements. For example, to allow the dynamic group to manage all resources, you might use
+  ```js
+  ALL {instance.compartment.id = '<your_compartment_ocid>'}
+  ```
 
-   ```js
-   Allow dynamic-group <your_dynamic_group_name> to manage all-resources in tenancy
-   ```
+  - Click **Create**
 
-### Step 5: Collect Information
+### Create a Policy
 
-Collect the following information:
+- Navigate to **Identity & Security** > **Policies**
 
-| Field                         | Example                      |
-| :---------------------------- | ---------------------------- |
-| User OCID                     | `ocid1.user.oc1..aaaa`       |
-| Tenancy OCID                  | `ocid1.tenancy.oc1..aaaa...` |
-| Region                        | `uk-london-1`                |
-| API Signing Key / private key |                              |
-| Fingerprint                   |                              |
+- Click **Create Policy**
 
-Save the file as oci.json
+  - Enter a Name, Description, and Compartment for the policy.
+  - In Policy Builder, toggle it to show manual editor and add the required Policy Statement/s. For example, to allow the **Dynamic Group** to manage all resources:
+
+  ```js
+  Allow dynamic-group '<Domain>'/'<Dynamic Group Name>' to manage all-resources in tenancy
+  ```
+
+  - Click **Create**
+
+### Collect Information
+
+| Field                         | How                                                                                                                                                                              |
+| :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| User OCID                     | Go to **Identity & Security** -> **Domain** -> **Users**                                                                                                                         |
+| Tenancy OCID                  | Go to **Governance & Administrator** -> **Tenancy Details**                                                                                                                      |
+| Region                        | Same as above                                                                                                                                                                    |
+| API Signing Key / private key | Go to **Identity & Security** -> **Domains** -> **Users** -> **Resources** -> **API Key** -> **Add API Key** -> **Generate API key pair** -> **Download Private Key** -> **Add** |
+| Fingerprint                   | Copy Fingerprint from **Resources** -> **API Keys**                                                                                                                              |
+
+- Create an `oci.json` file as per template below with the information collected
 
 #### Example oci.json
 
 ```bash
 {
-  "tenancyId": "ocid1.tenancy.oc1..aaaaaaaanerxvakjtzc4qpjwtqjfruxvh6irkoy4tw7noy3eqvajpqzov2sq",
-  "userId": "ocid1.user.oc1..aaaaaaaayuatcpsknelgylnz5blu2ra76cjm73h63lufyqs5fi7talazftia",
+  "tenancyId": "ocid1.tenancy.oc1..aaaaaaaane...",
+  "userId": "ocid1.user.oc1..aaaaaaaayuatcpsk...",
   "fingerprint": "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx",
   "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEv...n-----END PRIVATE KEY-----\n",
   "region": "uk-london-1",
@@ -67,11 +83,13 @@ Save the file as oci.json
 }
 ```
 
-#### Add OCI Credentials via CLI
+### Add OCI Credentials via CLI
 
 ```js
 bp cloud oci add -i 66681fa21440f6afb76522e6 --ocisecret ../oci.json
 ```
+
+- OCI Credentials are now added to Backplane for Compartment Creation
 
 #### Help us improve the documentation
 
