@@ -34,13 +34,11 @@ ALL {instance.compartment.id = '<your_compartment_ocid>'}
 
    - Click on "Create Policy".
    - Enter a Name, Description, and Compartment for the policy.
-   - Add the required Policy Statements. For example, to allow the dynamic group to manage all resources, you might use:plaintextCopy code
+   - Add the required Policy Statements. For example, to allow the dynamic group to manage all resources, you might use
 
    ```js
-   Allow dynamic-group <your_dynamic_group_name>
+   Allow dynamic-group <your_dynamic_group_name> to manage all-resources in tenancy
    ```
-
-   to manage all-resources in tenancy
 
 ### Step 5: Collect Information
 
