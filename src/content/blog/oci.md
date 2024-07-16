@@ -24,7 +24,7 @@ Creating a service principal in Oracle Cloud Infrastructure (OCI) involves setti
 - Define the Matching Rules to include the instances or resources that you want this dynamic group to manage. For example, to include all instances in your tenancy, you might use:
 
 ```js
-plaintextCopy codeALL {instance.compartment.id = '<your_compartment_ocid>'}
+ALL {instance.compartment.id = '<your_compartment_ocid>'}
 ```
 
 ### Step 2: Create a Policy
