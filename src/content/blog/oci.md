@@ -9,35 +9,65 @@ author: "Lewis Sheridan"
 tags: []
 ---
 
-#### Creating a Service Principal in OCI
+## Creating a Service Principal in OCI
 
 Creating a service principal in Oracle Cloud Infrastructure (OCI) involves setting up a dynamic group and a policy to allow a non-human entity, such as an application or script, to perform actions on your behalf. Here’s how you can set up and use a service principal for authentication:
-Step 1: Create a Dynamic Group
+
+### Step 1: Create a Dynamic Group
 
 1. Log in to the Oracle Cloud Console.
 2. Navigate to Identity & Security > Dynamic Groups.
 3. Create a New Dynamic Group:
-   _ Click on "Create Dynamic Group".
-   _ Enter a Name and Description for the dynamic group.
-   _ Define the Matching Rules to include the instances or resources that you want this dynamic group to manage. For example, to include all instances in your tenancy, you might use:plaintextCopy codeALL {instance.compartment.id = '<your_compartment_ocid>'}
-   _
-   Step 2: Create a Policy
-4. Navigate to Identity & Security > Policies.
-5. Create a New Policy:
-   _ Click on "Create Policy".
-   _ Enter a Name, Description, and Compartment for the policy.
-   _ Add the required Policy Statements. For example, to allow the dynamic group to manage all resources, you might use:plaintextCopy codeAllow dynamic-group <your_dynamic_group_name> to manage all-resources in tenancy
-   _
-   Step 5: Collect Information
-   Collect the following information:
 
-- User OCID
-- Tenancy OCID
-- Region
-- API Signing Key (private key content)
-- Fingerprint
+- Click on "Create Dynamic Group".
+- Enter a Name and Description for the dynamic group.
+- Define the Matching Rules to include the instances or resources that you want this dynamic group to manage. For example, to include all instances in your tenancy, you might use:
+
+```js
+plaintextCopy codeALL {instance.compartment.id = '<your_compartment_ocid>'}
+```
+
+### Step 2: Create a Policy
+
+1. Navigate to Identity & Security > Policies.
+2. Create a New Policy:
+
+   - Click on "Create Policy".
+   - Enter a Name, Description, and Compartment for the policy.
+   - Add the required Policy Statements. For example, to allow the dynamic group to manage all resources, you might use:plaintextCopy code
+
+   ```js
+   Allow dynamic-group <your_dynamic_group_name>
+   ```
+
+   to manage all-resources in tenancy
+
+### Step 5: Collect Information
+
+Collect the following information:
+
+| Field                         | Example                                           |
+| :---------------------------- | ------------------------------------------------- |
+| User OCID                     | `ocid1.user.oc1..aaaa`                            |
+| Tenancy OCID                  | `ocid1.tenancy.oc1..aaaa...`                      |
+| Region                        | `uk-london-1`                                     |
+| API Signing Key / private key | `-----BEGIN PRIVATE KEY-----\nMIIEv...`           |
+| Fingerprint                   | `xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx` |
 
 Save the file as oci.json
+
+#### Example oci.json
+
+```bash
+{
+  "tenancyId": "ocid1.tenancy.oc1..aaaaaaaanerxvakjtzc4qpjwtqjfruxvh6irkoy4tw7noy3eqvajpqzov2sq",
+  "userId": "ocid1.user.oc1..aaaaaaaayuatcpsknelgylnz5blu2ra76cjm73h63lufyqs5fi7talazftia",
+  "fingerprint": "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx",
+  "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEv...n-----END PRIVATE KEY-----\n",
+  "region": "uk-london-1",
+  "passphrase": null
+}
+```
 
 #### Add OCI Credentials via CLI
 
