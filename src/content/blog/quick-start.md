@@ -28,6 +28,8 @@ If you want to get involved and contribute to the Project, please visit [Backpla
 
 ## CLI Download & Installation
 
+---
+
 Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
 ### Binaries
@@ -38,13 +40,6 @@ The easiest way to get started is to download the Backplane CLI executable, avai
 | <img class="inline-block w-5 m-0 mr-3" src="/assets/appleicon.svg" /> Mac OSX | [ARM64](/cli/mac/bp.zip) |
 | <img class="inline-block w-6 m-0 mr-3" src="/assets/windows.svg" /> Windows | [x64](/cli/windows/bp.zip) |
 | <img class="inline-block w-6 m-0 mr-3" src="/assets/tux.svg" /> Linux | [x64](/cli/linux/bp.zip) |
-
-#### Validating download integrity with SHASUM (Mac OSX & Linux)
-
-```js
-shasum -a 256 -c bp.sha256
-bp: OK
-```
 
 #### Installation Instructions
 
@@ -129,6 +124,13 @@ bp: OK
 
   </details>
 
+#### Validating download integrity with SHASUM (Mac OSX & Linux)
+
+```js
+shasum -a 256 -c bp.sha256
+bp: OK
+```
+
 ### NPM
 
 - Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
@@ -155,9 +157,11 @@ bp: OK
 
 ## API Server Setup
 
-The fastest way to get started with Backplane API is to use the Demo API Server. This is a hosted instance of the API which you can use the CLI client to interact with.
+The below instructions can be used on **Windows**, **Linux** or **Mac**.
 
-### Demo API Server
+### Hosted Server
+
+The fastest way to get started with Backplane API is to use the Demo API Server. This is a hosted instance of the API which you can use the CLI client to interact with.
 
 - A demo server is hosted at `https://api.backplane.dev/api`
 
@@ -169,33 +173,34 @@ The fastest way to get started with Backplane API is to use the Demo API Server.
 
 - Now you are ready to [Start Using Backplane](#start-using-backplane)
 
-### Self-Hosted API Server
+### Local Development
 
 <details>
-<summary class="text-blue-700">Self-Hosted</summary>
+<summary class="text-blue-700">Git Clone Method</summary>
+  
+  #### Clone Repo
+  
+- Open a Terminal window. If using Windows, right-click and Run as Administrator.
 
-#### Step 1 - Install Node
-
-Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
-
-```js
-mkdir backplane-api
+```bash
+git clone https://github.com/backplane-cloud/backplane-api.git
 cd backplane-api
-npm init -y
-npm i express dotenv @backplane-software/backplane-api
 ```
 
-#### Step 2 - Setup Environment Variables
+#### Create Local Environment Variable file (.env)
 
-Create `.env` file, and provide the following:
+- Create `.env` file.
+  Windows: `new-item .env`
+  Linux/Mac: `touch .env` and copy the below template into it.
 
-```js
+```bash
 NODE_ENV=development
 PORT=8000
 
-JWT_SECRET=<provide-key> // Make up your own secret, this is used as the salt to CryptB for password Hashing. e.g. MyS3cureP&!00word\*
+JWT_SECRET=<provide-key>
+// Make up your own secret, this is used as the salt to CryptB for password Hashing. e.g. MyS3cureP&!00word\*
 
-MONGO_URI=<provide-key>
+MONGO_URI=<connection-string>
 
 MAILSENDER_USERNAME=<your-username>
 MAILSENDER_PASSWORD=<provide-key>
@@ -204,23 +209,88 @@ LOGTAIL_KEY=<provide-key>
 LOG_LEVEL=debug
 ```
 
-#### Step 3 - Setting up MongoDB
+### Setup Database
 
-Backplane API Server uses MongoDB as the backend datastore. See [Setting up MongoDB](/blog/mongosetup).
+#### MongoDB
 
-#### Step 4 - Setting up MailerSend
+- See [Setting up MongoDB](/blog/mongosetup) for instructions. The connection string will need to updated into the .env file.
 
-MailerSend is used as an SMTP mailrelay, so that User Registration e-mails can be sent as well as approval request e-mails. Create an account here: [MailerSend](https://www.mailersend.com/)
+### Setup Middleware
 
-#### Step 5 - Setting up LogTail
+#### MailerSend
 
-`/utils/logger.js` is used as Middleware for logging purposes. It leverages LogTail, now known as Better Stack is used as a Log Repository. It's free up to 1GB a month with 3-day retention. Create an account here: [LogTail](https://betterstack.com/logs).
+- MailerSend is used as an SMTP mailrelay, so that User Registration e-mails can be sent as well as approval request e-mails. Create an account here: [MailerSend](https://www.mailersend.com/)
 
-#### Step 6 - Create Index.js
+#### LogTail
 
-Create `index.js` file and copy the below into it.
+- `/utils/logger.js` is used as Middleware for logging purposes. It leverages LogTail, now known as Better Stack is used as a Log Repository. It's free up to 1GB a month with 3-day retention. Create an account here: [LogTail](https://betterstack.com/logs).
 
-```js
+### Run Server
+
+- Run the `npm i` command to install all dependencies
+- Run `npm run server` to launch server.
+
+The Backplane API Server is now up and running and you are ready to [Start Using Backplane](#start-using-backplane)
+
+</details>
+
+<details>
+<summary class="text-blue-700">NPM</summary>
+
+#### Install Node
+
+- Install [Node.JS](https://nodejs.org/en/download) on your system and then from a terminal window, initialise an NPM project.
+
+  ```bash
+  mkdir backplane-api
+  cd backplane-api
+  npm init -y
+  npm i express dotenv @backplane-software/backplane-api
+  ```
+
+#### Create Local Environment Variable file (.env)
+
+- Create `.env` file.
+  Windows: `new-item .env`
+  Linux/Mac: `touch .env` and copy the below template into it.
+
+```bash
+NODE_ENV=development
+PORT=8000
+
+JWT_SECRET=<provide-key>
+// Make up your own secret, this is used as the salt to CryptB for password Hashing. e.g. MyS3cureP&!00word\*
+
+MONGO_URI=<connection-string>
+
+MAILSENDER_USERNAME=<your-username>
+MAILSENDER_PASSWORD=<provide-key>
+
+LOGTAIL_KEY=<provide-key>
+LOG_LEVEL=debug
+```
+
+### Setup Database
+
+#### MongoDB
+
+- See [Setting up MongoDB](/blog/mongosetup) for instructions. The connection string will need to updated into the .env file.
+
+### Setup Middleware
+
+#### MailerSend
+
+- MailerSend is used as an SMTP mailrelay, so that User Registration e-mails can be sent as well as approval request e-mails. Create an account here: [MailerSend](https://www.mailersend.com/)
+
+#### LogTail
+
+- `/utils/logger.js` is used as Middleware for logging purposes. It leverages LogTail, now known as Better Stack is used as a Log Repository. It's free up to 1GB a month with 3-day retention. Create an account here: [LogTail](https://betterstack.com/logs).
+
+#### Create Index.js
+
+- Create `index.js` file and copy the below into it.
+
+```bash
 import express from "express";
 import dotenv from "dotenv";
 import backplane from "@backplane-software/backplane-api";
@@ -241,16 +311,18 @@ app.listen(port, () =>
 );
 ```
 
-#### Step 7 - Update Package.json
+#### Update Package.json
 
 - Add `"type": "module"` so the script can load ES modules.
-- Add `"server": "node index.js"` to the scripts section. Be sure to separate with a `,`.
+- Add `"server": "node index.js"` to the scripts section.
 
-#### Step 8 - Launch API Server
+### Run Server
 
-`npm run server` to start the server on localhost port 8000.
+- Run `npm run server` to launch server.
 
-Use `curl http://localhost:8000` to confirm server is running. If successful you should see: `Backplane REST API Server is ready`.
+Use `curl http://localhost:8000` to confirm server is running.
+
+The Backplane API Server is now up and running and you are ready to [Start Using Backplane](#start-using-backplane)
 
 </details>
 <details>
@@ -258,28 +330,43 @@ Use `curl http://localhost:8000` to confirm server is running. If successful you
 
 #### Clone Repo
 
-```js
-mkdir backplane
-cd backplane
-git clone https://github.com/backplane-cloud/backplane-api.git
-npm i
-```
+- Open a Terminal window and run:
 
-#### Docker
+  ```bash
+  git clone https://github.com/backplane-cloud/backplane-api.git
+  cd backplane-api
+  npm i
+  ```
 
-```js
-docker build -t backplanesoftware/backplaneapi:0.26.1 .
+#### Docker Commands
 
-docker network create my-network
+- Ensure Docker is installed and run:
 
-docker run --network my-network --name api -p 8000:8000 backplanesoftware/backplaneapi:0.26.1
+  ```bash
+  docker build -t backplanesoftware/backplaneapi:0.26.1 .
 
-docker run —network my-network —name cli -p 3000:3000 backplanesoftware/backplanecli:0.0.1
-```
+  docker network create my-network
+
+  docker run --network my-network --name api -p 8000:8000 backplanesoftware/backplaneapi:0.26.1
+
+  docker run —network my-network —name cli -p 3000:3000 backplanesoftware/backplanecli:0.0.1
+  ```
+
+#### Configure CLI
+
+- Set CLI server to docker URL `http://api:8000/api`
+
+  ```bash
+  bp auth setserver —server  http://api:8000/api
+  ```
+
+The Backplane API Server is now up and running and you are ready to [Start Using Backplane](#start-using-backplane)
 
 </details>
 
 ## Start Using Backplane
+
+---
 
 With the CLI and API Server configured, create your Organisation and first User.
 
@@ -498,3 +585,7 @@ bp product list --stringify | Convert-FromJSON
 ```
 
 Congraulations, this completes the Quick Start.
+
+#### Help us improve the documentation
+
+If you encounter any issues or errors in the documentation, please report on the [Support Slack Channel](https://backplane-dev.slack.com/)
