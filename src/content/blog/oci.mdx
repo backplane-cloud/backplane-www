@@ -44,13 +44,13 @@ ALL {instance.compartment.id = '<your_compartment_ocid>'}
 
 Collect the following information:
 
-| Field                         | Example                                           |
-| :---------------------------- | ------------------------------------------------- |
-| User OCID                     | `ocid1.user.oc1..aaaa`                            |
-| Tenancy OCID                  | `ocid1.tenancy.oc1..aaaa...`                      |
-| Region                        | `uk-london-1`                                     |
-| API Signing Key / private key | `-----BEGIN PRIVATE KEY-----\nMIIEv...`           |
-| Fingerprint                   | `xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx` |
+| Field                         | Example                      |
+| :---------------------------- | ---------------------------- |
+| User OCID                     | `ocid1.user.oc1..aaaa`       |
+| Tenancy OCID                  | `ocid1.tenancy.oc1..aaaa...` |
+| Region                        | `uk-london-1`                |
+| API Signing Key / private key |                              |
+| Fingerprint                   |                              |
 
 Save the file as oci.json
 
@@ -72,3 +72,7 @@ Save the file as oci.json
 ```js
 bp cloud oci add -i 66681fa21440f6afb76522e6 --ocisecret ../oci.json
 ```
+
+#### Help us improve the documentation
+
+If you encounter any issues or errors in the documentation, please report on the [Support Slack Channel](https://backplane-dev.slack.com/)
