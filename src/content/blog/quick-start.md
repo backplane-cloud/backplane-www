@@ -163,12 +163,12 @@ The below instructions can be used on **Windows**, **Linux** or **Mac**.
 
 The fastest way to get started with Backplane API is to use the Demo API Server. This is a hosted instance of the API which you can use the CLI client to interact with.
 
-- A demo server is hosted at `https://api.backplane.dev/api`
+- A demo server is hosted at `https://demo.backplane.dev/api`
 
 - To configure the CLI client to target the demo server, simply run the following CLI command:
 
   ```bash
-  bp auth setserver --server https://api.backplane.dev/api
+  bp auth setserver --server https://demo.backplane.dev/api
   ```
 
 - Now you are ready to [Start Using Backplane](#start-using-backplane)
