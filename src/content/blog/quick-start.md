@@ -11,24 +11,16 @@ tags: []
 
 Welcome to the Backplane Quick Start guide to get you up and running with Backplane API and CLI.
 
-## Project Status
+The Quick Start provides 2 paths, the Demo Server allows you to try out the UI and CLI quickly and easily. Or, the full guide to setup the Server locally.
 
-The Backplane API is currently an MVP in BETA. The below table shows the Cloud Integration progress across the concerns of Account Provisioning, Access, Policy and Cost data retrieval.
+## Choose setup path
 
-|                                                              |                           Account                           |                           Access                            |                           Policy                            | Cost |
-| :----------------------------------------------------------: | :---------------------------------------------------------: | :---------------------------------------------------------: | :---------------------------------------------------------: | :--: |
-| <img src="/assets/azure.svg" class="w-10 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |  -   |
-|  <img src="/assets/gcp.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |  -   |
-|  <img src="/assets/aws.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |  -   |
-|  <img src="/assets/oci.svg" class="w-10 m-0 p-0 mx-auto" />  | <img src="/assets/check.svg" class="w-8 m-0 p-0 mx-auto" /> |                              -                              |                              -                              |  -   |
+| Method       | Server                                | Client                                      | Time    |
+| :----------- | :------------------------------------ | :------------------------------------------ | :------ |
+| Demo Server  | `https://demo.backplane.dev`          | [Cloud Console](https://demo.backplane.dev) | 5 mins  |
+| Local Server | [Setup API Server](#setup-api-server) | [Download CLI](#download-cli)               | 30 mins |
 
-#### Want to get involved ?
-
-If you want to get involved and contribute to the Project, please visit [Backplane API Github Repo](https://github.com/backplane-cloud/backplane-api)
-
-## CLI Download & Installation
-
----
+## Download CLI
 
 Download the Backplane CLI either from NPM or a pre-compiled binary for your OS.
 
@@ -155,11 +147,11 @@ bp: OK
   v0.11.0
   ```
 
-## API Server Setup
+## Setup API Server
 
 The below instructions can be used on **Windows**, **Linux** or **Mac**.
 
-### Hosted Server
+### Demo API Server
 
 The fastest way to get started with Backplane API is to use the Demo API Server. This is a hosted instance of the API which you can use the CLI client to interact with.
 
