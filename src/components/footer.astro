@@ -5,7 +5,7 @@ import { Picture } from "astro:assets";
 
 <footer class="py-14 bg-slate-100 border-t border-slate-100 mt-10">
   <div class="max-w-screen-xl mx-auto px-5">
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+    <div class="grid sm:grid-cols-2 md:grid-cols- lg:grid-cols-5 gap-8">
       <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
         <a href="/" class="text-lg flex items-center">
           <span class="font-bold text-slate-900 font-[Orbitron]"
@@ -33,7 +33,7 @@ import { Picture } from "astro:assets";
       </div>
 
       <div>
-        <h3 class="font-medium text-sm text-slate-800">Company</h3>
+        <h3 class="font-medium text-sm text-slate-800">Community</h3>
         <div class="flex flex-col mt-3">
           <a
             href="/about"
@@ -51,15 +51,16 @@ import { Picture } from "astro:assets";
             Contact </a
           >
           <a
-          href="/community"
+          href="/blog"
           class="py-2 text-sm text-slate-600 hover:text-indigo-600">
-          Community </a
+          Blog </a
         >
-          <a
-          href="/blog/design"
-          class="py-2 text-sm text-slate-600 hover:text-indigo-600">
-          Project Status</a
-        >
+        <a
+        href="/docs/beta"
+        class="py-2 text-sm text-slate-600 hover:text-indigo-600">
+       Beta Program</a
+      >
+  
       <!-- <a
             href="/"
             class="py-2 text-sm text-slate-600 hover:text-indigo-600">
@@ -86,10 +87,11 @@ import { Picture } from "astro:assets";
             Roadmap </a
           >
           <a
-          href="/blog"
+          href="/docs"
           class="py-2 text-sm text-slate-600 hover:text-indigo-600">
           Documentation </a
         >
+   
     
         </div>
       </div>
@@ -118,10 +120,12 @@ import { Picture } from "astro:assets";
             NPM </a
           >
            <a
-            href="/blog/cli/"
+            href="/docs/cli/"
             class="py-2 text-sm text-slate-600 hover:text-indigo-600">
             Download CLI </a
           >
+
+          
         </div>
       </div>
     </div>

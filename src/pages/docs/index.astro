@@ -1,0 +1,26 @@
+<!-- ---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Container from '@components/container.astro';
+
+const docs = await getCollection('docs');
+---
+
+<Layout title="Documentation">
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        Documentation
+      </h1>
+      <ul class="mt-6 space-y-4">
+        {docs.map((doc) => (
+          <li key={doc.slug}>
+            <a href={`/docs/${doc.slug}`} class="text-blue-500 hover:underline">
+              {doc.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+</Layout> -->

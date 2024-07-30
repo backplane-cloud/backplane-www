@@ -15,10 +15,10 @@ The Quick Start provides 2 paths, the Demo Server allows you to try out the UI a
 
 ## Choose setup path
 
-| Method       | Server                                | Client                                      | Time    |
-| :----------- | :------------------------------------ | :------------------------------------------ | :------ |
-| Demo Server  | `https://demo.backplane.dev`          | [Cloud Console](https://demo.backplane.dev) | 5 mins  |
-| Local Server | [Setup API Server](#setup-api-server) | [Download CLI](#download-cli)               | 30 mins |
+| Method     | Description                                             | Instructions                          |
+| :--------- | :------------------------------------------------------ | :------------------------------------ |
+| Demo       | Quickly try it out on a hosted version of Backplane API | [Demo API Server](#demo-api-server)   |
+| Full Setup | Host Backplane API locally                              | [Setup API Server](#setup-api-server) |
 
 ## Download CLI
 
