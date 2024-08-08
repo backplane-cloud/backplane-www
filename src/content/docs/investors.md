@@ -11,12 +11,12 @@ tags: []
 
 _Confidential & Privileged information, not for distribution_
 
-# Contents
+## Contents
 
 [Key Information](#key-information)<br/>
 [Background](#background)<br/>
-[Problem](#problem)<br/>
-[Solution](#solution)<br/>
+[The Problem](#the-problem)<br/>
+[The Solution](#the-solution)<br/>
 [Products](#products)<br/>
 [Market Opportunity](#market-opportunity)<br/>
 [Business Model](#business-model)<br/>
@@ -46,20 +46,11 @@ _Confidential & Privileged information, not for distribution_
 - Its purpose is to build software tools to simplify multi-cloud integration and adoption.
 - Backplane is part of the Microsoft for Startups incubation hub.
 
-#### Founders
-
-With a combined experience of over 40 years in tech in lead technical and leadership roles, and with a proven track record of delivery and execution.
-
-|                                                           | Name                       | Role            | Bio                                                                                                                                                                                                                                                                  |
-| :-------------------------------------------------------- | :------------------------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src='/assets/lewis.png' class='inline-block mb-0' /> | [Lewis Sheridan](/founder) | Founder and CEO | Engineer with over 20 years experience in tech, several of which have been specialising in Cloud for the largest logistics company in the world. Certified Cloud Solution architect in both Azure and GCP. He fullstack developed Backplane's Cloud Abstraction API. |
-| <img src='/assets/backplane.svg' class='inline-block' />  | [TBA](/)                   | Co-Founder      | _To be announced_                                                                                                                                                                                                                                                    |
-
-# Background
+## Background
 
 Cloud has revolutionised how organisations consume compute, storage and networking. With virtualisation abstracting over a server resources, and Cloud abstracting over datacenters, virtualisation and abstraction have enabled better utilisation of resources providing better value to organisations.
 
-## Assumptions
+#### Assumptions
 
 - Cloud services will continue to become more commoditised across undifferented featuers like IaaS over the next 5 years as vendors focus more on differentiated offerings e.g. AI, Quantum Compute etc.
 
@@ -69,19 +60,19 @@ Cloud has revolutionised how organisations consume compute, storage and networki
 
 - Cloud Spend will continue to increase globally with estimated total spend to exceed $1 Trillion by 2030
 
-# Problem
+## Problem
 
 Large organisations are increasingly finding themselves operating in a multi-cloud landscape. This can be the result of mergers & acquisition, differentiating features and reducing vendor lock-in. Irrespective of motivation, adopting, enabling, governing and operating multi-cloud platforms is complex, giving rise to a number of issues when integration a custom cloud management platform.
 
 <img src='/assets/lewis-lg.png' class='inline-block w-16 mb-0' />
 
-### Insight
+#### Insight
 
 > Whilst working in the Technology division of the world's largest global shipping and logistics company and undergoing a Cloud transformation, I gained unique insights and experience in adopting, enabling, and governing multiple Clouds at scale.
 
-> I realised that effective cloud operations and deployment rely upon a solid foundation of adoption and governance, and also required this to be done as quickly and securely as possible. This insight motivated me to create Backplane, a unified platform that encapsulates the best practices from Cloud Adoption and Well-Architected Frameworks to make multi-cloud adoption, enablement and governance simply through a single API.
+> Effective cloud operations and deployment rely upon a solid foundation of adoption and governance. We the frantic pace to adopt cloud platforms, control cost etc, I realise there's an opportunity to build a simpler way to onboard Cloud Platforms at scale. This motivated me to create Backplane, a unified platform that encapsulates the best practices from Cloud Adoption and Well-Architected Frameworks to make multi-cloud adoption, enablement and governance simpler through a single abstraction API.
 
-> Backplane's Metacloud functions as a Cloud Operating System, providing a unified experience across different Cloud Service Providers, with a single purpose and goal to democratise multi-cloud for organisations of all sizes, globally.
+> Backplane Metacloud functions as a Cloud Operating System, providing a unified experience across different Cloud Service Providers, with a single purpose and goal to democratise multi-cloud for organisations of all sizes, globally.
 
 ### Integration Issues
 
@@ -94,7 +85,7 @@ Large organisations are increasingly finding themselves operating in a multi-clo
 
 With organisations focusing on Developer Experience, expending time and effort to integrate into each Cloud platform is of low-value.
 
-# The Solution
+## The Solution
 
 #### A Cloud Backplane
 
@@ -125,21 +116,21 @@ The Cloud Abstraction API provides a single, unified API to address the issues w
 | **Lack of Consistent Controls** | Policies defined once and then transpiled into Cloud Platform's format (Domain Specific Language)                         |
 | **Lack of Standardisation**     | Providing data standardisation so cost, access, policy data follows a consistent data-shape                               |
 
-# Products
+## Products
 
 | Product               | Core Capabilities                                     | URL                       |
 | :-------------------- | :---------------------------------------------------- | :------------------------ |
 | Cloud Abstraction API | Account Provisioning, Cost, Access & Policy retrieval | https://backplane.dev     |
 | Metacloud             | Resource Provisioning                                 | `https://backplane.cloud` |
 
-## Cloud Abstraction API
+### Cloud Abstraction API
 
 Backplane’s Open Source Cloud Abstraction API provides a unified API to simplify:
 
 - Cloud Account Provisioning
 - Standardisation of Cost, Access & Policy data
 
-  ### Features
+  #### Features
 
   - CLI and UI
   - Software Catalog
@@ -147,7 +138,7 @@ Backplane’s Open Source Cloud Abstraction API provides a unified API to simpli
   - Cost Management & Budgeting
   - Custom Extensions (Services)
 
-## Metacloud
+### Metacloud
 
 - Backplane Metacloud is an abstraction platform that unifies cloud consumption.
 - It uses Backplane’s Cloud Abstraction API and extends it with abstracted resource management and provisioning.
@@ -156,7 +147,7 @@ Backplane’s Open Source Cloud Abstraction API provides a unified API to simpli
 - Intelligent Workload Placement insights
 - Single Management Portal
 
-## How Metacloud works
+### How Metacloud works
 
 <img class="inline-block  m-0 mr-3" src="/assets/metacloud.png" />
 
@@ -179,6 +170,15 @@ Backplane’s Open Source Cloud Abstraction API provides a unified API to simpli
 | Member         | Role    | Linked In                                                    |
 | :------------- | :------ | :----------------------------------------------------------- |
 | Lewis Sheridan | Founder | [/lewissheridan](https://www.linkedin.com/in/lewissheridan/) |
+
+### Founders
+
+With a combined experience of over 40 years in tech in lead technical and leadership roles, and with a proven track record of delivery and execution.
+
+|                                                           | Name                       | Role            | Bio                                                                                                                                                                                                                                                                  |
+| :-------------------------------------------------------- | :------------------------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src='/assets/lewis.png' class='inline-block mb-0' /> | [Lewis Sheridan](/founder) | Founder and CEO | Engineer with over 20 years experience in tech, several of which have been specialising in Cloud for the largest logistics company in the world. Certified Cloud Solution architect in both Azure and GCP. He fullstack developed Backplane's Cloud Abstraction API. |
+| <img src='/assets/backplane.svg' class='inline-block' />  | [TBA](/)                   | Co-Founder      | _To be announced_                                                                                                                                                                                                                                                    |
 
 ## Financial Projections
 
