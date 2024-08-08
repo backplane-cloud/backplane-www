@@ -101,11 +101,15 @@ The table below shows the number of Datacenters and Regions for each major publi
 
 #### How Metacloud compares
 
+<div style="overflow-x: auto;">
+
 |                 | <img src='/assets/azure.svg' class='w-12'/> | <img src='/assets/aws.svg' class='w-12'/> | <img src='/assets/gcp.svg' class='w-12'/> | <img src='/assets/backplane.svg' class='w-16'/> |
 | :-------------- | :-----------------------------------------: | :---------------------------------------: | :---------------------------------------: | :---------------------------------------------: |
 | **Platform**    |               Microsoft Azure               |            Amazon Web Services            |           Google Cloud Platform           |             **Backplane Metacloud**             |
 | **Datacenters** |                     300                     |                    125                    |                    40                     |                     **465**                     |
 | **Regions**     |                     60                      |                    31                     |                    26                     |                     **117**                     |
+
+</div>
 
 The Cloud Abstraction API provides a single, unified API to address the issues with multi-cloud integration:
 
