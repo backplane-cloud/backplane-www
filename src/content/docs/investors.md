@@ -9,20 +9,24 @@ author: "Lewis Sheridan"
 tags: []
 ---
 
+_Confidential & Privileged information, not for distribution_
+
 ## Contents
 
-[Key Overview](#key-information)<br/>
-[Company](#company)<br/>
-[founders](#founders)<br/>
+[Key Information](#key-information)<br/>
 [Background](#background)<br/>
-[Assumptions](#assumptions)<br/>
-[Unique Insights](#unique-insights)<br/>
 [The Problem](#the-problem)<br/>
-[Issues](#issues)<br/>
 [The Solution](#the-solution)<br/>
-[A Cloud Backplane](#a-cloud-backplane)<br/>
-[Metacloud](#metacloud)<br/>
-[The Solution](#the-solution)<br/>
+[Products](#products)<br/>
+[Market Opportunity](#market-opportunity)<br/>
+[Business Model](#business-model)<br/>
+[Go-to-market Strategy](#go-to-market-strategy)<br/>
+[Competitive Analysis](#competitive-analysis)<br/>
+[Traction & Milestones](#traction-&-milestones)<br/>
+[Team](#team)<br/>
+[Financial Projections](#financial-projections)<br/>
+[Funding Requirements](#funding-requirements)<br/>
+[Call to Action](#call-to-action)<br/>
 
 ### Key Information
 
@@ -35,10 +39,6 @@ tags: []
 | Mission           | Become the global entry-point to cloud by delivering a unified multi-cloud experience through a simplified cloud Backplane |
 | Investment Stage  | Seed                                                                                                                       |
 | Investment Target | €3 million for 15% equity                                                                                                  |
-
-_Confidential & Privileged information, not for distribution_
-
-<img src='/assets/backplane.svg' class='inline-block w-16 mb-0' />
 
 ### Company
 
@@ -69,17 +69,21 @@ Cloud has revolutionised how organisations consume compute, storage and networki
 
 - Cloud Spend will continue to increase globally with estimated total spend to exceed $1 Trillion by 2030
 
-<img src='/assets/lewis-lg.png' class='inline-block w-16 mb-0' />
-
-### Unique Insight
-
-> Whilst working in the Technology division of the world's largest shipping and logistics company and undergoing a Cloud transformation, I gained unique insights and experience in adopting, enabling, and governing multiple Clouds at an enterprise scale. I realised that effective cloud operations and deployment depend on a solid foundation of cloud adoption and governance. This insight motivated me to create Backplane, a unified platform that encapsulates the best practices from Cloud Adoption and Well-Architected Frameworks and makes Cloud easily accessible through a single API. Backplane's Metacloud functions as a Cloud Operating System, providing a unified experience across different Cloud Service Providers, with a single purpose and goal to democratise multi-cloud for organisations of all sizes, globally.
-
 ## The Problem
 
 Large organisations are increasingly finding themselves operating in a multi-cloud landscape. This can be the result of mergers & acquisition, differentiating features and reducing vendor lock-in. Irrespective of motivation, adopting, enabling, governing and operating multi-cloud platforms is complex, giving rise a number of issues when building a custom cloud management platform.
 
-### Issues
+<img src='/assets/lewis-lg.png' class='inline-block w-16 mb-0' />
+
+### Insight
+
+> Whilst working in the Technology division of the world's largest global shipping and logistics company and undergoing a Cloud transformation, I gained unique insights and experience in adopting, enabling, and governing multiple Clouds at scale.
+
+> I realised that effective cloud operations and deployment rely upon a solid foundation of adoption and governance, and also required this to be done as quickly and securely as possible. This insight motivated me to create Backplane, a unified platform that encapsulates the best practices from Cloud Adoption and Well-Architected Frameworks to make multi-cloud adoption, enablement and governance simply through a single API.
+
+> Backplane's Metacloud functions as a Cloud Operating System, providing a unified experience across different Cloud Service Providers, with a single purpose and goal to democratise multi-cloud for organisations of all sizes, globally.
+
+### Integration Issues
 
 |                                 |                                                                                            |
 | :------------------------------ | :----------------------------------------------------------------------------------------- |
@@ -90,23 +94,15 @@ Large organisations are increasingly finding themselves operating in a multi-clo
 
 With organisations focusing on Developer Experience, expending time and effort to integrate into each Cloud platform is of low-value.
 
-<!-- ### The mission
-
-> To be the global entry-point to Cloud
-
-> To simplify multi-cloud
-
-> To advance streamline cloud adoption -->
-
 ## The Solution
 
-### A Cloud Backplane
+#### A Cloud Backplane
 
 In electronics, a Backplane is a shared interconnect of components that run in parallel. Taking this concept to Cloud, we want to use the modularity to connect Cloud Service Providers into a common Backplane, so that those Clouds can be consumed in a standardised, consistent and heterogeneous manner.
 
 The Backplane Cloud Abstraction API is the engine for Backplane Cloud which is a Metacloud. The API deals with Cloud integration and the Metacloud provides a Cloud Operating System upon which unifies the Cloud experience.
 
-### Metacloud
+#### Metacloud
 
 Backplane’s Metacloud takes the next logical step and abstracts over Cloud platforms, providing a 'virtualised' Cloud platform and becoming a unified entrypoint to Cloud; with the benefits of multiple cloud platforms delivered through a single-cloud experience.
 
