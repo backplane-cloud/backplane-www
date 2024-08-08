@@ -11,12 +11,12 @@ tags: []
 
 _Confidential & Privileged information, not for distribution_
 
-## Contents
+# Contents
 
 [Key Information](#key-information)<br/>
 [Background](#background)<br/>
-[The Problem](#the-problem)<br/>
-[The Solution](#the-solution)<br/>
+[Problem](#problem)<br/>
+[Solution](#solution)<br/>
 [Products](#products)<br/>
 [Market Opportunity](#market-opportunity)<br/>
 [Business Model](#business-model)<br/>
@@ -40,13 +40,13 @@ _Confidential & Privileged information, not for distribution_
 | Investment Stage  | Seed                                                                                                                       |
 | Investment Target | €3 million for 15% equity                                                                                                  |
 
-### Company
+#### Company
 
 - [Backplane Software Ltd.](https://find-and-update.company-information.service.gov.uk/company/15079797) is a UK-based software development company and start-up formed in 2023 by [Lewis Sheridan](/founder).
 - Its purpose is to build software tools to simplify multi-cloud integration and adoption.
 - Backplane is part of the Microsoft for Startups incubation hub.
 
-### Founders
+#### Founders
 
 With a combined experience of over 40 years in tech in lead technical and leadership roles, and with a proven track record of delivery and execution.
 
@@ -55,11 +55,11 @@ With a combined experience of over 40 years in tech in lead technical and leader
 | <img src='/assets/lewis.png' class='inline-block mb-0' /> | [Lewis Sheridan](/founder) | Founder and CEO | Engineer with over 20 years experience in tech, several of which have been specialising in Cloud for the largest logistics company in the world. Certified Cloud Solution architect in both Azure and GCP. He fullstack developed Backplane's Cloud Abstraction API. |
 | <img src='/assets/backplane.svg' class='inline-block' />  | [TBA](/)                   | Co-Founder      | _To be announced_                                                                                                                                                                                                                                                    |
 
-## Background
+# Background
 
 Cloud has revolutionised how organisations consume compute, storage and networking. With virtualisation abstracting over a server resources, and Cloud abstracting over datacenters, virtualisation and abstraction have enabled better utilisation of resources providing better value to organisations.
 
-### Assumptions
+## Assumptions
 
 - Cloud services will continue to become more commoditised across undifferented featuers like IaaS over the next 5 years as vendors focus more on differentiated offerings e.g. AI, Quantum Compute etc.
 
@@ -69,9 +69,9 @@ Cloud has revolutionised how organisations consume compute, storage and networki
 
 - Cloud Spend will continue to increase globally with estimated total spend to exceed $1 Trillion by 2030
 
-## The Problem
+# Problem
 
-Large organisations are increasingly finding themselves operating in a multi-cloud landscape. This can be the result of mergers & acquisition, differentiating features and reducing vendor lock-in. Irrespective of motivation, adopting, enabling, governing and operating multi-cloud platforms is complex, giving rise a number of issues when building a custom cloud management platform.
+Large organisations are increasingly finding themselves operating in a multi-cloud landscape. This can be the result of mergers & acquisition, differentiating features and reducing vendor lock-in. Irrespective of motivation, adopting, enabling, governing and operating multi-cloud platforms is complex, giving rise to a number of issues when integration a custom cloud management platform.
 
 <img src='/assets/lewis-lg.png' class='inline-block w-16 mb-0' />
 
@@ -94,7 +94,7 @@ Large organisations are increasingly finding themselves operating in a multi-clo
 
 With organisations focusing on Developer Experience, expending time and effort to integrate into each Cloud platform is of low-value.
 
-## The Solution
+# The Solution
 
 #### A Cloud Backplane
 
@@ -125,21 +125,21 @@ The Cloud Abstraction API provides a single, unified API to address the issues w
 | **Lack of Consistent Controls** | Policies defined once and then transpiled into Cloud Platform's format (Domain Specific Language)                         |
 | **Lack of Standardisation**     | Providing data standardisation so cost, access, policy data follows a consistent data-shape                               |
 
-## Products
+# Products
 
-| Product         | Core Capabilities                                     | URL                     |
-| :-------------- | :---------------------------------------------------- | :---------------------- |
-| Abstraction API | Account Provisioning, Cost, Access & Policy retrieval | https://backplane.dev   |
-| Metacloud       | Resource Provisioning                                 | https://backplane.cloud |
+| Product               | Core Capabilities                                     | URL                       |
+| :-------------------- | :---------------------------------------------------- | :------------------------ |
+| Cloud Abstraction API | Account Provisioning, Cost, Access & Policy retrieval | https://backplane.dev     |
+| Metacloud             | Resource Provisioning                                 | `https://backplane.cloud` |
 
-### Abstraction API
+## Cloud Abstraction API
 
 Backplane’s Open Source Cloud Abstraction API provides a unified API to simplify:
 
 - Cloud Account Provisioning
 - Standardisation of Cost, Access & Policy data
 
-  #### Features
+  ### Features
 
   - CLI and UI
   - Software Catalog
@@ -147,7 +147,7 @@ Backplane’s Open Source Cloud Abstraction API provides a unified API to simpli
   - Cost Management & Budgeting
   - Custom Extensions (Services)
 
-### Metacloud
+## Metacloud
 
 - Backplane Metacloud is an abstraction platform that unifies cloud consumption.
 - It uses Backplane’s Cloud Abstraction API and extends it with abstracted resource management and provisioning.
@@ -156,7 +156,7 @@ Backplane’s Open Source Cloud Abstraction API provides a unified API to simpli
 - Intelligent Workload Placement insights
 - Single Management Portal
 
-### How Metacloud works
+## How Metacloud works
 
 <img class="inline-block  m-0 mr-3" src="/assets/metacloud.png" />
 
