@@ -122,10 +122,10 @@ The Cloud Abstraction API provides a single, unified API to address the issues w
 
 ## Products
 
-| Product               | Core Capabilities                                     | URL                       |
-| :-------------------- | :---------------------------------------------------- | :------------------------ |
-| Cloud Abstraction API | Account Provisioning, Cost, Access & Policy retrieval | https://backplane.dev     |
-| Metacloud             | Resource Provisioning                                 | `https://backplane.cloud` |
+| Product               | Core Capabilities                                     |
+| :-------------------- | :---------------------------------------------------- |
+| Cloud Abstraction API | Account Provisioning, Cost, Access & Policy retrieval |
+| Metacloud             | Resource Provisioning                                 |
 
 ### Cloud Abstraction API
 
