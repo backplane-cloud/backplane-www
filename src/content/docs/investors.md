@@ -103,11 +103,11 @@ The table below shows the number of Datacenters and Regions for each major publi
 
 <div style="overflow-x: auto;">
 
-|                 | <img src='/assets/azure.svg' class='w-12'/> | <img src='/assets/aws.svg' class='w-12'/> | <img src='/assets/gcp.svg' class='w-12'/> | <img src='/assets/backplane.svg' class='w-16'/> |
-| :-------------- | :-----------------------------------------: | :---------------------------------------: | :---------------------------------------: | :---------------------------------------------: |
-| **Platform**    |               Microsoft Azure               |            Amazon Web Services            |           Google Cloud Platform           |             **Backplane Metacloud**             |
-| **Datacenters** |                     300                     |                    125                    |                    40                     |                     **465**                     |
-| **Regions**     |                     60                      |                    31                     |                    26                     |                     **117**                     |
+|                 | <img src='/assets/backplane.svg' class='w-16'/> | <img src='/assets/azure.svg' class='w-12'/> | <img src='/assets/aws.svg' class='w-14'/> | <img src='/assets/gcp.svg' class='w-12'/> |
+| :-------------- | :---------------------------------------------: | :-----------------------------------------: | :---------------------------------------: | :---------------------------------------: |
+| **Platform**    |             **Backplane Metacloud**             |               Microsoft Azure               |            Amazon Web Services            |           Google Cloud Platform           |
+| **Datacenters** |                     **465**                     |                     300                     |                    125                    |                    40                     |
+| **Regions**     |                     **117**                     |                     60                      |                    31                     |                    26                     |
 
 </div>
 
